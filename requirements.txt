@@ -1,0 +1,7 @@
+datasets
+pandas
+ollama
+transformers
+torch
+accelerate
+bitsandbytes

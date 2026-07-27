@@ -1,0 +1,206 @@
+[
+  {
+    "id": "0_medicationqa",
+    "focus_drug": "rivastigmine",
+    "original_question": "how does rivatigmine and otc sleep medicine interact",
+    "persona": "Middle-aged patient. Polite but anxious, wants to understand their health. Tends to give specific, concrete facts about their situation. Speaks in first person, naturally and conversationally.",
+    "transcript": [
+      {
+        "role": "system_kickoff",
+        "text": "The patient walked in. Greet them and ask what brings them in."
+      },
+      {
+        "role": "doctor",
+        "text": "Hello! What brings you here today?"
+      },
+      {
+        "role": "patient",
+        "text": "Hi there, Doc. I appreciate you seeing me on such short notice. It's about my medication, actually. You remember that rivastigmine you prescribed for my Parkinson's? Well, it's been a godsend with those tremors, but now I'm having trouble sleeping. So, I picked up some over-the-counter sleep aids this morning at the pharmacy. But I'm not sure how well they'll play together, so to speak."
+      },
+      {
+        "role": "doctor",
+        "text": "What other medications are you currently taking?"
+      },
+      {
+        "role": "patient",
+        "text": "Oh, just the rivastigmine, Doc. I've been on it for about six months now, and it's made a real difference with my tremors. But this insomnia thing is new – started keeping me up nights maybe a month ago."
+      },
+      {
+        "role": "doctor",
+        "text": " When did you start taking the over-the-counter sleep aids?"
+      },
+      {
+        "role": "patient",
+        "text": "Oh, I picked them up just this morning, Doc. Figured it was worth a shot since this insomnia has been keeping me awake at night."
+      },
+      {
+        "role": "doctor",
+        "text": " How many nights per week are you having trouble sleeping?"
+      },
+      {
+        "role": "patient",
+        "text": "Well, Doc, it's been happening most nights lately. Probably about five out of seven, I'd say. Just can't seem to catch those Zs like I used to."
+      },
+      {
+        "role": "doctor",
+        "text": "How long has this been going on?"
+      },
+      {
+        "role": "patient",
+        "text": "Oh, Doc, it's been like this for about a month now. I thought maybe it was just stress or something, but then even my usual bedtime routine wasn't helping anymore. Last night was especially rough – couldn't sleep a wink despite the noise from my neighbor's renovation!"
+      },
+      {
+        "role": "doctor",
+        "text": " When did your sleep problems start after?"
+      },
+      {
+        "role": "patient",
+        "text": "Well, Doc, it was just about four weeks ago when I started noticing these sleep issues. I'd lie down around my usual bedtime – you know, around 10 pm – but then it'd take me hours to fall asleep. Some nights, I barely got any shut-eye at all!"
+      },
+      {
+        "role": "system_kickoff",
+        "text": "This is the last turn. Doctor, give your brief assessment."
+      },
+      {
+        "role": "doctor",
+        "text": "Have you been under any additional stress or life changes recently?"
+      }
+    ]
+  },
+  {
+    "id": "1_medicationqa",
+    "focus_drug": "Valium",
+    "original_question": "how does valium affect the brain",
+    "persona": "Middle-aged patient. Polite but anxious, wants to understand their health. Tends to give specific, concrete facts about their situation. Speaks in first person, naturally and conversationally.",
+    "transcript": [
+      {
+        "role": "system_kickoff",
+        "text": "The patient walked in. Greet them and ask what brings them in."
+      },
+      {
+        "role": "doctor",
+        "text": "Hello! What brings you in today?"
+      },
+      {
+        "role": "patient",
+        "text": "Hi there, doc. I've been having some trouble sleeping lately, so my regular doctor prescribed me some Valium to help with that. It's helped with my anxiety a bit, but ever since I started taking it, I've been feeling so groggy every morning. I was wondering if we could talk about that?"
+      },
+      {
+        "role": "doctor",
+        "text": "What dose of Valium are you taking daily?"
+      },
+      {
+        "role": "patient",
+        "text": "Hi doc, thanks for seeing me today. I've been taking 5mg of Valium every night before bed since my doctor prescribed it about a week ago."
+      },
+      {
+        "role": "doctor",
+        "text": "How many hours after taking Valium do you feel groggy?"
+      },
+      {
+        "role": "patient",
+        "text": "Well, doc, it's usually when I wake up in the morning, about 7 or 8 hours after taking my dose before bed. It feels like my head is in a fog and it takes me a while to shake off that sleepy feeling."
+      },
+      {
+        "role": "doctor",
+        "text": "Do you still feel groggy later in the day?"
+      },
+      {
+        "role": "patient",
+        "text": "No, doc, it's just in the mornings when I wake up. By midday, I usually feel more alert and like myself again. But those first few hours are a struggle every day."
+      },
+      {
+        "role": "doctor",
+        "text": " Are you taking any other medications or substances?"
+      },
+      {
+        "role": "patient",
+        "text": "No, doc, just the Valium. I haven't touched any alcohol since starting this medication, and I'm not on anything else."
+      },
+      {
+        "role": "doctor",
+        "text": "Do you have any known allergies?"
+      },
+      {
+        "role": "patient",
+        "text": "No, doc, none that I know of."
+      },
+      {
+        "role": "system_kickoff",
+        "text": "This is the last turn. Doctor, give your brief assessment."
+      },
+      {
+        "role": "doctor",
+        "text": " Do you have any medical conditions?"
+      }
+    ]
+  },
+  {
+    "id": "2_medicationqa",
+    "focus_drug": "morphine",
+    "original_question": "what is morphine",
+    "persona": "Middle-aged patient. Polite but anxious, wants to understand their health. Tends to give specific, concrete facts about their situation. Speaks in first person, naturally and conversationally.",
+    "transcript": [
+      {
+        "role": "system_kickoff",
+        "text": "The patient walked in. Greet them and ask what brings them in."
+      },
+      {
+        "role": "doctor",
+        "text": "Hello! What brings you in today?"
+      },
+      {
+        "role": "patient",
+        "text": "Hi Doctor, thanks for seeing me. I've been dealing with this persistent backache for quite some time now, and I thought it was about time I got a professional's perspective on it."
+      },
+      {
+        "role": "doctor",
+        "text": "I see. Can you tell me when the pain started?"
+      },
+      {
+        "role": "patient",
+        "text": "Well, Doctor, it's been about six months now since this backache started. It was quite sudden actually; I remember waking up one morning and just feeling this dull ache in my lower back."
+      },
+      {
+        "role": "doctor",
+        "text": "On a scale of 1-10, how severe would you rate the pain?"
+      },
+      {
+        "role": "patient",
+        "text": "I'd say it's around a 6 or 7 most days, Doctor. But it gets worse when I'm sitting for too long or after my physical therapy sessions at the clinic. Yesterday was quite bad – they gave me something there to help with the pain, but I must admit, I'm not sure what it was exactly."
+      },
+      {
+        "role": "doctor",
+        "text": " Does the pain radiate anywhere else in your body?"
+      },
+      {
+        "role": "patient",
+        "text": " No, Doctor. It's just my lower back – no shooting pains down my legs or anything like that. But sometimes it feels quite stiff and I have trouble bending over to tie my shoes or pick something up off the floor."
+      },
+      {
+        "role": "doctor",
+        "text": " Does the pain wake you at night?"
+      },
+      {
+        "role": "patient",
+        "text": " Actually Doctor, yes it does sometimes. It'll keep me awake for hours before I finally manage to doze off again. Then in the morning, when I wake up, it's usually there waiting for me already."
+      },
+      {
+        "role": "doctor",
+        "text": " Does hot or cold make a difference with your pain?"
+      },
+      {
+        "role": "patient",
+        "text": "Well, Doctor, actually yes, I've noticed that heat seems to help quite a bit. My physiotherapist suggested it too – I use a heating pad at home sometimes when the pain gets really bad, and it helps to relax my muscles some. Cold doesn't seem to do much for me though; if anything, it just makes my back feel stiff."
+      },
+      {
+        "role": "system_kickoff",
+        "text": "This is the last turn. Doctor, give your brief assessment."
+      },
+      {
+        "role": "doctor",
+        "text": "I see. So far, this sounds like chronic lower back pain with stiffness and muscle tension, likely mechanical in nature. No signs of radiating pain or neurological deficits noted yet. Let's examine you to confirm.\n[DONE]"
+      }
+    ]
+  }
+]

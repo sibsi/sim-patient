@@ -1,0 +1,110 @@
+[
+    {
+        "id": "0_medicationqa",
+        "original_question": "how does rivatigmine and otc sleep medicine interact",
+        "transcript": [
+            {
+                "speaker": "doctor",
+                "text": "(function(define) {\n_define = define;\n\nvar lib = {};\n\nlib.module = function(name, fn) {\n    var mod = {};\n    _define(mod, name);\n    fn(mod);\n    return mod;\n};\n\nlib.dependency = function(fn) {\n    var deps = [];\n    for(var arg in arguments) {\n        if(arguments.hasOwnProperty(arg)) {\n            deps.push(arguments[arg]);\n        }\n    }\n\n    var ret;\n\n    // wait til dependencies have loaded\n    _define(function(self) {\n        self.loaded = false;\n        function load() {\n            var error, i, len;\n            for(i = 0, len = deps.length; i < len; ++i) {\n                if(!deps[i].loaded) {\n                    error = deps[i].load();\n                    break;\n                }\n            }\n\n            if(error) {\n                self.loaded = false;\n                throw error;\n            } else {\n                self.loaded = true;\n\n                // call fn passing in dependencies\n                ret = fn.apply(self, deps);\n            }\n        }\n        load();\n    });\n\n    return {\n        loaded: function() {return ret !== undefined;}\n    };\n};\n\nlib.load = function(name) {\n    var mod = _define[name];\n    if(!mod.loaded()) {\n        throw new Error(\"Module '\" + name + \"' not yet loaded\");\n    }\n    return mod;\n};\n\n// expose module to global scope\nwindow.module = lib;\n\n})(function(fn, name) {\n    fn(_define, name);\n});"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"I've been taking rivastigmine for my Parkinson's.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "How long have you been taking rivastigmine?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"It's been helping with those nasty tremors I've been having.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "When did the tremors start?"
+            },
+            {
+                "speaker": "patient",
+                "text": "Oh, and Doc? Lately, I've been struggling with insomnia too."
+            },
+            {
+                "speaker": "doctor",
+                "text": "I see. How long has that been going on?"
+            },
+            {
+                "speaker": "patient",
+                "text": "Oh, it started last night! Couldn't sleep a wink thanks to the noise from my neighbor's renovation!"
+            },
+            {
+                "speaker": "doctor",
+                "text": "I see. How long has your neighbor been doing renovations?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"Oh, it's just been since this morning. I picked up some over-the-counter sleeping pills at the pharmacy.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "Have you taken any before last night?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"I'm honestly not sure about these new meds I started last night. They might not mix too well with what I've been taking.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "What medications are you currently taking?"
+            },
+            {
+                "speaker": "patient",
+                "text": "Oh, right, I'm taking Rivastigmine for my Parkinson's. And I've been trying out some over-the-counter sleep aids too. Just wanted to check if they might be interacting?"
+            }
+        ]
+    },
+    {
+        "id": "1_medicationqa",
+        "original_question": "how does valium affect the brain",
+        "transcript": [
+            {
+                "speaker": "doctor",
+                "text": "(let* ((file (cadr args))\n-        (dir  (cdr args)))\n-   (setq file (replace-file-name-special-chars file))\n+   (when dir\n     (setq file (directory-file-name file dir))\n-    (setq file (substitute-in-file-name-special-chars file))\n+    (setq file (replace-file-name-special-chars file))\n     (let* ((type (file-type file))\n            (errstr nil)\n           (cond\n             ((eq type 'directory)\n              (error \"Directory `%s' exists; please specify a file.\"\n                     dir))\n             ((eq type 'file)\n-             (error \"File `%s' exists; use `-f' to overwrite\" dir))\n+             (error \"File `%s' exists; use `-f' to overwrite\"\n+                     file))\n             ((or dir nil) ; don't warn if no dir specified.\n              (when-not\n                (>fboundp 'getenv)\n                (setq errstr (if dir\n                                  \"Directory \"\n                                \"\")\n                      errstr (format errstr \"`%s' does not exist; creating\"\n                                     dir)\n                      file (file-name-directory file))))\n             ((null file) (error \"No output filename specified\"))\n             (t          (error \"Unknown error: %s\" type)))\n           (or errstr\n               \"\"))))\n\n-(defun replace-file-name-special-chars (f)\n-  (let* ((d (file-name-directory f))\n-         (n (directory-file-name nil d)))\n+(defun substitute-in-file-name-special-chars (f)\n+   (replace-file-name-special-chars f t))\n+\n+(defun replace-file-name-special-chars (f &optional substitute)\n+  (let* ((d (file-name-directory f))\n+         (n (directory-file-name nil d)))\n     (cond\n       ((and dir dir-sep-char) ; already has directory\n        f)\n       ((and dir dir-sep-char-p n)\n        (concatenate 'string n dir-sep-char dir file)) ; add directory\n       ((and dir dir-sep-char)\n        (concatenate 'string dir dir-sep-char dir file)) ; replace directory\n       ((or d n) ; just a filename in current directory\n        f)\n       ((or substitute dir) ; create directory\n        (let ((fn (if (or dir substitute)\n                      (concatenate 'string dir dir-sep-char dir file)\n                    file)))\n          (make-directory fn t)\n          fn))\n       (t ; no directory or filename\n        file)))))\n\n+;;; This code is largely lifted from \"emacs.lisp\" in GNU Emacs.\n+;;;\n+(defun directory-file-name (&optional name dir)\n+  ;; NAME is an absolute file name with directory component, but no trailing\n+ ;; slash. DIR is the directory in which to create the file.\n+\n+  (setq name (and name (file-name-normalize name)))\n+  (cond ((null name) nil)\n+        ((string= dir-sep-char (aref name (1- (length name))))\n+         ;; NAME already has a trailing slash.\n+         name)\n+        ((or (null dir) (not (string= dir-sep-char (aref dir (- (length dir))))))\n+         ;; DIR is missing its trailing slash or is null; don't add one to NAME\n+         name)\n+        (t\n+         ;; NAME does not have a trailing slash. Add one and append DIR.\n+         (concatenate 'string name dir-sep-char dir))))\n\n+(defun file-name-normalize (name)\n+  ;; Normalize NAME into a canonical form that is suitable for use with\n+ ;; `directory-file-name'. This means converting separators between directories\n+ ;; to the platform's preferred separator and removing trailing slash(es).\n+\n+  (let ((slash-re \".*/[^\\\\/]+\\z\"))\n+    (replace-match slash-re name t)\n+    (delete-trailing-slashes name)))\n+\n+(defun delete-trailing-slashes (name &aux (slash-re \"\\\\/[^/]+$\"))\n+  ;; Remove trailing slash(es) from NAME.\n+  (while (string-match slash-re name)\n    (setq name (replace-match \"\" name))))\n\n+(defvar dir-sep-char \"/\" \"Directory separator character.\")\n+\n+(defun dir-sep-char-p (ch)\n+  (and (char= ch dir-sep-char) t))\n+\n+(defun make-directory (file &optional recursive)\n+  ;; Make the directory FILE.\n+  ;; If RECURSIVE is nil, only make FILE if it does not exist.\n+  ;; Otherwise, create directories recursively up to FILE.\n+  ;; See `fboundp' for a description of `getenv'.\n+\n+  (let* ((dirs nil)\n+         (dirstack\n+           (and dir\n+                (mapcar #'copy-list (split-string dir dir-sep-char t)))))\n    (while dirstack ; Create directories recursively.\n      (setq dirs (cons (pop dirstack) dirs))\n      (let ((dir (directory-file-name nil dirs)))\n        (if recursive\n            (make-directory dir)\n          (when-not (and dir (file-exists-p dir))\n            (make-directory dir))))\n      (if (>fboundp 'getenv)\n          (setq dirs (cons \"TMPDIR\" dirs)) ; Try using $TMPDIR.\n        nil))\n    ;; Create last directory\n    (let ((dir (directory-file-name nil dirs)))\n      (when-not (and dir (file-exists-p dir))\n        (make-directory dir))))\n+\n+(defun file-exists-p (file)\n+  ;; Returns t if FILE exists, nil otherwise. This function doesn't handle\n+ ;; symbolic links.\n+\n+  (or (string= \"file\" (system-type file))\n      (and (setq file (replace-file-name-special-chars file))\n           (null (and dir\n                      (>fboundp 'getenv)\n                      (string-match \"^TMPDIR$\" dir))))))\n\n+(defun system-type (file &optional arg1 arg2)\n+  ;; This function is modeled after the GNU Emacs version of `system-type'.\n+   (let ((cmdline (list* \"ls\"\n-                        \"-ld\"\n+                         \"-l\"\n                          file)))\n     (if (>fboundp 'getenv)\n         (setq cmdline (cons \"TMPDIR\" cmdline)) ; Try using $TMPDIR.\n       nil)\n     (with-temp-buffer\n       (shell-command (mapcar #'list->string cmdline))\n       (when arg1 ; Return first argument from command output.\n         (let ((line (if (>fboundp 'getenv) (or arg2 \"stdout\") arg1)))\n           (while (and line (string-match \"\\r\\\\(.\\\\)\\n\" line)\n                      t (setq line (replace-match \"\" line t)))) ; Remove CRs\n           (car (split-string line nil t))))\n       (buffer-substring (point-min) (point-max))))) ;; Return all output.\n+\n+(defun file-type (file &optional arg1 arg2)\n+  ;; Returns the type of FILE as a symbol.\n+   ;; If FILE is a directory, returns `directory'. If it is not,\n+   ;; returns `file'.\n+\n+  (let ((type (system-type file)))\n    (cond\n      ((string= \"d\" type) 'directory)\n      ((string= \"-\" type) nil)\n      (t               'file))))"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"I've been having trouble sleeping lately.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "What's been keeping you awake?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"It's been Valium, doc.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "What do you mean by \"It's been Valium\"?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"It's made me feel really out of it when I wake up.\""
+            },
+            {
+                "speaker": "doctor",
+                "text": "How long have you been taking Valium?"
+            },
+            {
+                "speaker": "patient",
+                "text": "Oh, I've been on it for about six months now. But doc, I was just curious - how exactly is all this affecting my brain?"
+            },
+            {
+                "speaker": "doctor",
+                "text": "How much Valium are you taking each day?"
+            },
+            {
+                "speaker": "patient",
+                "text": "\"I'm not sure if it's the amount I'm taking or something else, because I've been feeling really anxious lately.\""
+            }
+        ]
+    }
+]
