@@ -1,0 +1,296 @@
+{
+  "patient_id": 133425,
+  "age": 28,
+  "sex": "F",
+  "diagnosis": "Tuberculosis",
+  "differential_diagnosis": [
+    [
+      "Tuberculosis",
+      0.13622675902987222
+    ],
+    [
+      "Bronchitis",
+      0.12650306713164428
+    ],
+    [
+      "Pneumonia",
+      0.0954393974515937
+    ],
+    [
+      "Bronchiectasis",
+      0.08600235811641133
+    ],
+    [
+      "Acute pulmonary edema",
+      0.0837170952064085
+    ],
+    [
+      "Pulmonary embolism",
+      0.08042324228552446
+    ],
+    [
+      "Bronchospasm / acute asthma exacerbation",
+      0.07425928709077269
+    ],
+    [
+      "Atrial fibrillation",
+      0.07309263562891584
+    ],
+    [
+      "Guillain-Barré syndrome",
+      0.053887799048331304
+    ],
+    [
+      "Acute dystonic reactions",
+      0.053887799048331304
+    ],
+    [
+      "Myocarditis",
+      0.053887799048331304
+    ],
+    [
+      "Myasthenia gravis",
+      0.053887799048331304
+    ],
+    [
+      "PSVT",
+      0.028784961865531946
+    ]
+  ],
+  "source_evidences": [
+    "E_2",
+    "E_44",
+    "E_45",
+    "E_61",
+    "E_66",
+    "E_78",
+    "E_91",
+    "E_162",
+    "E_201",
+    "E_204_@_V_10"
+  ],
+  "name": "Petra",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_2",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you infected with the human immunodeficiency virus (HIV)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_2",
+      "statement": "I am HIV positive.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_44",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you take corticosteroids?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_44",
+      "statement": "I take corticosteroids.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_45",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you been coughing up blood?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_45",
+      "statement": "I have been coughing up blood.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_61",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you currently using intravenous drugs?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_61",
+      "statement": "I currently use intravenous drugs.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_66",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_66",
+      "statement": "I am short of breath and have real difficulty breathing.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I drink alcohol heavily and have a problem with alcohol.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_91",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a fever (either felt or measured with a thermometer)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_91",
+      "statement": "I have had a fever.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_162",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you had an involuntary weight loss over the last 3 months?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_162",
+      "statement": "I have lost weight over the last three months without trying to.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_201",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a cough?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_201",
+      "statement": "I have a cough.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X0",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I don't smoke cigarettes.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_79"
+      ]
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I work as a cashier in a hardware store."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live alone."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My best friend works as a hairdresser."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I like watching true-crime documentaries."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I go to the cinema with friends most Saturdays."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "I started working extra shifts at the store this month."
+    },
+    {
+      "life_id": "L6",
+      "field": "symptom_stairs",
+      "statement": "I had to stop halfway up the stairs to my flat last week."
+    },
+    {
+      "life_id": "L7",
+      "field": "symptom_noticed",
+      "statement": "My best friend said I sounded out of breath on the phone."
+    },
+    {
+      "life_id": "L8",
+      "field": "drinking_money",
+      "statement": "I've spent money I needed for rent on alcohol."
+    },
+    {
+      "life_id": "L9",
+      "field": "drinking_concern",
+      "statement": "My best friend keeps telling me I drink too much."
+    }
+  ]
+}

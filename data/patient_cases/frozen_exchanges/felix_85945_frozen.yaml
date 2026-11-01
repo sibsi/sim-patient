@@ -1,0 +1,102 @@
+name: felix_85945_frozen
+patient_id: 85945
+pair: tuberculosis            # paired with petra_133425; same type order
+
+added_shards:           # DDXPlus convention: absent binary evidence = "no"
+  - shard_id: X0
+    evidence_code: E_79
+    statement: "I don't smoke cigarettes."
+    is_negative: true
+  - shard_id: X2
+    statement: "No, I don't have any long-term health conditions."
+    is_negative: true
+
+exchanges:
+  - turn: 1
+    type: opening
+    question: "Hello Felix, I see you've come in because you've been coughing up blood. Can you tell me a bit about that?"
+    fact_ids: [M1]
+    background_fact_ids: [L6, L7, M3]
+
+  - turn: 2
+    type: broad
+    question: "Is there anything else you've noticed about your health lately?"
+    fact_ids: [M7]
+    background_fact_ids: [M6]
+
+  - turn: 3
+    type: focused
+    question: "How has your breathing been? Do you get short of breath?"
+    fact_ids: [M3]
+    background_fact_ids: [L0]
+
+  - turn: 4
+    type: focused
+    question: "Have you had any fevers or sweats?"
+    fact_ids: [M5]
+
+  - turn: 5
+    type: focused
+    question: "Have you lost any weight without trying to?"
+    fact_ids: [M6]
+
+  - turn: 6
+    type: focused
+    question: "Have you been abroad at all in the last few weeks?"
+    fact_ids: [M8]
+
+  - turn: 7
+    type: focused
+    question: "Do you take any regular medication?"
+    fact_ids: [M0]
+
+  - turn: 8
+    type: duration
+    question: "And roughly how long has all this been going on?"
+    fact_ids: []
+    tags: [trap_duration]
+
+  - turn: 9
+    type: history
+    question: "Do you have any long-term health conditions, or anything you're being treated for?"
+    fact_ids: [X2]
+    tags: [trap_binary]
+
+  - turn: 10
+    type: lifestyle
+    question: "Just a couple of questions that can sometimes affect your symptoms. Do you smoke, or do you use any drugs?"
+    fact_ids: [X0, M2]
+    tags: [trap_binary, sensitive]
+
+  - turn: 11
+    type: sensitive
+    question: "And how much alcohol do you drink in a typical week?"
+    fact_ids: [M4]
+    background_fact_ids: [L8, L9]
+    tags: [sensitive]
+
+  - turn: 12
+    type: impact
+    question: "How has all this been affecting your day-to-day life, at work and at home?"
+    fact_ids: [L0, L1]
+    background_fact_ids: [L3]
+
+  - turn: 13
+    type: coping
+    question: "In general, are you managing OK at the moment? Is there anything else going on in your life right now?"
+    fact_ids: [L4, L5]
+
+  - turn: 14
+    type: ice
+    question: "What made you decide to come in now? And do you have any thoughts yourself about what might be behind it?"
+    fact_ids: []
+
+  - turn: 15
+    type: plan
+    question: "With a cough like this, I'd like to get a chest X-ray and some tests on your blood and on what you're coughing up. Until we have the results, it would be best to stay off work and keep close contact with other people to a minimum, in case it's an infection that can spread. What do you make of that, and is there anything you'd like to ask me about it?"
+    fact_ids: []
+
+  - turn: 16
+    type: safety_net
+    question: "If you cough up larger amounts of blood, or your breathing gets much worse, please come back straight away. Before we finish, is there anything else you'd like to tell me?"
+    fact_ids: []

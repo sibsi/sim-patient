@@ -1,0 +1,533 @@
+{
+  "patient_id": 131469,
+  "age": 54,
+  "sex": "F",
+  "diagnosis": "HIV (initial infection)",
+  "differential_diagnosis": [
+    [
+      "HIV (initial infection)",
+      0.3766649925125732
+    ],
+    [
+      "Anemia",
+      0.326735938309583
+    ],
+    [
+      "Cluster headache",
+      0.27284339812660297
+    ],
+    [
+      "Sarcoidosis",
+      0.023755671051240844
+    ]
+  ],
+  "source_evidences": [
+    "E_9",
+    "E_27",
+    "E_53",
+    "E_54_@_V_154",
+    "E_54_@_V_184",
+    "E_54_@_V_198",
+    "E_55_@_V_25",
+    "E_55_@_V_26",
+    "E_55_@_V_38",
+    "E_55_@_V_89",
+    "E_56_@_3",
+    "E_57_@_V_123",
+    "E_58_@_8",
+    "E_59_@_1",
+    "E_61",
+    "E_88",
+    "E_115",
+    "E_129",
+    "E_130_@_V_138",
+    "E_131_@_V_10",
+    "E_132_@_3",
+    "E_133_@_V_90",
+    "E_133_@_V_95",
+    "E_133_@_V_110",
+    "E_133_@_V_111",
+    "E_133_@_V_117",
+    "E_134_@_6",
+    "E_135_@_V_12",
+    "E_136_@_0",
+    "E_144",
+    "E_162",
+    "E_189",
+    "E_204_@_V_10"
+  ],
+  "name": "Susanne",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_9",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have swollen or painful lymph nodes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_9",
+      "statement": "My lymph nodes are swollen and painful.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_27",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you ever had a sexually transmitted infection?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_27",
+      "statement": "I have had a sexually transmitted infection.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_154",
+        "V_184",
+        "V_198"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "tedious, a pulse, exhausting",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my head and my neck feels nagging, pulsing, and exhausting.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_25",
+        "V_26",
+        "V_38",
+        "V_89"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "back of head, back of the neck, cervical spine, forehead",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in my head and my neck.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "3"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "3",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my head and my neck is about 3 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_123"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "nowhere",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my head and my neck doesn't spread anywhere else.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "8"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "8",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my head and my neck is in a fairly specific spot.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "1"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "1",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my head and my neck came on very gradually.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_61",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you currently using intravenous drugs?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_61",
+      "statement": "I currently use intravenous drugs.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_88",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_88",
+      "statement": "I am too tired to do usual activities; I stay in bed all day.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_115",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you had unprotected sex with more than one partner in the last 6 months?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_115",
+      "statement": "I have had unprotected sex with more than one partner in the last six months.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_129",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "I have lesions, redness, and skin problems related to why I am here.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_130",
+      "value_codes": [
+        "V_138"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "What color is the rash?",
+      "original_answer": "pale",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My rash is pale.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M14",
+      "evidence_code": "E_131",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Do your lesions peel off?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My lesions don't peel.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M15",
+      "evidence_code": "E_132",
+      "value_codes": [
+        "3"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Is the rash swollen?",
+      "original_answer": "3",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My rash is slightly swollen.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M16",
+      "evidence_code": "E_133",
+      "value_codes": [
+        "V_90",
+        "V_95",
+        "V_110",
+        "V_111",
+        "V_117"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Where is the affected region located?",
+      "original_answer": "lower gum, labia majora(R), internal cheek(R), internal cheek(L), upper lip(R)",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "The affected area is on my mouth and my genital area.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M17",
+      "evidence_code": "E_134",
+      "value_codes": [
+        "6"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain caused by the rash?",
+      "original_answer": "6",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My pain from the rash is about 6 on a scale of 0 to 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M18",
+      "evidence_code": "E_135",
+      "value_codes": [
+        "V_12"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Is the lesion (or are the lesions) larger than 1cm?",
+      "original_answer": "Y",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My lesions are bigger than a centimetre across.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M19",
+      "evidence_code": "E_136",
+      "value_codes": [
+        "0"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How severe is the itching?",
+      "original_answer": "0",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My rash doesn't itch.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M20",
+      "evidence_code": "E_144",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have diffuse (widespread) muscle pain?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_144",
+      "statement": "I have muscle pain all over.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M21",
+      "evidence_code": "E_162",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you had an involuntary weight loss over the last 3 months?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_162",
+      "statement": "I have lost weight over the last three months without trying to.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M22",
+      "evidence_code": "E_189",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you had sexual intercourse with an HIV-positive partner in the past 12 months?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_189",
+      "statement": "I have had sex with an HIV-positive partner in the past twelve months.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M23",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X0",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I don't smoke cigarettes.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_79"
+      ]
+    },
+    {
+      "shard_id": "X2",
+      "evidence_code": null,
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": null,
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": null,
+      "statement": "No, I don't have any long-term health conditions.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I work as a bookkeeper for a furniture company."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live with my adult son, Tobias."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My sister calls me every Sunday."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I enjoy doing jigsaw puzzles."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I go to a book club once a month."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "My son started a new job last week."
+    },
+    {
+      "life_id": "L6",
+      "field": "relationship_history",
+      "statement": "I separated from my husband two years ago."
+    },
+    {
+      "life_id": "L7",
+      "field": "dating",
+      "statement": "I've been meeting people through a dating app."
+    }
+  ]
+}

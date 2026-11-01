@@ -1,0 +1,408 @@
+{
+  "patient_id": 60370,
+  "age": 24,
+  "sex": "F",
+  "diagnosis": "GERD",
+  "differential_diagnosis": [
+    [
+      "GERD",
+      0.265800383664093
+    ],
+    [
+      "Bronchitis",
+      0.20900725932935896
+    ],
+    [
+      "Pericarditis",
+      0.15989720592551906
+    ],
+    [
+      "Unstable angina",
+      0.12738006123582654
+    ],
+    [
+      "Tuberculosis",
+      0.0821304297477141
+    ],
+    [
+      "Possible NSTEMI / STEMI",
+      0.0821304297477141
+    ],
+    [
+      "Pancreatic neoplasm",
+      0.07365423034977407
+    ]
+  ],
+  "source_evidences": [
+    "E_53",
+    "E_54_@_V_112",
+    "E_54_@_V_161",
+    "E_54_@_V_179",
+    "E_54_@_V_181",
+    "E_54_@_V_193",
+    "E_55_@_V_103",
+    "E_55_@_V_104",
+    "E_55_@_V_187",
+    "E_55_@_V_197",
+    "E_56_@_7",
+    "E_57_@_V_29",
+    "E_57_@_V_101",
+    "E_58_@_5",
+    "E_59_@_5",
+    "E_70",
+    "E_79",
+    "E_167",
+    "E_173",
+    "E_201",
+    "E_204_@_V_10",
+    "E_215",
+    "E_217"
+  ],
+  "name": "Sabine",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_112",
+        "V_161",
+        "V_179",
+        "V_181",
+        "V_193"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "haunting, sensitive, a knife stroke, burning, sickening",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my belly feels throbbing, like a stab, and burning.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_103",
+        "V_104",
+        "V_187",
+        "V_197"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "hypochondrium(R), hypochondrium(L), belly, epigastric",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in my belly.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "7"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "7",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my belly is about 7 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_29",
+        "V_101"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "lower chest, upper chest",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my belly spreads to my chest.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "5"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "5",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my belly covers a fairly wide area, not one exact spot.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "5"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "5",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my belly came on gradually, over a while.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_70",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you significantly overweight compared to people of the same height as you?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_70",
+      "statement": "I am significantly overweight for my height.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I smoke cigarettes.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_167",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you think you are pregnant or are you currently pregnant?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_167",
+      "statement": "I am pregnant.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_173",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_173",
+      "statement": "I get a burning feeling that starts in my stomach and rises into my throat, sometimes with a bitter taste in my mouth.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_201",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a cough?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_201",
+      "statement": "I have a cough.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_215",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have symptoms that get worse after eating?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_215",
+      "statement": "My symptoms get worse after I eat.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M14",
+      "evidence_code": "E_217",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Are your symptoms worse when lying down and alleviated while sitting up?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_217",
+      "statement": "My symptoms are worse when I lie down and better when I sit up.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X1",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I don't drink alcohol.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_78"
+      ]
+    },
+    {
+      "shard_id": "X2",
+      "evidence_code": null,
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": null,
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": null,
+      "statement": "No, I don't have any long-term health conditions.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X3",
+      "evidence_code": null,
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you noticed light red blood or blood clots in your stool? Have you recently had stools that were black (like coal)?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": null,
+      "statement": "I haven't noticed any blood in my stool or black stools.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_179",
+        "E_140"
+      ]
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I work as a hotel receptionist."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live with my boyfriend, Jonas."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My best friend Lena lives in the flat next door."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I enjoy watching fantasy series."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I go to a ceramics class on Thursday evenings."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "Jonas and I started looking for a bigger flat this month."
+    },
+    {
+      "life_id": "L6",
+      "field": "pregnancy_news",
+      "statement": "Jonas and I found out about the pregnancy a few weeks ago."
+    },
+    {
+      "life_id": "L7",
+      "field": "pregnancy_tracking",
+      "statement": "I've downloaded a pregnancy app to keep track of the weeks."
+    },
+    {
+      "life_id": "L8",
+      "field": "smoking_context",
+      "statement": "I've smoked since I was a teenager."
+    }
+  ]
+}

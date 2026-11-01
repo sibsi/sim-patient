@@ -1,40 +1,45 @@
-# neutral, first-person, personality-free statement templates for all 223 DDXPlus evidences
-# LLM-drafted & manually reviewed
+# Neutral, first-person, personality-free statement templates for all 223 DDXPlus evidences.
+# First-person wording adapted from the existing reviewed statement fields.
+# antecedent_kind (antecedents only): 
+#   medical_history = conditions, past illnesses, surgeries, medication, family medical_history;
+#   non_medical = lifestyle, habits, living/work situation, contacts, travel, sexual behaviour;
+# persona_overlap: the evidence describes a trait expression (NEO-PI-R facet of a manipulated Big Five trait). 
+#   Cases containing it are excluded from evaluation sampling, because the case content would be indistinguishable from persona expression.
 E_91:
   data_type: B
   is_antecedent: false
   original_question: Do you have a fever (either felt or measured with a thermometer)?
   format: binary
-  statement: I have had a fever.
+  statement: "I have had a fever."
 E_55:
   data_type: M
   is_antecedent: false
   original_question: Do you feel pain somewhere?
   format: multi
-  statement: I have pain in {values}.
+  statement: "I have pain in {values}."
   negative_values:
     - V_123
-  negative_statement: I don't have any pain.
+  negative_statement: "I have no pain."
 E_53:
   data_type: B
   is_antecedent: false
   original_question: Do you have pain somewhere, related to your reason for consulting?
-  statement: I have some pain.
+  statement: "I have some pain."
 E_57:
   data_type: M
   is_antecedent: false
   original_question: Does the pain radiate to another location?
   format: multi
-  statement: The pain spreads to {values}.
+  statement: "My pain spreads to {values}."
   negative_values:
     - V_123
-  negative_statement: The pain doesn't spread anywhere else.
+  negative_statement: "My pain doesn't spread anywhere else."
 E_54:
   data_type: M
   is_antecedent: false
   original_question: "Characterize your pain:"
   format: multi-inline
-  statement: The pain feels {values}.
+  statement: "My pain feels {values}."
   negative_values:
     - V_11
   negative_statement: null
@@ -62,19 +67,19 @@ E_59:
   format: binned
   bins:
     - max: 2
-      statement: The pain came on very gradually.
+      statement: "My pain came on very gradually."
     - max: 5
-      statement: The pain came on gradually, over a while.
+      statement: "My pain came on gradually, over a while."
     - max: 8
-      statement: The pain came on fairly quickly.
+      statement: "My pain came on fairly quickly."
     - max: 10
-      statement: The pain came on suddenly, all at once.
+      statement: "My pain came on suddenly, all at once."
 E_56:
   data_type: C
   is_antecedent: false
   original_question: How intense is the pain?
   format: numeric
-  statement: On a scale of 0 to 10, the pain is about {article}{value}.
+  statement: "My pain intensity is about {value} on a scale of 0 to 10."
 E_58:
   data_type: C
   is_antecedent: false
@@ -82,28 +87,28 @@ E_58:
   format: binned
   bins:
     - max: 2
-      statement: I can't really pinpoint the pain, it covers a wide area.
+      statement: "I cannot pinpoint the pain; it covers a wide area."
     - max: 5
-      statement: The pain covers a fairly wide area, not one exact spot.
+      statement: "My pain covers a fairly wide area, not one exact spot."
     - max: 8
-      statement: The pain is in a fairly specific spot.
+      statement: "My pain is in a fairly specific spot."
     - max: 10
-      statement: I can point to exactly where the pain is.
+      statement: "I can pinpoint exactly where the pain is."
 E_159:
   data_type: B
   is_antecedent: false
   original_question: Did you lose consciousness?
   format: binary
-  statement: I lost consciousness.
+  statement: "I lost consciousness."
 E_133:
   data_type: M
   is_antecedent: false
   original_question: Where is the affected region located?
   format: multi
-  statement: The affected area is on {values}.
+  statement: "The affected area is on {values}."
   negative_values:
     - V_123
-  negative_statement: I don't have any affected area.
+  negative_statement: "I have no affected area."
 E_129:
   data_type: B
   is_antecedent: false
@@ -111,13 +116,13 @@ E_129:
     Do you have any lesions, redness or problems on your skin that you believe are related
     to the condition you are consulting for?
   format: binary
-  statement: I have lesions, redness, or skin problems that are related to why I'm here.
+  statement: "I have lesions, redness, and skin problems related to why I am here."
 E_130:
   data_type: C
   is_antecedent: false
   original_question: What color is the rash?
   format: valued
-  statement: The rash is {value}.
+  statement: "My rash is {value}."
   negative_values:
     - V_11
   negative_statement: null
@@ -133,8 +138,8 @@ E_134:
   is_antecedent: false
   original_question: How intense is the pain caused by the rash?
   format: numeric
-  statement: On a scale of 0 to 10, the pain from the rash is about {article}{value}.
-  zero_statement: The rash isn't painful.
+  statement: "My pain from the rash is about {value} on a scale of 0 to 10."
+  zero_statement: "My rash isn't painful."
 E_132:
   data_type: C
   is_antecedent: false
@@ -142,20 +147,20 @@ E_132:
   format: binned
   bins:
     - max: 0
-      statement: The rash isn't swollen.
+      statement: "My rash isn't swollen."
     - max: 3
-      statement: The rash is slightly swollen.
+      statement: "My rash is slightly swollen."
     - max: 6
-      statement: The rash is moderately swollen.
+      statement: "My rash is moderately swollen."
     - max: 10
-      statement: The rash is very swollen.
+      statement: "My rash is very swollen."
 E_136:
   data_type: C
   is_antecedent: false
   original_question: How severe is the itching?
   format: numeric
-  statement: On a scale of 0 to 10, the itching is about {article}{value}.
-  zero_statement: The rash doesn't itch.
+  statement: "My itching intensity is about {value} on a scale of 0 to 10."
+  zero_statement: "My rash doesn't itch."
 E_135:
   data_type: C
   is_antecedent: false
@@ -172,14 +177,14 @@ E_131:
   format: valued
   statement: "{value}"
   value_phrasings:
-    V_10: My lesions don't peel.
-    V_12: My lesions peel.
+    V_10: "My lesions don't peel."
+    V_12: "My lesions peel."
 E_154:
   data_type: B
   is_antecedent: false
   original_question: Is your skin much paler than usual?
   format: binary
-  statement: My skin is much paler than usual.
+  statement: "My skin is much paler than usual."
 E_155:
   data_type: B
   is_antecedent: false
@@ -187,85 +192,86 @@ E_155:
     Do you feel your heart is beating fast (racing), irregularly (missing a beat) or
     do you feel palpitations?
   format: binary
-  statement: My heart feels like it's racing, skipping beats, or I notice palpitations.
+  statement: "I feel my heart racing or skipping beats, or notice palpitations."
 E_210:
   data_type: B
   is_antecedent: false
   original_question: Have you recently thrown up blood or something resembling coffee beans?
   format: binary
-  statement: I have thrown up blood, or something that looked like coffee grounds.
+  statement: "I have thrown up blood, or something that looked like coffee grounds."
 E_140:
   data_type: B
   is_antecedent: false
   original_question: Have you recently had stools that were black (like coal)?
   format: binary
-  statement: My stools have been black, like coal.
+  statement: "My stools have been black, like coal."
 E_51:
   data_type: B
   is_antecedent: false
   original_question: Have you had diarrhea or an increase in stool frequency?
   format: binary
-  statement: I have had diarrhea, or I'm passing stools more often than usual.
+  statement: "I have had diarrhea, or am passing stools more often than usual."
 E_75:
   data_type: B
   is_antecedent: false
   original_question: Do you feel like you are (or were) choking or suffocating?
   format: binary
-  statement: I feel like I'm choking or suffocating.
+  statement: "I feel as though I am choking or suffocating."
 E_89:
   data_type: B
   is_antecedent: false
   original_question: Do you constantly feel fatigued or do you have non-restful sleep?
   format: binary
-  statement: I feel tired all the time, and my sleep isn't restful.
+  statement: "I feel tired all the time; my sleep is not restful."
 E_114:
   data_type: B
   is_antecedent: false
+  persona_overlap: "neuroticism - anger/hostility, depression"
   original_question: Are you more irritable or has your mood been very unstable recently?
   format: binary
-  statement: I've been more irritable than usual, and my mood has been unstable.
+  statement: "I have been more irritable than usual; my mood has been unstable."
 E_82:
   data_type: B
   is_antecedent: false
   original_question: Do you feel lightheaded and dizzy or do you feel like you are about to faint?
   format: binary
-  statement: I feel lightheaded and dizzy, like I might faint.
+  statement: "I feel lightheaded and dizzy, as though I might faint."
 E_148:
   data_type: B
   is_antecedent: false
   original_question: Are you feeling nauseous or do you feel like vomiting?
   format: binary
-  statement: I feel nauseous, like I might vomit.
+  statement: "I feel nauseous, as though I might vomit."
 E_94:
   data_type: B
   is_antecedent: false
   original_question: Have you had chills or shivers?
   format: binary
-  statement: I've had chills and shivers.
+  statement: "I have had chills and shivers."
 E_220:
   data_type: B
   is_antecedent: false
   original_question: Do you have pain that is increased when you breathe in deeply?
   format: binary
-  statement: The pain gets worse when I breathe in deeply.
+  statement: "My pain gets worse when I breathe in deeply."
 E_161:
   data_type: B
   is_antecedent: false
   original_question: Have you recently had a loss of appetite or do you get full more quickly then usually?
   format: binary
-  statement: I've lost my appetite, and I get full more quickly than usual.
+  statement: "I have lost my appetite and get full more quickly than usual."
 E_179:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed light red blood or blood clots in your stool?
   format: binary
-  statement: I've noticed bright red blood or blood clots in my stool.
+  statement: "I have noticed bright red blood in my stool."
 E_162:
   data_type: B
   is_antecedent: false
   original_question: Have you had an involuntary weight loss over the last 3 months?
   format: binary
-  statement: I've lost weight over the last three months without trying to.
+  statement: "I have lost weight over the last three months without trying to."
 E_173:
   data_type: B
   is_antecedent: false
@@ -274,14 +280,13 @@ E_173:
     throat, and can be associated with a bitter taste in your mouth?
   format: binary
   statement:
-    I get a burning feeling that starts in my stomach and rises into my throat, sometimes with
-    a bitter taste in my mouth.
+    "I get a burning feeling that starts in my stomach and rises into my throat, sometimes with a bitter taste in my mouth."
 E_33:
   data_type: B
   is_antecedent: false
   original_question: Do you have pain that improves when you lean forward?
   format: binary
-  statement: The pain gets better when I lean forward.
+  statement: "My pain gets better when I lean forward."
 E_218:
   data_type: B
   is_antecedent: false
@@ -289,13 +294,13 @@ E_218:
     Do you have symptoms that are increased with physical exertion but alleviated with
     rest?
   format: binary
-  statement: My symptoms get worse with physical exertion and better when I rest.
+  statement: "My symptoms get worse with physical exertion and better with rest."
 E_93:
   data_type: B
   is_antecedent: false
   original_question: Do you have numbness, loss of sensation or tingling in the feet?
   format: binary
-  statement: I have numbness or tingling in my feet.
+  statement: "I have numbness or tingling in my feet."
 E_66:
   data_type: B
   is_antecedent: false
@@ -303,31 +308,31 @@ E_66:
     Are you experiencing shortness of breath or difficulty breathing in a significant
     way?
   format: binary
-  statement: I'm short of breath and have real difficulty breathing.
+  statement: "I am short of breath and have real difficulty breathing."
 E_163:
   data_type: B
   is_antecedent: false
   original_question: Have you had any vaginal discharge?
   format: binary
-  statement: I've had vaginal discharge.
+  statement: "I have had vaginal discharge."
 E_30:
   data_type: B
   is_antecedent: false
   original_question: Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?
   format: binary
-  statement: My abdomen feels bloated and swollen from the inside.
+  statement: "My abdomen feels bloated and swollen from the inside."
 E_127:
   data_type: B
   is_antecedent: false
   original_question: Do you feel that your eyes produce excessive tears?
   format: binary
-  statement: My eyes water more than they should.
+  statement: "My eyes water more than they should."
 E_181:
   data_type: B
   is_antecedent: false
   original_question: Do you have nasal congestion or a clear runny nose?
   format: binary
-  statement: My nose is blocked, or I have a clear runny nose.
+  statement: "I have a blocked nose or a clear runny nose."
 E_88:
   data_type: B
   is_antecedent: false
@@ -335,7 +340,7 @@ E_88:
     Do you feel so tired that you are unable to do your usual activities or are you
     stuck in your bed all day long?
   format: binary
-  statement: I'm so tired that I can't do my usual activities; I stay in bed all day.
+  statement: "I am too tired to do usual activities; I stay in bed all day."
 E_43:
   data_type: B
   is_antecedent: false
@@ -343,7 +348,7 @@ E_43:
     Have you lost consciousness associated with violent and sustained muscle contractions
     or had an absence episode?
   format: binary
-  statement: I lost consciousness with violent, sustained muscle contractions, or I had an absence episode.
+  statement: "I lost consciousness with violent, sustained muscle contractions, and had an absence episode."
 E_156:
   data_type: B
   is_antecedent: false
@@ -351,85 +356,88 @@ E_156:
     Have you had weakness or paralysis on one side of the face, which may still be present
     or completely resolved?
   format: binary
-  statement: I've had weakness or paralysis on one side of my face.
+  statement: "I have had weakness or paralysis on one side of my face."
 E_144:
   data_type: B
   is_antecedent: false
   original_question: Do you have diffuse (widespread) muscle pain?
   format: binary
-  statement: I have muscle pain all over.
+  statement: "I have muscle pain all over."
 E_216:
   data_type: B
   is_antecedent: false
   original_question: Do you have pain that is increased with movement?
   format: binary
-  statement: The pain gets worse when I move.
+  statement: "My pain gets worse with movement."
 E_201:
   data_type: B
   is_antecedent: false
   original_question: Do you have a cough?
   format: binary
-  statement: I have a cough.
+  statement: "I have a cough."
 E_217:
   data_type: B
   is_antecedent: false
   original_question: Are your symptoms worse when lying down and alleviated while sitting up?
   format: binary
-  statement: My symptoms are worse when I lie down and better when I sit up.
+  statement: "My symptoms are worse when I lie down and better when I sit up."
 E_215:
   data_type: B
   is_antecedent: false
   original_question: Do you have symptoms that get worse after eating?
   format: binary
-  statement: My symptoms get worse after I eat.
+  statement: "My symptoms get worse after I eat."
 E_64:
   data_type: B
   is_antecedent: false
   original_question: Do you feel out of breath with minimal physical effort?
   format: binary
-  statement: I get out of breath with very little effort.
+  statement: "I get out of breath with very little effort."
 E_96:
   data_type: B
   is_antecedent: false
   original_question: Have you gained weight recently?
   format: binary
-  statement: I've gained weight recently.
+  statement: "I have gained weight recently."
 E_16:
   data_type: B
   is_antecedent: true
+  persona_overlap: "neuroticism - anxiety"
+  antecedent_kind: medical_history
   original_question: Do you feel anxious?
   format: binary
-  statement: I feel anxious.
+  statement: "I feel anxious."
 E_50:
   data_type: B
   is_antecedent: false
   original_question: Have you had significantly increased sweating?
   format: binary
-  statement: I've been sweating a lot more than usual.
+  statement: "I have been sweating a lot more than usual."
 E_97:
   data_type: B
   is_antecedent: false
   original_question: Do you have a sore throat?
   format: binary
-  statement: I have a sore throat.
+  statement: "I have a sore throat."
 E_9:
   data_type: B
   is_antecedent: false
   original_question: Do you have swollen or painful lymph nodes?
   format: binary
-  statement: My lymph nodes are swollen or painful.
+  statement: "My lymph nodes are swollen and painful."
 E_76:
   data_type: B
   is_antecedent: false
   original_question: Do you feel slightly dizzy or lightheaded?
   format: binary
-  statement: I feel slightly dizzy and lightheaded.
+  statement: "I feel slightly dizzy and lightheaded."
 E_102:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you consulting because you have high blood pressure?
   format: binary
-  statement: I'm here because of my high blood pressure.
+  statement: "I am consulting because of high blood pressure."
 E_65:
   data_type: B
   is_antecedent: false
@@ -437,13 +445,13 @@ E_65:
     Do you have difficulty swallowing, or have a feeling of discomfort/blockage when
     swallowing?
   format: binary
-  statement: I have difficulty swallowing; it feels blocked or uncomfortable.
+  statement: "I have difficulty swallowing; it feels blocked or uncomfortable."
 E_74:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed a diffuse (widespread) redness in one or both eyes?
   format: binary
-  statement: I've noticed widespread redness in one or both of my eyes.
+  statement: "I have noticed widespread redness in both eyes."
 E_205:
   data_type: B
   is_antecedent: false
@@ -451,13 +459,13 @@ E_205:
     Do you suddenly have difficulty or an inability to open your mouth or have jaw pain
     when opening it?
   format: binary
-  statement: I suddenly can't open my mouth properly, or my jaw hurts when I open it.
+  statement: "I suddenly cannot open my mouth properly, or my jaw hurts when I open it."
 E_63:
   data_type: B
   is_antecedent: false
   original_question: Do you have difficulty articulating words/speaking?
   format: binary
-  statement: I have difficulty speaking and forming words.
+  statement: "I have difficulty speaking and forming words."
 E_128:
   data_type: B
   is_antecedent: false
@@ -465,31 +473,31 @@ E_128:
     Have you ever felt like you were suffocating for a very short time associated with
     inability to breathe or speak?
   format: binary
-  statement: I've had brief episodes where I felt like I was suffocating and couldn't breathe or speak.
+  statement: "I have had brief episodes of feeling as though I am suffocating and being unable to breathe or speak."
 E_190:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed that you produce more saliva than usual?
   format: binary
-  statement: I'm producing more saliva than usual.
+  statement: "I am producing more saliva than usual."
 E_39:
   data_type: B
   is_antecedent: false
   original_question: Have you felt confused or disorientated lately?
   format: binary
-  statement: I've felt confused and disoriented lately.
+  statement: "I have felt confused and disoriented lately."
 E_212:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed that the tone of your voice has become deeper, softer or hoarse?
   format: binary
-  statement: My voice has become deeper, softer, or hoarse.
+  statement: "My voice has become deeper, softer, or hoarse."
 E_206:
   data_type: B
   is_antecedent: false
   original_question: Do you have painful mouth ulcers or sores?
   format: binary
-  statement: I have painful ulcers or sores in my mouth.
+  statement: "I have painful ulcers or sores in my mouth."
 E_52:
   data_type: B
   is_antecedent: false
@@ -497,94 +505,94 @@ E_52:
     Do you have the perception of seeing two images of a single object seen overlapping
     or adjacent to each other (double vision)?
   format: binary
-  statement: I see double, two images of the same thing overlapping or side by side.
+  statement: "I see double: two images of the same thing overlapping or side by side."
 E_203:
   data_type: B
   is_antecedent: false
   original_question: Do you have intense coughing fits?
   format: binary
-  statement: I have intense coughing fits.
+  statement: "I have intense coughing fits."
 E_38:
   data_type: B
   is_antecedent: false
   original_question: Do you have pain or weakness in your jaw?
   format: binary
-  statement: I have pain or weakness in my jaw.
+  statement: "I have pain or weakness in my jaw."
 E_172:
   data_type: B
   is_antecedent: false
   original_question: Do you have a hard time opening/raising one or both eyelids?
   format: binary
-  statement: I have a hard time opening or raising one or both of my eyelids.
+  statement: "I have a hard time opening or raising one or both eyelids."
 E_84:
   data_type: B
   is_antecedent: false
   original_question: Do you feel weakness in both arms and/or both legs?
   format: binary
-  statement: I feel weakness in both arms and both legs.
+  statement: "I feel weakness in both arms and both legs."
 E_90:
   data_type: B
   is_antecedent: false
   original_question: Do your symptoms of muscle weakness increase with fatigue and/or stress?
   format: binary
-  statement: My muscle weakness gets worse with fatigue and stress.
+  statement: "My muscle weakness gets worse with fatigue and stress."
 E_211:
   data_type: B
   is_antecedent: false
   original_question: Have you vomited several times or have you made several efforts to vomit?
   format: binary
-  statement: I've vomited several times, or retched several times.
+  statement: "I have vomited several times, or retched several times."
 E_166:
   data_type: B
   is_antecedent: false
   original_question: Did you vomit after coughing?
   format: binary
-  statement: I vomited after coughing.
+  statement: "I vomited after coughing."
 E_112:
   data_type: B
   is_antecedent: false
   original_question: Do you wheeze while inhaling or is your breathing noisy after coughing spells?
   format: binary
-  statement: I wheeze when I breathe in, or my breathing is noisy after coughing.
+  statement: "I wheeze when I breathe in, or my breathing is noisy after I cough."
 E_178:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed any unusual bleeding or bruising related to your consultation today?
   format: binary
-  statement: I've noticed unusual bleeding or bruising related to why I'm here.
+  statement: "I have noticed unusual bleeding or bruising related to why I am here."
 E_152:
   data_type: M
   is_antecedent: false
   original_question: Where is the swelling located?
   format: multi
-  statement: I have swelling in {values}.
+  statement: "I have swelling in {values}."
   negative_values:
     - V_123
-  negative_statement: I don't have any swelling.
+  negative_statement: "I have no swelling."
 E_151:
   data_type: B
   is_antecedent: false
   original_question: Do you have swelling in one or more areas of your body?
   format: binary
-  statement: I have swelling in one or more areas of my body.
+  statement: "I have swelling in one or more areas of my body."
 E_45:
   data_type: B
   is_antecedent: false
   original_question: Have you been coughing up blood?
   format: binary
-  statement: I've been coughing up blood.
+  statement: "I have been coughing up blood."
 E_194:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed a high pitched sound when breathing in?
   format: binary
-  statement: I've noticed a high-pitched sound when I breathe in.
+  statement: "I have noticed a high-pitched sound when breathing in."
 E_83:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed weakness in your facial muscles and/or eyes?
   format: binary
-  statement: I've noticed weakness in my facial muscles and my eyes.
+  statement: "I have noticed weakness in my facial muscles and my eyes."
 E_157:
   data_type: B
   is_antecedent: false
@@ -592,7 +600,7 @@ E_157:
     Have you recently had numbness, loss of sensation or tingling, in both arms and
     legs and around your mouth?
   format: binary
-  statement: I've recently had numbness or tingling in both arms and legs and around my mouth.
+  statement: "I have recently had numbness or tingling in both arms and legs and around my mouth."
 E_176:
   data_type: B
   is_antecedent: false
@@ -600,31 +608,31 @@ E_176:
     Did you previously, or do you currently, have any weakness/paralysis in one or more
     of your limbs or in your face?
   format: binary
-  statement: I have, or have had, weakness or paralysis in one or more limbs or in my face.
+  statement: "I have, or have had, weakness or paralysis in one or more limbs or in my face."
 E_42:
   data_type: B
   is_antecedent: false
   original_question: Have you been in contact with or ate something that you have an allergy to?
   format: binary
-  statement: I've been in contact with, or eaten, something I'm allergic to.
+  statement: "I have been in contact with, or eaten, something to which I am allergic."
 E_214:
   data_type: B
   is_antecedent: false
   original_question: Have you noticed a wheezing sound when you exhale?
   format: binary
-  statement: I've noticed a wheezing sound when I breathe out.
+  statement: "I have noticed a wheezing sound when breathing out."
 E_150:
   data_type: B
   is_antecedent: false
   original_question: Have you been able to pass stools or gas since your symptoms increased?
   format: binary
-  statement: I've been able to pass stools and gas since my symptoms got worse.
+  statement: "I have been able to pass stools and gas since the symptoms got worse."
 E_32:
   data_type: B
   is_antecedent: false
   original_question: Do you have a decrease in appetite?
   format: binary
-  statement: My appetite has decreased.
+  statement: "My appetite has decreased."
 E_221:
   data_type: B
   is_antecedent: false
@@ -632,37 +640,38 @@ E_221:
     Are the symptoms or pain increased with coughing, with an effort like lifting a
     weight or from forcing a bowel movement?
   format: binary
-  statement: My symptoms get worse when I cough, lift something heavy, or strain on the toilet.
+  statement: "My symptoms get worse when I cough, lift something heavy, or strain on the toilet."
 E_202:
   data_type: B
   is_antecedent: false
   original_question: Does the person have a whooping cough?
   format: binary
-  statement: I have a whooping cough.
+  statement: "I have a whooping cough."
 E_219:
   data_type: B
   is_antecedent: false
   original_question: Are your symptoms more prominent at night?
   format: binary
-  statement: My symptoms are worse at night.
+  statement: "My symptoms are worse at night."
 E_196:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you had surgery within the last month?
   format: binary
-  statement: I had surgery within the last month.
+  statement: "I had surgery within the last month."
 E_170:
   data_type: B
   is_antecedent: false
   original_question: Do you have severe itching in one or both eyes?
   format: binary
-  statement: I have severe itching in one or both eyes.
+  statement: "I have severe itching in one or both eyes."
 E_77:
   data_type: B
   is_antecedent: false
   original_question: Do you have a cough that produces colored or more abundant sputum than usual?
   format: binary
-  statement: My cough brings up sputum that's coloured, or more of it than usual.
+  statement: "My cough brings up mucus that's coloured, and more of it than usual."
 E_13:
   data_type: B
   is_antecedent: false
@@ -671,20 +680,19 @@ E_13:
     less effort is required to cause the symptoms?
   format: binary
   statement:
-    My symptoms have got worse over the last two weeks, and it takes less and less effort to
-    bring them on.
+    "My symptoms have got worse over the last two weeks, and it takes less and less effort to bring them on."
 E_14:
   data_type: B
   is_antecedent: false
   original_question: Do you have chest pain even at rest?
   format: binary
-  statement: I have chest pain even when I'm resting.
+  statement: "I have chest pain even at rest."
 E_169:
   data_type: B
   is_antecedent: false
   original_question: Is your nose or the back of your throat itchy?
   format: binary
-  statement: My nose or the back of my throat is itchy.
+  statement: "My nose or the back of my throat is itchy."
 E_177:
   data_type: B
   is_antecedent: false
@@ -692,7 +700,7 @@ E_177:
     Do you currently, or did you ever, have numbness, loss of sensitivity or tingling
     anywhere on your body?
   format: binary
-  statement: I have, or have had, numbness or tingling somewhere on my body.
+  statement: "I have, or have had, numbness or tingling somewhere on my body."
 E_175:
   data_type: B
   is_antecedent: false
@@ -701,26 +709,25 @@ E_175:
     muscle aches or a change in your general well-being related to your consultation today?
   format: binary
   statement:
-    I've noticed new tiredness, a vague general discomfort, widespread muscle aches, or a change
-    in how I feel overall.
+    "I have noticed new tiredness, a vague general discomfort, widespread muscle aches, and a change in overall well-being."
 E_174:
   data_type: B
   is_antecedent: false
   original_question: Have you been unintentionally losing weight or have you lost your appetite?
   format: binary
-  statement: I've been losing weight without meaning to, and I've lost my appetite.
+  statement: "I have been losing weight without meaning to, and have lost my appetite."
 E_145:
   data_type: B
   is_antecedent: false
   original_question: Do you have very abundant or very long menstruation periods?
   format: binary
-  statement: My periods are very heavy or last a very long time.
+  statement: "My periods are very heavy and last a very long time."
 E_92:
   data_type: B
   is_antecedent: false
   original_question: Did your cheeks suddenly turn red?
   format: binary
-  statement: My cheeks suddenly turned red.
+  statement: "My cheeks suddenly turned red."
 E_192:
   data_type: B
   is_antecedent: false
@@ -728,19 +735,19 @@ E_192:
     Do you feel that muscle spasms or soreness in your neck are keeping you from turning
     your head to one side?
   format: binary
-  statement: Muscle spasms or soreness in my neck stop me turning my head to one side.
+  statement: "Muscle spasms or soreness in my neck prevent me from turning my head to one side."
 E_188:
   data_type: B
   is_antecedent: false
   original_question: Do you have pale stools and dark urine?
   format: binary
-  statement: My stools are pale and my urine is dark.
+  statement: "My stools are pale and my urine is dark."
 E_164:
   data_type: B
   is_antecedent: false
   original_question: Do you feel your heart is beating very irregularly or in a disorganized pattern?
   format: binary
-  statement: My heart feels like it's beating very irregularly, in a disorganised pattern.
+  statement: "My heart feels like it's beating very irregularly, in a disorganised pattern."
 E_193:
   data_type: B
   is_antecedent: false
@@ -748,214 +755,242 @@ E_193:
     Do you have annoying muscle spasms in your face, neck or any other part of your
     body?
   format: binary
-  statement: I get muscle spasms in my face, neck, or other parts of my body.
+  statement: "I get muscle spasms in my face, neck, or other parts of my body."
 E_168:
   data_type: B
   is_antecedent: false
   original_question: Do you have trouble keeping your tongue in your mouth?
   format: binary
-  statement: I have trouble keeping my tongue in my mouth.
+  statement: "I have trouble keeping my tongue in my mouth."
 E_180:
   data_type: B
   is_antecedent: false
   original_question: Are you unable to control the direction of your eyes?
   format: binary
-  statement: I can't control the direction of my eyes.
+  statement: "I cannot control the direction of my eyes."
 E_67:
   data_type: B
   is_antecedent: false
   original_question: Do you have bouts of choking or shortness of breath that wake you up at night?
   format: binary
-  statement: I get bouts of choking or shortness of breath that wake me up at night.
+  statement: "I get bouts of choking or shortness of breath that wake me at night."
 E_78:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you drink alcohol excessively or do you have an addiction to alcohol?
   format: binary
-  statement: I drink alcohol heavily, and I have a problem with alcohol.
+  statement: "I drink alcohol heavily and have a problem with alcohol."
 E_146:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you taking any new oral anticoagulants ((NOACs)?
   format: binary
-  statement: I'm taking new oral anticoagulants.
+  statement: "I am taking new oral anticoagulants."
 E_171:
   data_type: B
   is_antecedent: false
+  persona_overlap: "neuroticism - anxiety (panic, depersonalisation)"
   original_question: Do you feel like you are detached from your own body or your surroundings?
   format: binary
-  statement: I feel detached from my own body and my surroundings.
+  statement: "I feel detached from my own body and surroundings."
 E_111:
   data_type: B
   is_antecedent: false
+  persona_overlap: "neuroticism - anxiety (catastrophic fear)"
   original_question: Do you feel like you are dying or were you afraid that you were about do die?
   format: binary
-  statement: I feel like I'm dying, or I was afraid I was about to die.
+  statement: "I feel as though I am dying, or was afraid I was about to die."
 E_182:
   data_type: B
   is_antecedent: false
   original_question: Do you have greenish or yellowish nasal discharge?
   format: binary
-  statement: I have greenish or yellowish discharge from my nose.
+  statement: "I have greenish or yellowish discharge from my nose."
 E_103:
   data_type: B
   is_antecedent: false
   original_question: Have you lost your sense of smell?
   format: binary
-  statement: I've lost my sense of smell.
+  statement: "I have lost my sense of smell."
 E_23:
   data_type: B
   is_antecedent: false
   original_question: Do you ever temporarily stop breathing while you’re asleep?
   format: binary
-  statement: I sometimes stop breathing for short periods while I'm asleep.
+  statement: "I sometimes stop breathing for short periods while asleep."
 E_105:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a heart attack or do you have angina (chest pain)?
   format: binary
-  statement: I've had a heart attack, or I have angina.
+  statement: "I have had a heart attack, or have angina."
 E_108:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a problem with poor circulation?
   format: binary
-  statement: I have a problem with poor circulation.
+  statement: "I have a problem with poor circulation."
 E_104:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have high blood pressure or do you take medications to treat high blood pressure?
   format: binary
-  statement: I have high blood pressure, and I take medication for it.
+  statement: "I have high blood pressure and take medication for it."
 E_79:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you smoke cigarettes?
   format: binary
-  statement: I smoke cigarettes.
+  statement: "I smoke cigarettes."
 E_71:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have high cholesterol or do you take medications to treat high cholesterol?
   format: binary
-  statement: I have high cholesterol, and I take medication for it.
+  statement: "I have high cholesterol and take medication for it."
 E_41:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you been in contact with a person with similar symptoms in the past 2 weeks?
   format: binary
-  statement: I've been in contact with someone with similar symptoms in the past two weeks.
+  statement: "I have been in contact with someone with similar symptoms in the past two weeks."
 E_100:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you currently take hormones?
   format: binary
-  statement: I currently take hormones.
+  statement: "I currently take hormones."
 E_69:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have diabetes?
   format: binary
-  statement: I have diabetes.
+  statement: "I have diabetes."
 E_167:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you think you are pregnant or are you currently pregnant?
   format: binary
-  statement: I'm pregnant, or I think I am.
+  statement: "I am pregnant."
 E_115:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you had unprotected sex with more than one partner in the last 6 months?
   format: binary
-  statement: I've had unprotected sex with more than one partner in the last six months.
+  statement: "I have had unprotected sex with more than one partner in the last six months."
 E_70:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are you significantly overweight compared to people of the same height as you?
   format: binary
-  statement: I'm significantly overweight for my height.
+  statement: "I am significantly overweight for my height."
 E_10:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you currently taking or have you recently taken anti-inflammatory drugs (NSAIDs)?
   format: binary
-  statement: I'm taking, or have recently taken, anti-inflammatory drugs.
+  statement: "I am taking, or have recently taken, anti-inflammatory drugs."
 E_165:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have any of your family members ever had a pneumothorax?
   format: binary
-  statement: Someone in my family has had a collapsed lung.
+  statement: "Someone in my family has had a collapsed lung."
 E_8:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you currently undergo dialysis?
   format: binary
-  statement: I'm on dialysis.
+  statement: "I am on dialysis."
 E_25:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have any of your family members been diagnosed with cluster headaches?
   format: binary
-  statement: Someone in my family has been diagnosed with cluster headaches.
+  statement: "Someone in my family has been diagnosed with cluster headaches."
 E_184:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you take medication that dilates your blood vessels?
   format: binary
-  statement: I take medication that dilates my blood vessels.
+  statement: "I take medication that dilates the blood vessels."
 E_185:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a head trauma?
   format: binary
-  statement: I've had a head injury.
+  statement: "I have had a head injury."
 E_99:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a migraine or is a member of your family known to have migraines?
   format: binary
-  statement: I've had migraines, or someone in my family gets them.
+  statement: "I have had migraines, or someone in my family gets them."
 E_107:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a stroke?
   format: binary
-  statement: I've had a stroke.
+  statement: "I have had a stroke."
 E_226:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you more likely to develop common allergies than the general population?
   format: binary
-  statement: I'm more likely than most people to develop common allergies.
+  statement: "I am more likely than most people to develop common allergies."
 E_62:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you regularly take stimulant drugs?
   format: binary
-  statement: I regularly take stimulant drugs.
+  statement: "I regularly take stimulant drugs."
 E_49:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you attend or work in a daycare?
   format: binary
-  statement: I attend or work in a daycare.
+  statement: "I attend or work in a daycare."
 E_95:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have Parkinson’s disease?
   format: binary
-  statement: I have Parkinson's disease.
+  statement: "I have Parkinson's disease."
 E_204:
   data_type: C
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you traveled out of the country in the last 4 weeks?
   format: valued
-  statement: I travelled to {value} in the last four weeks.
+  statement: "I travelled to {value} in the last four weeks."
   negative_values:
     - V_10
-  negative_statement: I haven't travelled outside the country in the last four weeks.
+  negative_statement: I have not travelled outside the country in the last four weeks.
   value_phrasings:
     V_0: North Africa
     V_1: West Africa
@@ -965,530 +1000,616 @@ E_204:
     V_5: South America
     V_6: Asia
     V_7: South East Asia
-    V_8: the Caribbean
+    V_8: "Caribbean"
     V_9: Europe
     V_13: Oceania
 E_37:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have metastatic cancer?
   format: binary
-  statement: I have metastatic cancer.
+  statement: "I have metastatic cancer."
 E_153:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you being treated for osteoporosis?
   format: binary
-  statement: I'm being treated for osteoporosis.
+  statement: "I am being treated for osteoporosis."
 E_124:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have asthma or have you ever had to use a bronchodilator in the past?
   format: binary
-  statement: I have asthma, or I've had to use a bronchodilator in the past.
+  statement: "I have asthma and have had to use a bronchodilator in the past."
 E_98:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a hiatal hernia?
   format: binary
-  statement: I have a hiatal hernia.
+  statement: "I have a hiatal hernia."
 E_116:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you had a cold in the last 2 weeks?
   format: binary
-  statement: I had a cold in the last two weeks.
+  statement: "I had a cold in the last two weeks."
 E_48:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you live with 4 or more people?
   format: binary
-  statement: I live with four or more people.
+  statement: "I live with four or more people."
 E_2:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you infected with the human immunodeficiency virus (HIV)?
   format: binary
-  statement: I'm HIV positive.
+  statement: "I am HIV positive."
 E_227:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are you immunosuppressed?
   format: binary
-  statement: I'm immunosuppressed.
+  statement: "I am immunosuppressed."
 E_61:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are you currently using intravenous drugs?
   format: binary
-  statement: I currently use intravenous drugs.
+  statement: "I currently use intravenous drugs."
 E_47:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you suffer from Crohn’s disease or ulcerative colitis (UC)?
   format: binary
-  statement: I have Crohn's disease or ulcerative colitis.
+  statement: "I have Crohn's disease or ulcerative colitis."
 E_27:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a sexually transmitted infection?
   format: binary
-  statement: I've had a sexually transmitted infection.
+  statement: "I have had a sexually transmitted infection."
 E_143:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you exercise regularly, 4 times per week or more?
   format: binary
-  statement: I exercise regularly, four times a week or more.
+  statement: "I exercise regularly, four times a week or more."
 E_191:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are you a former smoker?
   format: binary
-  statement: I used to smoke, but I've quit.
+  statement: "I used to smoke but have quit."
 E_208:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Is your BMI less than 18.5, or are you underweight?
   format: binary
-  statement: My BMI is under 18.5; I'm underweight.
+  statement: "My BMI is under 18.5; I am underweight."
 E_126:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have liver cirrhosis?
   format: binary
-  statement: I have liver cirrhosis.
+  statement: "I have liver cirrhosis."
 E_189:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you had sexual intercourse with an HIV-positive partner in the past 12 months?
   format: binary
-  statement: I've had sex with an HIV-positive partner in the past twelve months.
+  statement: "I have had sex with an HIV-positive partner in the past twelve months."
 E_7:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you have a poor diet?
   format: binary
-  statement: My diet is poor.
+  statement: "My diet is poor."
 E_24:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a diagnosis of anemia?
   format: binary
-  statement: I've been diagnosed with anemia.
+  statement: "I have been diagnosed with anemia."
 E_26:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have any family members who have been diagnosed with anemia?
   format: binary
-  statement: Someone in my family has been diagnosed with anemia.
+  statement: "Someone in my family has been diagnosed with anemia."
 E_113:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have chronic kidney failure?
   format: binary
-  statement: I have chronic kidney failure.
+  statement: "I have chronic kidney failure."
 E_160:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Were you born prematurely or did you suffer any complication at birth?
   format: binary
-  statement: I was born prematurely, or I had complications at birth.
+  statement: "I was born prematurely, or had complications at birth."
 E_28:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are there any members of your family who have been diagnosed myasthenia gravis?
   format: binary
-  statement: Someone in my family has been diagnosed with myasthenia gravis.
+  statement: "Someone in my family has been diagnosed with myasthenia gravis."
 E_20:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have Rheumatoid Arthritis?
   format: binary
-  statement: I have rheumatoid arthritis.
+  statement: "I have rheumatoid arthritis."
 E_80:
   data_type: B
   is_antecedent: true
+  persona_overlap: "neuroticism - depression"
+  antecedent_kind: medical_history
   original_question: Have you ever been diagnosed with depression?
   format: binary
-  statement: I've been diagnosed with depression.
+  statement: "I have been diagnosed with depression."
 E_40:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you been in contact with someone who has had pertussis (whoooping cough)?
   format: binary
-  statement: I've been in contact with someone who had whooping cough.
+  statement: "I have been in contact with someone who had whooping cough."
 E_0:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you recently had a viral infection?
   format: binary
-  statement: I recently had a viral infection.
+  statement: "I recently had a viral infection."
 E_1:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Are you currently being treated or have you recently been treated with an oral antibiotic
     for an ear infection?
   format: binary
-  statement: I'm being treated, or was recently treated, with an oral antibiotic for an ear infection.
+  statement: "I am being treated, or was recently treated, with an oral antibiotic for an ear infection."
 E_34:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have an active cancer?
   format: binary
-  statement: I have an active cancer.
+  statement: "I have an active cancer."
 E_209:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are your vaccinations up to date?
   format: binary
-  statement: My vaccinations are up to date.
+  statement: "My vaccinations are up to date."
 E_139:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a known heart defect?
   format: binary
-  statement: I have a known heart defect.
+  statement: "I have a known heart defect."
 E_19:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you been diagnosed with hyperthyroidism?
   format: binary
-  statement: I've been diagnosed with hyperthyroidism.
+  statement: "I have been diagnosed with hyperthyroidism."
 E_31:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?
   format: binary
-  statement: I have severe chronic obstructive pulmonary disease.
+  statement: "I have severe chronic obstructive pulmonary disease."
 E_22:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a known issue with one of your heart valves?
   format: binary
-  statement: I have a known problem with one of my heart valves.
+  statement: "I have a known problem with one of my heart valves."
 E_60:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you consume energy drinks regularly?
   format: binary
-  statement: I drink energy drinks regularly.
+  statement: "I drink energy drinks regularly."
 E_35:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you regularly drink coffee or tea?
   format: binary
-  statement: I regularly drink coffee or tea.
+  statement: "I regularly drink coffee or tea."
 E_213:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Have you recently taken decongestants or other substances that may have stimulant
     effects?
   format: binary
-  statement: I've recently taken decongestants or other things with a stimulant effect.
+  statement: "I have recently taken decongestants or other things with a stimulant effect."
 E_12:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a known severe food allergy?
   format: binary
-  statement: I have a known severe food allergy.
+  statement: "I have a known severe food allergy."
 E_44:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you take corticosteroids?
   format: binary
-  statement: I take corticosteroids.
+  statement: "I take corticosteroids."
 E_4:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you or any member of your family ever had croup?
   format: binary
-  statement: I've had croup, or someone in my family has.
+  statement: "I have had croup, or someone in my family has."
 E_81:
   data_type: B
   is_antecedent: true
+  persona_overlap: "neuroticism - anxiety"
+  antecedent_kind: medical_history
   original_question: Do you suffer from chronic anxiety?
   format: binary
-  statement: I have chronic anxiety.
+  statement: "I have chronic anxiety."
 E_109:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had deep vein thrombosis (DVT)?
   format: binary
-  statement: I've had a deep vein thrombosis.
+  statement: "I have had a deep vein thrombosis."
 E_110:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Have you been unable to move or get up for more than 3 consecutive days within the
     last 4 weeks?
   format: binary
-  statement: In the last four weeks, I was unable to move or get up for more than three days in a row.
+  statement: "In the last four weeks, I was unable to move or get up for more than three days in a row."
 E_17:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are you of Asian descent?
   format: binary
-  statement: I'm of Asian descent.
+  statement: "I am of Asian descent."
 E_18:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have cystic fibrosis?
   format: binary
-  statement: I have cystic fibrosis.
+  statement: "I have cystic fibrosis."
 E_118:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had pneumonia?
   format: binary
-  statement: I've had pneumonia.
+  statement: "I have had pneumonia."
 E_123:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a chronic obstructive pulmonary disease (COPD)?
   format: binary
-  statement: I have chronic obstructive pulmonary disease.
+  statement: "I have chronic obstructive pulmonary disease."
 E_207:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you live in in a big city?
   format: binary
-  statement: I live in a big city.
+  statement: "I live in a big city."
 E_86:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Do you have any close family members who suffer from allergies (any type), hay fever
     or eczema?
   format: binary
-  statement: I have close family members with allergies, hay fever, or eczema.
+  statement: "I have close family members with allergies, hay fever, or eczema."
 E_87:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have any family members who have asthma?
   format: binary
-  statement: I have family members with asthma.
+  statement: "I have family members with asthma."
 E_141:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Did you have your first menstrual period before the age of 12?
   format: binary
-  statement: I had my first period before I was twelve.
+  statement: "I had my first menstrual period before age twelve."
 E_11:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Have you breastfed one of your children for more than 9 months?
   format: binary
-  statement: I breastfed one of my children for more than nine months.
+  statement: "I breastfed one of my children for more than nine months."
 E_186:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever been diagnosed with obstructive sleep apnea (OSA)?
   format: binary
-  statement: I've been diagnosed with obstructive sleep apnea.
+  statement: "I have been diagnosed with obstructive sleep apnea."
 E_106:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have heart failure?
   format: binary
-  statement: I have heart failure.
+  statement: "I have heart failure."
 E_158:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Were you diagnosed with endocrine disease or a hormone dysfunction?
   format: binary
-  statement: I've been diagnosed with an endocrine or hormone disorder.
+  statement: "I have been diagnosed with an endocrine or hormone disorder."
 E_187:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question:
     Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction
     occurred?
   format: binary
-  statement: I ate dark-fleshed fish, like tuna, or Swiss cheese before the reaction started.
+  statement: "I ate dark-fleshed fish, like tuna, or Swiss cheese before the reaction started."
 E_6:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have chronic pancreatitis?
   format: binary
-  statement: I have chronic pancreatitis.
+  statement: "I have chronic pancreatitis."
 E_125:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever been diagnosed with gastroesophageal reflux?
   format: binary
-  statement: I've been diagnosed with gastroesophageal reflux.
+  statement: "I have been diagnosed with gastroesophageal reflux."
 E_21:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a spontaneous pneumothorax?
   format: binary
-  statement: I've had a collapsed lung that happened on its own.
+  statement: "I have had a collapsed lung that happened on its own."
 E_222:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Are you exposed to secondhand cigarette smoke on a daily basis?
   format: binary
-  statement: I'm around secondhand cigarette smoke every day.
+  statement: "I am around secondhand cigarette smoke every day."
 E_15:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you started or taken any antipsychotic medication within the last 7 days?
   format: binary
-  statement: I've started or taken antipsychotic medication within the last seven days.
+  statement: "I have started or taken antipsychotic medication within the last seven days."
 E_147:
   data_type: B
   is_antecedent: true
+  persona_overlap: "agreeableness - hostility (aggressive behaviour); neuroticism - impulsiveness"
+  antecedent_kind: medical_history
   original_question:
     Have you been treated in hospital recently for nausea, agitation, intoxication or
     aggressive behavior and received medication via an intravenous or intramuscular route?
   format: binary
   statement:
-    I was recently treated in hospital for nausea, agitation, intoxication, or aggressive behaviour,
-    and I got medication through a drip or an injection.
+    "I was recently treated in hospital for nausea, agitation, intoxication, or aggressive behaviour, and received medication through a drip or an injection."
 E_137:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had surgery to remove lymph nodes?
   format: binary
-  statement: I've had surgery to remove lymph nodes.
+  statement: "I have had surgery to remove lymph nodes."
 E_149:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you take a calcium channel blockers (medication)?
   format: binary
-  statement: I take a calcium channel blocker.
+  statement: "I take a calcium channel blocker."
 E_197:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a known kidney problem resulting in an inability to retain proteins?
   format: binary
-  statement: I have a known kidney problem that means I can't hold on to proteins.
+  statement: "I have a known kidney problem causing an inability to hold on to proteins."
 E_3:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had a pericarditis?
   format: binary
-  statement: I've had pericarditis.
+  statement: "I have had pericarditis."
 E_29:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do any members of your immediate family have a psychiatric illness?
   format: binary
-  statement: Someone in my immediate family has a psychiatric illness.
+  statement: "Someone in my immediate family has a psychiatric illness."
 E_225:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Do you have close family members who had a cardiovascular disease problem before
     the age of 50?
   format: binary
-  statement: I have close family members who had heart or circulation problems before they were fifty.
+  statement: "I have close family members who had heart or circulation problems before they were fifty."
 E_73:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question:
     In the last month, have you been in contact with anyone infected with the Ebola
     virus?
   format: binary
-  statement: In the last month I was in contact with someone infected with Ebola.
+  statement: "In the last month, I was in contact with someone infected with Ebola."
 E_138:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you suffer from fibromyalgia?
   format: binary
-  statement: I have fibromyalgia.
+  statement: "I have fibromyalgia."
 E_101:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you been hospitalized for an asthma attack in the past year?
   format: binary
-  statement: I was hospitalised for an asthma attack in the past year.
+  statement: "I was hospitalised for an asthma attack in the past year."
 E_46:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you had 2 or more asthma attacks in the past year?
   format: binary
-  statement: I've had two or more asthma attacks in the past year.
+  statement: "I have had two or more asthma attacks in the past year."
 E_119:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you been diagnosed with chronic sinusitis?
   format: binary
-  statement: I've been diagnosed with chronic sinusitis.
+  statement: "I have been diagnosed with chronic sinusitis."
 E_72:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question:
     Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD)
     in the past year?
   format: binary
-  statement: I've had one or more flare-ups of chronic obstructive pulmonary disease in the past year.
+  statement: "I have had one or more flare-ups of chronic obstructive pulmonary disease in the past year."
 E_198:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you work in agriculture?
   format: binary
-  statement: I work in agriculture.
+  statement: "I work in agriculture."
 E_200:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you work in the mining sector?
   format: binary
-  statement: I work in mining.
+  statement: "I work in mining."
 E_199:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you work in construction?
   format: binary
-  statement: I work in construction.
+  statement: "I work in construction."
 E_121:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have a deviated nasal septum?
   format: binary
-  statement: I have a deviated nasal septum.
+  statement: "I have a deviated nasal septum."
 E_120:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have polyps in your nose?
   format: binary
-  statement: I have polyps in my nose.
+  statement: "I have polyps in my nose."
 E_142:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Does your mother suffer from asthma?
   format: binary
-  statement: My mother has asthma.
+  statement: "My mother has asthma."
 E_195:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you live in the suburbs?
   format: binary
-  statement: I live in the suburbs.
+  statement: "I live in the suburbs."
 E_183:
   data_type: B
   is_antecedent: true
+  antecedent_kind: non_medical
   original_question: Do you live in a rural area?
   format: binary
-  statement: I live in a rural area.
+  statement: "I live in a rural area."
 E_224:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Do you have family members who have had lung cancer?
   format: binary
-  statement: I have family members who had lung cancer.
+  statement: "I have family members who had lung cancer."
 E_223:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Are there members of your family who have been diagnosed with pancreatic cancer?
   format: binary
-  statement: Someone in my family has been diagnosed with pancreatic cancer.
+  statement: "Someone in my family has been diagnosed with pancreatic cancer."
 E_5:
   data_type: B
   is_antecedent: true
+  antecedent_kind: medical_history
   original_question: Have you ever had fluid in your lungs?
   format: binary
-  statement: I've had fluid in my lungs.
+  statement: "I have had fluid in the lungs."

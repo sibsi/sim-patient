@@ -1,0 +1,374 @@
+{
+  "patient_id": 74168,
+  "age": 48,
+  "sex": "F",
+  "diagnosis": "Sarcoidosis",
+  "differential_diagnosis": [
+    [
+      "Sarcoidosis",
+      0.31820192262361296
+    ],
+    [
+      "Possible NSTEMI / STEMI",
+      0.28591965772639866
+    ],
+    [
+      "Acute dystonic reactions",
+      0.15761713838142274
+    ],
+    [
+      "Anemia",
+      0.15761713838142274
+    ],
+    [
+      "SLE",
+      0.08064414288714285
+    ]
+  ],
+  "source_evidences": [
+    "E_9",
+    "E_43",
+    "E_53",
+    "E_54_@_V_181",
+    "E_54_@_V_192",
+    "E_55_@_V_68",
+    "E_55_@_V_81",
+    "E_55_@_V_92",
+    "E_55_@_V_194",
+    "E_55_@_V_195",
+    "E_56_@_1",
+    "E_57_@_V_123",
+    "E_58_@_3",
+    "E_59_@_0",
+    "E_66",
+    "E_74",
+    "E_130_@_V_11",
+    "E_131_@_V_10",
+    "E_132_@_0",
+    "E_133_@_V_123",
+    "E_134_@_0",
+    "E_135_@_V_10",
+    "E_136_@_0",
+    "E_163",
+    "E_198",
+    "E_204_@_V_10"
+  ],
+  "name": "Christina",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_9",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have swollen or painful lymph nodes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_9",
+      "statement": "My lymph nodes are swollen and painful.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_43",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_43",
+      "statement": "I lost consciousness with violent, sustained muscle contractions, and had an absence episode.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_181",
+        "V_192"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "burning, sharp",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my left hand, my left arm, my right leg and both my shoulders feels burning and sharp.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_68",
+        "V_81",
+        "V_92",
+        "V_194",
+        "V_195"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "finger (index)(L), palmar face of the wrist(L), knee(R), shoulder(R), shoulder(L)",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in my left hand, my left arm, my right leg and both my shoulders.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "1"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "1",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my left hand, my left arm, my right leg and both my shoulders is about 1 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_123"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "nowhere",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my left hand, my left arm, my right leg and both my shoulders doesn't spread anywhere else.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "3"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "3",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my left hand, my left arm, my right leg and both my shoulders covers a fairly wide area, not one exact spot.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "0"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "0",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my left hand, my left arm, my right leg and both my shoulders came on very gradually.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_66",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_66",
+      "statement": "I am short of breath and have real difficulty breathing.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_74",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you noticed a diffuse (widespread) redness in one or both eyes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_74",
+      "statement": "I have noticed widespread redness in both eyes.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_163",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you had any vaginal discharge?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_163",
+      "statement": "I have had vaginal discharge.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_198",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you work in agriculture?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_198",
+      "statement": "I work in agriculture.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X0",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I don't smoke cigarettes.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_79"
+      ]
+    },
+    {
+      "shard_id": "X1",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I don't drink a lot of alcohol.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_78"
+      ]
+    },
+    {
+      "shard_id": "X2",
+      "evidence_code": null,
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": null,
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": null,
+      "statement": "No, I don't have any long-term health conditions.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "household",
+      "statement": "I live with my husband and our daughter."
+    },
+    {
+      "life_id": "L1",
+      "field": "relationship",
+      "statement": "My mother calls me every evening."
+    },
+    {
+      "life_id": "L2",
+      "field": "leisure",
+      "statement": "I enjoy doing sudoku."
+    },
+    {
+      "life_id": "L3",
+      "field": "routine",
+      "statement": "I go to a quilting group every Monday."
+    },
+    {
+      "life_id": "L4",
+      "field": "recent_event",
+      "statement": "My daughter finishes school this year."
+    },
+    {
+      "life_id": "L5",
+      "field": "episode_witness",
+      "statement": "My husband was with me when it happened and told me afterwards what he saw."
+    },
+    {
+      "life_id": "L6",
+      "field": "episode_setting",
+      "statement": "It happened in the evening, while I was on the phone with my mother."
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # value phrasings for the 165 DDXPlus body locations used in multi-choice evidences (E_55, E_57, E_133, E_152)
 # LLM-drafted & manually reviewed
+# region: the lay body area a location belongs to. Used when an evidence lists 3+ locations:
+# these regions are used in the first-person patient statement.
 V_123:
   medical_phrase: nowhere
   paraphrased: null
@@ -7,492 +9,656 @@ V_123:
 V_14:
   medical_phrase: iliac wing(R)
   paraphrased: my right hip bone
+  region: my right hip
 V_15:
   medical_phrase: iliac wing(L)
   paraphrased: my left hip bone
+  region: my left hip
 V_16:
   medical_phrase: groin(R)
   paraphrased: my right groin
+  region: my groin
 V_17:
   medical_phrase: groin(L)
   paraphrased: my left groin
+  region: my groin
 V_19:
   medical_phrase: axilla(L)
   paraphrased: my left armpit
+  region: my left armpit
 V_18:
   medical_phrase: axilla(R)
   paraphrased: my right armpit
+  region: my right armpit
 V_20:
   medical_phrase: tonsil(R)
   paraphrased: my right tonsil
+  region: my throat
 V_21:
   medical_phrase: tonsil(L)
   paraphrased: my left tonsil
+  region: my throat
 V_22:
   medical_phrase: anus
   paraphrased: my anus
+  region: my bottom
 V_26:
   medical_phrase: back of the neck
   paraphrased: the back of my neck
+  region: my neck
 V_25:
   medical_phrase: back of head
   paraphrased: the back of my head
+  region: my head
 V_30:
   medical_phrase: biceps(R)
   paraphrased: the front of my right upper arm
+  region: my right arm
 V_31:
   medical_phrase: biceps(L)
   paraphrased: the front of my left upper arm
+  region: my left arm
 V_32:
   medical_phrase: mouth
   paraphrased: my mouth
+  region: my mouth
 V_33:
   medical_phrase: thyroid cartilage
   paraphrased: my Adam's apple
+  region: my throat
 V_34:
   medical_phrase: ankle(R)
   paraphrased: my right ankle
+  region: my right leg
 V_35:
   medical_phrase: ankle(L)
   paraphrased: my left ankle
+  region: my left leg
 V_36:
   medical_phrase: clitoris
   paraphrased: my clitoris
+  region: my genital area
 V_37:
   medical_phrase: coccyx
   paraphrased: my tailbone
+  region: my lower back
 V_38:
   medical_phrase: cervical spine
   paraphrased: the top of my spine in my neck
+  region: my neck
 V_39:
   medical_phrase: thoracic spine
   paraphrased: the middle of my spine in my upper back
+  region: my upper back
 V_40:
   medical_phrase: lumbar spine
   paraphrased: my lower back
+  region: my lower back
 V_41:
   medical_phrase: commissure(R)
   paraphrased: the right corner of my mouth
+  region: my mouth
 V_42:
   medical_phrase: commissure(L)
   paraphrased: the left corner of my mouth
+  region: my mouth
 V_49:
   medical_phrase: iliac crest(R)
   paraphrased: the top of my right hip bone
+  region: my right hip
 V_50:
   medical_phrase: iliac crest(L)
   paraphrased: the top of my left hip bone
+  region: my left hip
 V_51:
   medical_phrase: thigh(R)
   paraphrased: my right thigh
+  region: my right leg
 V_52:
   medical_phrase: thigh(L)
   paraphrased: my left thigh
+  region: my left leg
 V_57:
   medical_phrase: lower teeth(R)
   paraphrased: my lower right teeth
+  region: my mouth
 V_58:
   medical_phrase: lower teeth(L)
   paraphrased: my lower left teeth
+  region: my mouth
 V_59:
   medical_phrase: upper teeth(R)
   paraphrased: my upper right teeth
+  region: my mouth
 V_60:
   medical_phrase: upper teeth(L)
   paraphrased: my upper left teeth
+  region: my mouth
 V_67:
   medical_phrase: finger (index)(R)
   paraphrased: my right index finger
+  region: my right hand
 V_68:
   medical_phrase: finger (index)(L)
   paraphrased: my left index finger
+  region: my left hand
 V_69:
   medical_phrase: finger (middle)(R)
   paraphrased: my right middle finger
+  region: my right hand
 V_70:
   medical_phrase: finger (middle)(L)
   paraphrased: my left middle finger
+  region: my left hand
 V_63:
   medical_phrase: finger (ring finger)(R)
   paraphrased: my right ring finger
+  region: my right hand
 V_64:
   medical_phrase: finger (ring finger)(L)
   paraphrased: my left ring finger
+  region: my left hand
 V_65:
   medical_phrase: finger (little finger)(R)
   paraphrased: my right little finger
+  region: my right hand
 V_66:
   medical_phrase: finger (little finger)(L)
   paraphrased: my left little finger
+  region: my left hand
 V_62:
   medical_phrase: top of the head
   paraphrased: the top of my head
+  region: my head
 V_194:
   medical_phrase: shoulder(R)
   paraphrased: my right shoulder
+  region: my right shoulder
 V_195:
   medical_phrase: shoulder(L)
   paraphrased: my left shoulder
+  region: my left shoulder
 V_197:
   medical_phrase: epigastric
   paraphrased: the upper middle part of my belly just below my breastbone
+  region: my upper belly
 V_27:
   medical_phrase: forearm(R)
   paraphrased: my right forearm
+  region: my right arm
 V_28:
   medical_phrase: forearm(L)
   paraphrased: my left forearm
+  region: my left arm
 V_76:
   medical_phrase: dorsal aspect of the hand(R)
   paraphrased: the back of my right hand
+  region: my right hand
 V_77:
   medical_phrase: dorsal aspect of the hand(L)
   paraphrased: the back of my left hand
+  region: my left hand
 V_72:
   medical_phrase: dorsal aspect of the foot(R)
   paraphrased: the top of my right foot
+  region: my right foot
 V_73:
   medical_phrase: dorsal aspect of the foot(L)
   paraphrased: the top of my left foot
+  region: my left foot
 V_74:
   medical_phrase: dorsal aspect of the wrist(R)
   paraphrased: the back of my right wrist
+  region: my right arm
 V_75:
   medical_phrase: dorsal aspect of the wrist(L)
   paraphrased: the back of my left wrist
+  region: my left arm
 V_149:
   medical_phrase: sole(R)
   paraphrased: the sole of my right foot
+  region: my right foot
 V_150:
   medical_phrase: sole(L)
   paraphrased: the sole of my left foot
+  region: my left foot
 V_80:
   medical_phrase: palmar face of the wrist(R)
   paraphrased: the inside of my right wrist
+  region: my right arm
 V_81:
   medical_phrase: palmar face of the wrist(L)
   paraphrased: the inside of my left wrist
+  region: my left arm
 V_43:
   medical_phrase: lateral side of the foot(R)
   paraphrased: the outer side of my right foot
+  region: my right foot
 V_44:
   medical_phrase: lateral side of the foot(L)
   paraphrased: the outer side of my left foot
+  region: my left foot
 V_82:
   medical_phrase: buttock(R)
   paraphrased: my right buttock
+  region: my bottom
 V_83:
   medical_phrase: buttock(L)
   paraphrased: my left buttock
+  region: my bottom
 V_84:
   medical_phrase: flank(R)
   paraphrased: my right side between my ribs and my hip
+  region: my right side
 V_85:
   medical_phrase: flank(L)
   paraphrased: my left side between my ribs and my hip
+  region: my left side
 V_78:
   medical_phrase: palmar side of the forearm(R)
   paraphrased: the inner side of my right forearm
+  region: my right arm
 V_79:
   medical_phrase: palmar side of the forearm(L)
   paraphrased: the inner side of my left forearm
+  region: my left arm
 V_87:
   medical_phrase: iliac fossa(R)
   paraphrased: the lower right part of my belly
+  region: my lower belly
 V_88:
   medical_phrase: iliac fossa(L)
   paraphrased: the lower left part of my belly
+  region: my lower belly
 V_89:
   medical_phrase: forehead
   paraphrased: my forehead
+  region: my head
 V_92:
   medical_phrase: knee(R)
   paraphrased: my right knee
+  region: my right leg
 V_93:
   medical_phrase: knee(L)
   paraphrased: my left knee
+  region: my left leg
 V_90:
   medical_phrase: lower gum
   paraphrased: my lower gum
+  region: my mouth
 V_47:
   medical_phrase: popliteal fossa(R)
   paraphrased: the back of my right knee
+  region: my right leg
 V_48:
   medical_phrase: popliteal fossa(L)
   paraphrased: the back of my left knee
+  region: my left leg
 V_91:
   medical_phrase: upper gum
   paraphrased: my upper gum
+  region: my mouth
 V_94:
   medical_phrase: glans
   paraphrased: the tip of my penis
+  region: my genital area
 V_95:
   medical_phrase: labia majora(R)
   paraphrased: my right outer labia
+  region: my genital area
 V_96:
   medical_phrase: labia majora(L)
   paraphrased: my left outer labia
+  region: my genital area
 V_97:
   medical_phrase: big toe(R)
   paraphrased: my right big toe
+  region: my right foot
 V_98:
   medical_phrase: big toe(L)
   paraphrased: my left big toe
+  region: my left foot
 V_99:
   medical_phrase: hip(R)
   paraphrased: my right hip
+  region: my right hip
 V_100:
   medical_phrase: hip(L)
   paraphrased: my left hip
+  region: my left hip
 V_102:
   medical_phrase: hymen
   paraphrased: my hymen
+  region: my genital area
 V_103:
   medical_phrase: hypochondrium(R)
   paraphrased: under my right ribs
+  region: my upper belly
 V_104:
   medical_phrase: hypochondrium(L)
   paraphrased: under my left ribs
+  region: my upper belly
 V_105:
   medical_phrase: ischio jambier(R)
   paraphrased: my right hamstring
+  region: my right leg
 V_106:
   medical_phrase: ischio jambier(L)
   paraphrased: my left hamstring
+  region: my left leg
 V_108:
   medical_phrase: cheek(R)
   paraphrased: my right cheek
+  region: my face
 V_109:
   medical_phrase: cheek(L)
   paraphrased: my left cheek
+  region: my face
 V_110:
   medical_phrase: internal cheek(R)
   paraphrased: the inside of my right cheek
+  region: my mouth
 V_111:
   medical_phrase: internal cheek(L)
   paraphrased: the inside of my left cheek
+  region: my mouth
 V_53:
   medical_phrase: side of the neck(R)
   paraphrased: the right side of my neck
+  region: my neck
 V_54:
   medical_phrase: side of the neck(L)
   paraphrased: the left side of my neck
+  region: my neck
 V_55:
   medical_phrase: side of the chest(R)
   paraphrased: the right side of my chest
+  region: my chest
 V_56:
   medical_phrase: side of the chest(L)
   paraphrased: the left side of my chest
+  region: my chest
 V_116:
   medical_phrase: bottom lip(R)
   paraphrased: the right side of my lower lip
+  region: my mouth
 V_117:
   medical_phrase: upper lip(R)
   paraphrased: the right side of my upper lip
+  region: my mouth
 V_113:
   medical_phrase: renal fossa(R)
-  paraphrased: my right lower back over my kidney
+  paraphrased: my right lower back over the kidney
+  region: my lower back
 V_114:
   medical_phrase: renal fossa(L)
-  paraphrased: my left lower back over my kidney
+  paraphrased: my left lower back over the kidney
+  region: my lower back
 V_115:
   medical_phrase: uvula
   paraphrased: the dangly bit at the back of my throat
+  region: my throat
 V_121:
   medical_phrase: jaw
   paraphrased: my jaw
+  region: my jaw
 V_118:
   medical_phrase: chin
   paraphrased: my chin
+  region: my jaw
 V_29:
   medical_phrase: lower chest
   paraphrased: my lower chest
+  region: my chest
 V_119:
   medical_phrase: calf(R)
   paraphrased: my right calf
+  region: my right leg
 V_120:
   medical_phrase: calf(L)
   paraphrased: my left calf
+  region: my left leg
 V_122:
   medical_phrase: nose
   paraphrased: my nose
+  region: my face
 V_124:
   medical_phrase: occiput
   paraphrased: the back of my head at the base of my skull
+  region: my head
 V_125:
   medical_phrase: eye(R)
   paraphrased: my right eye
+  region: my face
 V_126:
   medical_phrase: eye(L)
   paraphrased: my left eye
+  region: my face
 V_127:
   medical_phrase: scapula(R)
   paraphrased: my right shoulder blade
+  region: my upper back
 V_128:
   medical_phrase: scapula(L)
   paraphrased: my left shoulder blade
+  region: my upper back
 V_129:
   medical_phrase: ear(R)
   paraphrased: my right ear
+  region: my right ear
 V_130:
   medical_phrase: ear(L)
   paraphrased: my left ear
+  region: my left ear
 V_131:
   medical_phrase: toe (1)(R)
   paraphrased: my right second toe
+  region: my right foot
 V_132:
   medical_phrase: toe (1)(L)
   paraphrased: my left second toe
+  region: my left foot
 V_133:
   medical_phrase: toe (2)(R)
   paraphrased: my right third toe
+  region: my right foot
 V_134:
   medical_phrase: toe (2)(L)
   paraphrased: my left third toe
+  region: my left foot
 V_135:
   medical_phrase: toe (3)(R)
   paraphrased: my right fourth toe
+  region: my right foot
 V_136:
   medical_phrase: toe (3)(L)
   paraphrased: my left fourth toe
+  region: my left foot
 V_144:
   medical_phrase: little toe (4)(R)
   paraphrased: my right little toe
+  region: my right foot
 V_145:
   medical_phrase: little toe (4)(L)
   paraphrased: my left little toe
+  region: my left foot
 V_45:
   medical_phrase: elbow(R)
   paraphrased: my right elbow
+  region: my right arm
 V_46:
   medical_phrase: elbow(L)
   paraphrased: my left elbow
+  region: my left arm
 V_137:
   medical_phrase: palace # wrong translation!
   paraphrased: the roof of my mouth
+  region: my mouth
 V_170:
   medical_phrase: posterior chest wall(R)
   paraphrased: the right side of my upper back
+  region: my upper back
 V_171:
   medical_phrase: posterior chest wall(L)
   paraphrased: the left side of my upper back
+  region: my upper back
 V_139:
   medical_phrase: vaginal wall
   paraphrased: my vaginal wall
+  region: my genital area
 V_140:
   medical_phrase: vaginal wall(R)
   paraphrased: the right side of my vaginal wall
+  region: my genital area
 V_141:
   medical_phrase: vaginal wall(L)
   paraphrased: the left side of my vaginal wall
+  region: my genital area
 V_142:
   medical_phrase: palm(R)
   paraphrased: the palm of my right hand
+  region: my right hand
 V_143:
   medical_phrase: palm(L)
   paraphrased: the palm of my left hand
+  region: my left hand
 V_155:
   medical_phrase: penis
   paraphrased: my penis
+  region: my genital area
 V_187:
   medical_phrase: belly
   paraphrased: my belly
+  region: my belly
 V_146:
   medical_phrase: labia minora(R)
   paraphrased: my right inner labia
+  region: my genital area
 V_147:
   medical_phrase: labia minora(L)
   paraphrased: my left inner labia
+  region: my genital area
 V_148:
   medical_phrase: pharynx
   paraphrased: the back of my throat
+  region: my throat
 V_23:
   medical_phrase: posterior aspect of the ankle(R)
   paraphrased: the back of my right ankle
+  region: my right leg
 V_24:
   medical_phrase: posterior aspect of the ankle(L)
   paraphrased: the back of my left ankle
+  region: my left leg
 V_151:
   medical_phrase: thumb(R)
   paraphrased: my right thumb
+  region: my right hand
 V_152:
   medical_phrase: thumb(L)
   paraphrased: my left thumb
+  region: my left hand
 V_158:
   medical_phrase: scrotum
   paraphrased: my scrotum
+  region: my genital area
 V_159:
   medical_phrase: breast(R)
   paraphrased: my right breast
+  region: my chest
 V_160:
   medical_phrase: breast(L)
   paraphrased: my left breast
+  region: my chest
 V_162:
   medical_phrase: under the tongue
   paraphrased: under my tongue
+  region: my mouth
 V_163:
   medical_phrase: under the jaw
   paraphrased: under my jaw
+  region: my neck
 V_101:
   medical_phrase: upper chest
   paraphrased: my upper chest
+  region: my chest
 V_61:
   medical_phrase: above the tongue
   paraphrased: the top of my tongue
+  region: my mouth
 V_153:
   medical_phrase: pubis
   paraphrased: my pubic area
+  region: my lower belly
 V_164:
   medical_phrase: heel(R)
   paraphrased: my right heel
+  region: my right foot
 V_165:
   medical_phrase: heel(L)
   paraphrased: my left heel
+  region: my left foot
 V_166:
   medical_phrase: temple(R)
   paraphrased: my right temple
+  region: my head
 V_167:
   medical_phrase: temple(L)
   paraphrased: my left temple
+  region: my head
 V_168:
   medical_phrase: testicle(R)
   paraphrased: my right testicle
+  region: my genital area
 V_169:
   medical_phrase: testicle(L)
   paraphrased: my left testicle
+  region: my genital area
 V_172:
   medical_phrase: tibia(R)
   paraphrased: my right shin
+  region: my right leg
 V_173:
   medical_phrase: tibia(L)
   paraphrased: my left shin
+  region: my left leg
 V_175:
   medical_phrase: trapezius(R)
   paraphrased: my right shoulder muscle near my neck
+  region: my neck
 V_176:
   medical_phrase: trapezius(L)
   paraphrased: my left shoulder muscle near my neck
+  region: my neck
 V_174:
   medical_phrase: trachea
   paraphrased: my windpipe
+  region: my throat
 V_177:
   medical_phrase: triceps(R)
   paraphrased: the back of my right upper arm
+  region: my right arm
 V_178:
   medical_phrase: triceps(L)
   paraphrased: the back of my left upper arm
+  region: my left arm
 V_185:
   medical_phrase: urethra
   paraphrased: my urethra
+  region: my genital area
 V_186:
   medical_phrase: vagina
   paraphrased: my vagina
+  region: my genital area
 V_188:
   medical_phrase: vermilion(R)
   paraphrased: the right side of my lip
+  region: my mouth
 V_189:
   medical_phrase: vermilion(L)
   paraphrased: the left side of my lip
+  region: my mouth
 V_190:
   medical_phrase: vulval vestibule
   paraphrased: the opening of my vagina
+  region: my genital area

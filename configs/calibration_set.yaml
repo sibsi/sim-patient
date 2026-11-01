@@ -1,0 +1,5 @@
+# Judge calibration set: generate fresh, label by hand before viewing judge output.
+set:
+  - {case: sabine_60370, profiles: [b5_O_high, b5_C_low]}
+  - {case: felix_85945, profiles: [b5_moderate, b5_N_high]}
+  - {case: jakob_19920, profiles: [b5_A_high, b5_E_low]}

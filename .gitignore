@@ -12,3 +12,7 @@ build/
 
 data/ddxplus/raw/
 results/
+# Only the Part 1 results and analysis are versioned
+outputs/*
+!outputs/Part1_RESULTS.zip
+!outputs/Part1_ANALYSIS/

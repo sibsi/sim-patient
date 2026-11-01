@@ -1,0 +1,61 @@
+# Case-specific pain wording that replaces the generated statement; shard IDs stay unchanged.
+103370: # Anna
+  E_54: My headache feels tender, tugging, and like a cramp.
+  E_56: My headache intensity is about 2 on a scale of 0 to 10.
+  E_57: My headache doesn't spread anywhere else.
+  E_58: My headache covers a fairly wide area, not one exact spot.
+  E_59: My headache came on gradually, over a while.
+74168: # Christina
+  E_54: The pain in my left hand, my left arm, my right leg and both my shoulders feels burning and sharp.
+  E_56: The pain in my left hand, my left arm, my right leg and both my shoulders is about 1 out of 10.
+  E_57: The pain in my left hand, my left arm, my right leg and both my shoulders doesn't spread anywhere else.
+  E_58: The pain in my left hand, my left arm, my right leg and both my shoulders covers a fairly wide area, not one exact spot.
+  E_59: The pain in my left hand, my left arm, my right leg and both my shoulders came on very gradually.
+19920: # Jakob
+  E_54: My headache feels tender and exhausting.
+  E_56: My headache intensity is about 8 on a scale of 0 to 10.
+  E_57: My headache doesn't spread anywhere else.
+  E_58: My headache is in a fairly specific spot.
+  E_59: My headache came on very gradually.
+102835: # Jonas
+  E_54: The pain in the right side of my chest and the left side of my upper back feels sharp.
+  E_56: The pain in the right side of my chest and the left side of my upper back is about 2 out of 10.
+  E_57: The pain in the right side of my chest and the left side of my upper back doesn't spread anywhere else.
+  E_58: I cannot pinpoint the pain in the right side of my chest and the left side of my upper back; it covers a wide area.
+  E_59: The pain in the right side of my chest and the left side of my upper back came on fairly quickly.
+93048: # Marie
+  E_54: The pain in both my hands feels tender, burning, and sharp.
+  E_56: The pain in both my hands is about 8 out of 10.
+  E_57: The pain in both my hands doesn't spread anywhere else.
+  E_58: I cannot pinpoint the pain in both my hands; it covers a wide area.
+  E_59: The pain in both my hands came on very gradually.
+99935: # Olivia
+  E_54: The pain in my chest and my upper back feels sharp.
+  E_56: The pain in my chest and my upper back is about 1 out of 10.
+  E_57: The pain in my chest and my upper back doesn't spread anywhere else.
+  E_58: The pain in my chest and my upper back is in a fairly specific spot.
+  E_59: The pain in my chest and my upper back came on gradually, over a while.
+102620: # Paul
+  E_54: My headache feels tugging and exhausting.
+  E_56: My headache intensity is about 5 on a scale of 0 to 10.
+  E_57: My headache doesn't spread anywhere else.
+  E_58: My headache is in a fairly specific spot.
+  E_59: My headache came on gradually, over a while.
+60370: # Sabine
+  E_54: The pain in my belly feels throbbing, like a stab, and burning.
+  E_56: The pain in my belly is about 7 out of 10.
+  E_57: The pain in my belly spreads to my chest.
+  E_58: The pain in my belly covers a fairly wide area, not one exact spot.
+  E_59: The pain in my belly came on gradually, over a while.
+99594: # Stefan
+  E_54: The pain in my chest and my upper belly feels throbbing, burning, and frightening.
+  E_56: The pain in my chest and my upper belly is about 4 out of 10.
+  E_57: The pain in my chest and my upper belly spreads to my lower chest.
+  E_58: The pain in my chest and my upper belly covers a fairly wide area, not one exact spot.
+  E_59: The pain in my chest and my upper belly came on very gradually.
+131469: # Susanne
+  E_54: The pain in my head and my neck feels nagging, pulsing, and exhausting.
+  E_56: The pain in my head and my neck is about 3 out of 10.
+  E_57: The pain in my head and my neck doesn't spread anywhere else.
+  E_58: The pain in my head and my neck is in a fairly specific spot.
+  E_59: The pain in my head and my neck came on very gradually.

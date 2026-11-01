@@ -1,0 +1,424 @@
+{
+  "patient_id": 102620,
+  "age": 24,
+  "sex": "M",
+  "diagnosis": "Anemia",
+  "differential_diagnosis": [
+    [
+      "Anemia",
+      0.48965423720449247
+    ],
+    [
+      "Cluster headache",
+      0.19098745296297545
+    ],
+    [
+      "PSVT",
+      0.1628505383306904
+    ],
+    [
+      "Atrial fibrillation",
+      0.15650777150184172
+    ]
+  ],
+  "source_evidences": [
+    "E_7",
+    "E_24",
+    "E_53",
+    "E_54_@_V_180",
+    "E_54_@_V_198",
+    "E_55_@_V_25",
+    "E_55_@_V_62",
+    "E_55_@_V_166",
+    "E_55_@_V_167",
+    "E_56_@_5",
+    "E_57_@_V_123",
+    "E_58_@_6",
+    "E_59_@_4",
+    "E_76",
+    "E_82",
+    "E_88",
+    "E_113",
+    "E_140",
+    "E_146",
+    "E_154",
+    "E_179",
+    "E_204_@_V_7",
+    "E_208"
+  ],
+  "name": "Paul",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_7",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have a poor diet?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_7",
+      "statement": "My diet is poor.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_24",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you ever had a diagnosis of anemia?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_24",
+      "statement": "I have been diagnosed with anemia.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_180",
+        "V_198"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "tugging, exhausting",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "My headache feels tugging and exhausting.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_25",
+        "V_62",
+        "V_166",
+        "V_167"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "back of head, top of the head, temple(R), temple(L)",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have a headache.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "5"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "5",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "My headache intensity is about 5 on a scale of 0 to 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_123"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "nowhere",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "My headache doesn't spread anywhere else.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "6"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "6",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "My headache is in a fairly specific spot.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "4"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "4",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "My headache came on gradually, over a while.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_76",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you feel slightly dizzy or lightheaded?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_76",
+      "statement": "I feel slightly dizzy and lightheaded.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_82",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_82",
+      "statement": "I feel lightheaded and dizzy, as though I might faint.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_88",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_88",
+      "statement": "I am too tired to do usual activities; I stay in bed all day.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_113",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have chronic kidney failure?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_113",
+      "statement": "I have chronic kidney failure.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_140",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you recently had stools that were black (like coal)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_140",
+      "statement": "My stools have been black, like coal.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M14",
+      "evidence_code": "E_146",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you taking any new oral anticoagulants ((NOACs)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_146",
+      "statement": "I am taking new oral anticoagulants.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M15",
+      "evidence_code": "E_154",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Is your skin much paler than usual?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_154",
+      "statement": "My skin is much paler than usual.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M16",
+      "evidence_code": "E_179",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you noticed light red blood or blood clots in your stool?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_179",
+      "statement": "I have noticed bright red blood in my stool.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M17",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_7"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "South East Asia",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I travelled to South East Asia in the last four weeks.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M18",
+      "evidence_code": "E_208",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Is your BMI less than 18.5, or are you underweight?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_208",
+      "statement": "My BMI is under 18.5; I am underweight.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X0",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I don't smoke cigarettes.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_79"
+      ]
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I'm studying history at university."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I share a flat with two other students."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My younger sister is still at school."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I enjoy playing the piano."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I play board games with friends on Wednesday evenings."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "I handed in a big term paper last week."
+    },
+    {
+      "life_id": "L6",
+      "field": "diet_habits",
+      "statement": "I mostly live on toast and instant noodles between lectures."
+    },
+    {
+      "life_id": "L7",
+      "field": "diet_cooking",
+      "statement": "I'm the only one in my flat who never really cooks."
+    },
+    {
+      "life_id": "L8",
+      "field": "travel_trip",
+      "statement": "I went backpacking in Vietnam and Thailand for three weeks after my exams."
+    },
+    {
+      "life_id": "L9",
+      "field": "travel_company",
+      "statement": "I travelled with my friend from my history course."
+    }
+  ]
+}

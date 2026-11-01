@@ -1,0 +1,392 @@
+{
+  "patient_id": 99594,
+  "age": 67,
+  "sex": "M",
+  "diagnosis": "GERD",
+  "differential_diagnosis": [
+    [
+      "GERD",
+      0.21396989293925514
+    ],
+    [
+      "Bronchitis",
+      0.17805325903883626
+    ],
+    [
+      "Spontaneous rib fracture",
+      0.11847327382205841
+    ],
+    [
+      "Unstable angina",
+      0.11836643430342078
+    ],
+    [
+      "Anemia",
+      0.08542792477098893
+    ],
+    [
+      "Possible NSTEMI / STEMI",
+      0.08191745994146515
+    ],
+    [
+      "Tuberculosis",
+      0.07269233850184546
+    ],
+    [
+      "Stable angina",
+      0.06590922759965147
+    ],
+    [
+      "Pancreatic neoplasm",
+      0.06519018908247821
+    ]
+  ],
+  "source_evidences": [
+    "E_53",
+    "E_54_@_V_112",
+    "E_54_@_V_161",
+    "E_54_@_V_180",
+    "E_54_@_V_181",
+    "E_54_@_V_196",
+    "E_55_@_V_29",
+    "E_55_@_V_103",
+    "E_55_@_V_104",
+    "E_55_@_V_197",
+    "E_56_@_4",
+    "E_57_@_V_29",
+    "E_58_@_4",
+    "E_59_@_1",
+    "E_70",
+    "E_79",
+    "E_98",
+    "E_124",
+    "E_140",
+    "E_173",
+    "E_201",
+    "E_204_@_V_10",
+    "E_215"
+  ],
+  "name": "Stefan",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_112",
+        "V_161",
+        "V_180",
+        "V_181",
+        "V_196"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "haunting, sensitive, tugging, burning, scary",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my chest and my upper belly feels throbbing, burning, and frightening.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_29",
+        "V_103",
+        "V_104",
+        "V_197"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "lower chest, hypochondrium(R), hypochondrium(L), epigastric",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in my chest and my upper belly.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "4"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "4",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my chest and my upper belly is about 4 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_29"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "lower chest",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my chest and my upper belly spreads to my lower chest.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "4"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "4",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my chest and my upper belly covers a fairly wide area, not one exact spot.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "1"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "1",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in my chest and my upper belly came on very gradually.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_70",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you significantly overweight compared to people of the same height as you?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_70",
+      "statement": "I am significantly overweight for my height.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I smoke cigarettes.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_98",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have a hiatal hernia?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_98",
+      "statement": "I have a hiatal hernia.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_124",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_124",
+      "statement": "I have asthma and have had to use a bronchodilator in the past.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_140",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you recently had stools that were black (like coal)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_140",
+      "statement": "My stools have been black, like coal.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_173",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_173",
+      "statement": "I get a burning feeling that starts in my stomach and rises into my throat, sometimes with a bitter taste in my mouth.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_201",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a cough?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_201",
+      "statement": "I have a cough.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M14",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M15",
+      "evidence_code": "E_215",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have symptoms that get worse after eating?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_215",
+      "statement": "My symptoms get worse after I eat.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X1",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I don't drink a lot of alcohol.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_78"
+      ]
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I'm a retired bank clerk."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live with my wife, Ingrid."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My granddaughter visits me every weekend."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I like building model railways."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I volunteer at the local library on Mondays."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "I took over organising the library's book sale this month."
+    },
+    {
+      "life_id": "L6",
+      "field": "smoking_concern",
+      "statement": "My wife Ingrid has been on at me to stop smoking for years."
+    },
+    {
+      "life_id": "L7",
+      "field": "smoking_history",
+      "statement": "I've smoked for most of my adult life."
+    }
+  ]
+}

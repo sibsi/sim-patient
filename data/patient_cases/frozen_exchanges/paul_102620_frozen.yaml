@@ -1,0 +1,101 @@
+name: paul_102620_frozen
+patient_id: 102620
+pair: anemia            # paired with anna_103370; same type order
+
+added_shards:           # DDXPlus convention: absent binary evidence = "no"
+  - shard_id: X0
+    evidence_code: E_79
+    statement: "I don't smoke cigarettes."
+    is_negative: true
+
+exchanges:
+  - turn: 1
+    type: opening
+    question: "Hello Paul, I see you've come in because you've been looking paler than usual. Can you tell me a bit about that?"
+    fact_ids: [M15]
+    background_fact_ids: [L1, M1, M4, M10, M12]
+
+  - turn: 2
+    type: broad
+    question: "Is there anything else you've noticed about your health lately?"
+    fact_ids: [M11]
+    background_fact_ids: [M16]
+
+  - turn: 3
+    type: focused
+    question: "Have you had any dizziness, or felt like you might faint?"
+    fact_ids: [M10]
+    background_fact_ids: [M9]
+
+  - turn: 4
+    type: focused_pain
+    question: "Have you had any pain anywhere? Where is it, what does it feel like, and how bad is it on a scale from zero to ten?"
+    fact_ids: [M3, M4, M5]
+    background_fact_ids: [M8, M6, M7]
+
+  - turn: 5
+    type: focused
+    question: "How have you been eating lately? What does your diet look like at the moment?"
+    fact_ids: [M0]
+    background_fact_ids: [M18, L6, L7]
+
+  - turn: 6
+    type: focused
+    question: "And how about your weight?"
+    fact_ids: [M18]
+
+  - turn: 7
+    type: focused
+    question: "Have you been abroad at all in the last few weeks?"
+    fact_ids: [M17]
+    background_fact_ids: [L8, L9]
+
+  - turn: 8
+    type: duration
+    question: "And roughly how long has all this been going on?"
+    fact_ids: []
+    tags: [trap_duration]
+
+  - turn: 9
+    type: history
+    question: "Have you had any health problems in the past, anything you've been diagnosed with?"
+    fact_ids: [M1, M12]
+    background_fact_ids: [M14]
+
+  - turn: 10
+    type: lifestyle
+    question: "Can you tell me a bit about your lifestyle, things like smoking or drinking?"
+    fact_ids: [X0]
+    tags: [trap_binary]
+
+  - turn: 11
+    type: sensitive
+    question: "Have you noticed any changes with your bowels, or when you go to the toilet?"
+    fact_ids: [M13, M16]
+    tags: [sensitive]
+
+  - turn: 12
+    type: impact
+    question: "How has all this been affecting your day-to-day life, with your studies and at home?"
+    fact_ids: [L0, L1]
+    background_fact_ids: [L3, L5]
+
+  - turn: 13
+    type: coping
+    question: "In general, are you managing OK at the moment? Is there anything else going on in your life right now?"
+    fact_ids: [L4, L5]
+
+  - turn: 14
+    type: ice
+    question: "What made you decide to come in now? And do you have any thoughts yourself about what might be behind it?"
+    fact_ids: []
+
+  - turn: 15
+    type: plan
+    question: "Looking pale like this can have a few different causes, so I'd like to start with some blood tests, including your blood count and iron levels. Depending on the results, we may need a few more tests to find out what's behind it. What do you make of that, and is there anything you'd like to ask me about it?"
+    fact_ids: []
+
+  - turn: 16
+    type: safety_net
+    question: "If you faint, get very short of breath, or notice any bleeding, please come back straight away. Before we finish, is there anything else you'd like to tell me?"
+    fact_ids: []

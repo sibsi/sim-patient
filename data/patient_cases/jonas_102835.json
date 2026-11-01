@@ -1,0 +1,652 @@
+{
+  "patient_id": 102835,
+  "age": 55,
+  "sex": "M",
+  "diagnosis": "Pneumonia",
+  "differential_diagnosis": [
+    [
+      "Pneumonia",
+      0.08487606678023271
+    ],
+    [
+      "Bronchitis",
+      0.0845905929816444
+    ],
+    [
+      "Bronchiectasis",
+      0.07710879054601733
+    ],
+    [
+      "Possible NSTEMI / STEMI",
+      0.0700892955641643
+    ],
+    [
+      "Panic attack",
+      0.06998589156964634
+    ],
+    [
+      "Pulmonary neoplasm",
+      0.06547673406800945
+    ],
+    [
+      "Acute COPD exacerbation / infection",
+      0.06545576965227984
+    ],
+    [
+      "Unstable angina",
+      0.06409782337322764
+    ],
+    [
+      "Stable angina",
+      0.054747152659229456
+    ],
+    [
+      "Tuberculosis",
+      0.053507325286720156
+    ],
+    [
+      "Scombroid food poisoning",
+      0.04616225288040681
+    ],
+    [
+      "Bronchospasm / acute asthma exacerbation",
+      0.045462502996354154
+    ],
+    [
+      "Atrial fibrillation",
+      0.04474826377243682
+    ],
+    [
+      "Pulmonary embolism",
+      0.03969480241134436
+    ],
+    [
+      "Myocarditis",
+      0.03546437166069974
+    ],
+    [
+      "Guillain-Barré syndrome",
+      0.03299081261993571
+    ],
+    [
+      "Acute dystonic reactions",
+      0.03299081261993571
+    ],
+    [
+      "PSVT",
+      0.017622528660449457
+    ],
+    [
+      "Chagas",
+      0.014928209897265593
+    ]
+  ],
+  "source_evidences": [
+    "E_53",
+    "E_54_@_V_192",
+    "E_55_@_V_55",
+    "E_55_@_V_171",
+    "E_56_@_2",
+    "E_57_@_V_123",
+    "E_58_@_0",
+    "E_59_@_6",
+    "E_66",
+    "E_77",
+    "E_78",
+    "E_79",
+    "E_91",
+    "E_94",
+    "E_106",
+    "E_107",
+    "E_123",
+    "E_124",
+    "E_129",
+    "E_130_@_V_156",
+    "E_131_@_V_12",
+    "E_132_@_4",
+    "E_133_@_V_26",
+    "E_133_@_V_82",
+    "E_133_@_V_84",
+    "E_133_@_V_194",
+    "E_134_@_3",
+    "E_135_@_V_10",
+    "E_136_@_1",
+    "E_161",
+    "E_196",
+    "E_204_@_V_10",
+    "E_208",
+    "E_209"
+  ],
+  "name": "Jonas",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_192"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "sharp",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in the right side of my chest and the left side of my upper back feels sharp.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_55",
+        "V_171"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "side of the chest(R), posterior chest wall(L)",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in the right side of my chest and the left side of my upper back.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "2"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "2",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in the right side of my chest and the left side of my upper back is about 2 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_123"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "nowhere",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in the right side of my chest and the left side of my upper back doesn't spread anywhere else.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "0"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "0",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I cannot pinpoint the pain in the right side of my chest and the left side of my upper back; it covers a wide area.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "6"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "6",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in the right side of my chest and the left side of my upper back came on fairly quickly.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_66",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_66",
+      "statement": "I am short of breath and have real difficulty breathing.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_77",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a cough that produces colored or more abundant sputum than usual?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_77",
+      "statement": "My cough brings up mucus that's coloured, and more of it than usual.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I drink alcohol heavily and have a problem with alcohol.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I smoke cigarettes.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_91",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have a fever (either felt or measured with a thermometer)?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_91",
+      "statement": "I have had a fever.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_94",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you had chills or shivers?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_94",
+      "statement": "I have had chills and shivers.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M13",
+      "evidence_code": "E_106",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have heart failure?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_106",
+      "statement": "I have heart failure.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M14",
+      "evidence_code": "E_107",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you ever had a stroke?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_107",
+      "statement": "I have had a stroke.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M15",
+      "evidence_code": "E_123",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_122",
+      "statement": "I have chronic obstructive pulmonary disease.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M16",
+      "evidence_code": "E_124",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_124",
+      "statement": "I have asthma and have had to use a bronchodilator in the past.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M17",
+      "evidence_code": "E_129",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "I have lesions, redness, and skin problems related to why I am here.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M18",
+      "evidence_code": "E_130",
+      "value_codes": [
+        "V_156"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "What color is the rash?",
+      "original_answer": "pink",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My rash is pink.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M19",
+      "evidence_code": "E_131",
+      "value_codes": [
+        "V_12"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Do your lesions peel off?",
+      "original_answer": "Y",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My lesions peel.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M20",
+      "evidence_code": "E_132",
+      "value_codes": [
+        "4"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Is the rash swollen?",
+      "original_answer": "4",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My rash is moderately swollen.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M21",
+      "evidence_code": "E_133",
+      "value_codes": [
+        "V_26",
+        "V_82",
+        "V_84",
+        "V_194"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Where is the affected region located?",
+      "original_answer": "back of the neck, buttock(R), flank(R), shoulder(R)",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "The affected area is on my neck, my bottom, my right side and my right shoulder.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M22",
+      "evidence_code": "E_134",
+      "value_codes": [
+        "3"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain caused by the rash?",
+      "original_answer": "3",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My pain from the rash is about 3 on a scale of 0 to 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M23",
+      "evidence_code": "E_135",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "Is the lesion (or are the lesions) larger than 1cm?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My lesions are smaller than a centimetre across.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M24",
+      "evidence_code": "E_136",
+      "value_codes": [
+        "1"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How severe is the itching?",
+      "original_answer": "1",
+      "is_initial": false,
+      "code_question": "E_129",
+      "statement": "My itching intensity is about 1 on a scale of 0 to 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M25",
+      "evidence_code": "E_161",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you recently had a loss of appetite or do you get full more quickly then usually?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_161",
+      "statement": "I have lost my appetite and get full more quickly than usual.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M26",
+      "evidence_code": "E_196",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Have you had surgery within the last month?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_196",
+      "statement": "I had surgery within the last month.",
+      "is_negative": false,
+      "in_history": true,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M27",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M28",
+      "evidence_code": "E_208",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Is your BMI less than 18.5, or are you underweight?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_208",
+      "statement": "My BMI is under 18.5; I am underweight.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M29",
+      "evidence_code": "E_209",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are your vaccinations up to date?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_209",
+      "statement": "My vaccinations are up to date.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I work as a locksmith."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live with my wife, Sabine."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My son is studying engineering in Aachen."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I like doing crossword puzzles."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I play cards with friends every Friday evening."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "My wife and I celebrated our 30th wedding anniversary last week."
+    },
+    {
+      "life_id": "L6",
+      "field": "symptom_noticed",
+      "statement": "My wife Sabine has been taking my temperature every evening."
+    },
+    {
+      "life_id": "L7",
+      "field": "drinking_secret",
+      "statement": "I keep bottles hidden in my workshop so my wife doesn't see how much I drink."
+    },
+    {
+      "life_id": "L8",
+      "field": "drinking_concern",
+      "statement": "My wife has told me more than once that I should cut down."
+    }
+  ]
+}

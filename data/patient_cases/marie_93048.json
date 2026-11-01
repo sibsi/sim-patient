@@ -1,0 +1,369 @@
+{
+  "patient_id": 93048,
+  "age": 54,
+  "sex": "F",
+  "diagnosis": "Sarcoidosis",
+  "differential_diagnosis": [
+    [
+      "Sarcoidosis",
+      0.4099733486590333
+    ],
+    [
+      "Acute dystonic reactions",
+      0.2192700749570211
+    ],
+    [
+      "Chagas",
+      0.16546822499944527
+    ],
+    [
+      "Myocarditis",
+      0.15552439183212227
+    ],
+    [
+      "Pulmonary neoplasm",
+      0.04976395955237805
+    ],
+    [
+      "Pulmonary embolism",
+      0.0
+    ]
+  ],
+  "source_evidences": [
+    "E_9",
+    "E_53",
+    "E_54_@_V_161",
+    "E_54_@_V_181",
+    "E_54_@_V_192",
+    "E_55_@_V_63",
+    "E_55_@_V_64",
+    "E_55_@_V_67",
+    "E_55_@_V_68",
+    "E_55_@_V_70",
+    "E_56_@_8",
+    "E_57_@_V_123",
+    "E_58_@_1",
+    "E_59_@_0",
+    "E_66",
+    "E_70",
+    "E_74",
+    "E_130_@_V_11",
+    "E_131_@_V_10",
+    "E_132_@_0",
+    "E_133_@_V_123",
+    "E_134_@_0",
+    "E_135_@_V_10",
+    "E_136_@_0",
+    "E_163",
+    "E_204_@_V_10"
+  ],
+  "name": "Marie",
+  "shards": [
+    {
+      "shard_id": "M0",
+      "evidence_code": "E_9",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have swollen or painful lymph nodes?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_9",
+      "statement": "My lymph nodes are swollen and painful.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M1",
+      "evidence_code": "E_53",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Do you have pain somewhere, related to your reason for consulting?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have some pain.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M2",
+      "evidence_code": "E_54",
+      "value_codes": [
+        "V_161",
+        "V_181",
+        "V_192"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Characterize your pain:",
+      "original_answer": "sensitive, burning, sharp",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in both my hands feels tender, burning, and sharp.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M3",
+      "evidence_code": "E_55",
+      "value_codes": [
+        "V_63",
+        "V_64",
+        "V_67",
+        "V_68",
+        "V_70"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Do you feel pain somewhere?",
+      "original_answer": "finger (ring finger)(R), finger (ring finger)(L), finger (index)(R), finger (index)(L), finger (middle)(L)",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I have pain in both my hands.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M4",
+      "evidence_code": "E_56",
+      "value_codes": [
+        "8"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How intense is the pain?",
+      "original_answer": "8",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in both my hands is about 8 out of 10.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M5",
+      "evidence_code": "E_57",
+      "value_codes": [
+        "V_123"
+      ],
+      "is_antecedent": false,
+      "data_type": "M",
+      "original_question": "Does the pain radiate to another location?",
+      "original_answer": "nowhere",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in both my hands doesn't spread anywhere else.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M6",
+      "evidence_code": "E_58",
+      "value_codes": [
+        "1"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How precisely is the pain located?",
+      "original_answer": "1",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "I cannot pinpoint the pain in both my hands; it covers a wide area.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M7",
+      "evidence_code": "E_59",
+      "value_codes": [
+        "0"
+      ],
+      "is_antecedent": false,
+      "data_type": "C",
+      "original_question": "How fast did the pain appear?",
+      "original_answer": "0",
+      "is_initial": false,
+      "code_question": "E_53",
+      "statement": "The pain in both my hands came on very gradually.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M8",
+      "evidence_code": "E_66",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_66",
+      "statement": "I am short of breath and have real difficulty breathing.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M9",
+      "evidence_code": "E_70",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Are you significantly overweight compared to people of the same height as you?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_70",
+      "statement": "I am significantly overweight for my height.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M10",
+      "evidence_code": "E_74",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you noticed a diffuse (widespread) redness in one or both eyes?",
+      "original_answer": "Yes",
+      "is_initial": true,
+      "code_question": "E_74",
+      "statement": "I have noticed widespread redness in both eyes.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M11",
+      "evidence_code": "E_163",
+      "value_codes": [],
+      "is_antecedent": false,
+      "data_type": "B",
+      "original_question": "Have you had any vaginal discharge?",
+      "original_answer": "Yes",
+      "is_initial": false,
+      "code_question": "E_163",
+      "statement": "I have had vaginal discharge.",
+      "is_negative": false,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "M12",
+      "evidence_code": "E_204",
+      "value_codes": [
+        "V_10"
+      ],
+      "is_antecedent": true,
+      "data_type": "C",
+      "original_question": "Have you traveled out of the country in the last 4 weeks?",
+      "original_answer": "N",
+      "is_initial": false,
+      "code_question": "E_204",
+      "statement": "I have not travelled outside the country in the last four weeks.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    },
+    {
+      "shard_id": "X0",
+      "evidence_code": "E_79",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you smoke cigarettes?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_79",
+      "statement": "I don't smoke cigarettes.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_79"
+      ]
+    },
+    {
+      "shard_id": "X1",
+      "evidence_code": "E_78",
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": "E_78",
+      "statement": "I don't drink a lot of alcohol.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": [
+        "E_78"
+      ]
+    },
+    {
+      "shard_id": "X2",
+      "evidence_code": null,
+      "value_codes": [],
+      "is_antecedent": true,
+      "data_type": "B",
+      "original_question": null,
+      "original_answer": "No",
+      "is_initial": false,
+      "code_question": null,
+      "statement": "No, I don't have any long-term health conditions.",
+      "is_negative": true,
+      "in_history": false,
+      "evidence_codes": null
+    }
+  ],
+  "life_shards": [
+    {
+      "life_id": "L0",
+      "field": "occupation_role",
+      "statement": "I work as a secretary at a law firm."
+    },
+    {
+      "life_id": "L1",
+      "field": "household",
+      "statement": "I live with my husband, Thomas."
+    },
+    {
+      "life_id": "L2",
+      "field": "relationship",
+      "statement": "My son lives in Munich with his family."
+    },
+    {
+      "life_id": "L3",
+      "field": "leisure",
+      "statement": "I like reading historical novels."
+    },
+    {
+      "life_id": "L4",
+      "field": "routine",
+      "statement": "I take an Italian evening class on Wednesdays."
+    },
+    {
+      "life_id": "L5",
+      "field": "recent_event",
+      "statement": "My son's second child was born last month."
+    },
+    {
+      "life_id": "L6",
+      "field": "eye_noticed_home",
+      "statement": "My husband Thomas was the first to notice my eyes looked red."
+    },
+    {
+      "life_id": "L7",
+      "field": "eye_noticed_work",
+      "statement": "My colleagues at work kept asking whether I'd been crying."
+    }
+  ]
+}

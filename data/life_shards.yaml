@@ -1,0 +1,135 @@
+# Life shards for the 12 evaluation cases, identical across all persona conditions.
+# The six base slots (occupation_role ... recent_event) follow these rules so no shard contradicts
+# a DDXPlus fact (absent evidence = "no"): no residence type, household max. 3 people,
+# no job in daycare/agriculture/mining/construction/healthcare, no pets, no sport, no travel,
+# no food or drinks, no sleep, no sick contacts.
+# Keys after recent_event were added by hand for the frozen scripts; they may break these rules
+# only where they match a DDXPlus fact of the same case.
+
+131469: # F, 54 (Susanne)
+  occupation_role: I work as a bookkeeper for a furniture company.
+  household: I live with my adult son, Tobias.
+  relationship: My sister calls me every Sunday.
+  leisure: I enjoy doing jigsaw puzzles.
+  routine: I go to a book club once a month.
+  recent_event: My son started a new job last week.
+  relationship_history: I separated from my husband two years ago.
+  dating: I've been meeting people through a dating app.
+
+19920: # M, 58 (Jakob)
+  occupation_role: I work as a tram driver.
+  household: I live alone.
+  relationship: Rainer and I have been friends since school and still talk most days.
+  leisure: I like listening to old jazz records.
+  routine: I play chess at a club every Tuesday evening.
+  recent_event: My car broke down last week.
+  relationship_history: I've been single since my divorce a few years ago.
+  dating: I've been meeting people through a dating app.
+
+103370: # F, 29 (Anna)
+  occupation_role: I work as a graphic designer.
+  household: I live with my boyfriend, Lukas.
+  relationship: My grandmother lives two streets away from me.
+  leisure: I enjoy drawing comics.
+  routine: I take a Spanish evening class on Mondays.
+  recent_event: I moved to a new team at work this month.
+  menstrual_tracking: I mark the dates of my periods in my phone calendar.
+  menstrual_supplies: I keep spare sanitary pads in my handbag.
+
+102620: # M, 24 (Paul)
+  occupation_role: I'm studying history at university.
+  household: I share a flat with two other students.
+  relationship: My younger sister is still at school.
+  leisure: I enjoy playing the piano.
+  routine: I play board games with friends on Wednesday evenings.
+  recent_event: I handed in a big term paper last week.
+  diet_habits: I mostly live on toast and instant noodles between lectures.
+  diet_cooking: I'm the only one in my flat who never really cooks.
+  travel_trip: I went backpacking in Vietnam and Thailand for three weeks after my exams.
+  travel_company: I travelled with my friend from my history course.
+
+60370: # F, 24 (Sabine)
+  occupation_role: I work as a hotel receptionist.
+  household: I live with my boyfriend, Jonas.
+  relationship: My best friend Lena lives in the flat next door.
+  leisure: I enjoy watching fantasy series.
+  routine: I go to a ceramics class on Thursday evenings.
+  recent_event: Jonas and I started looking for a bigger flat this month.
+  pregnancy_news: Jonas and I found out about the pregnancy a few weeks ago.
+  pregnancy_tracking: I've downloaded a pregnancy app to keep track of the weeks.
+  smoking_context: I've smoked since I was a teenager.
+
+99594: # M, 67 (Stefan)
+  occupation_role: I'm a retired bank clerk.
+  household: I live with my wife, Ingrid.
+  relationship: My granddaughter visits me every weekend.
+  leisure: I like building model railways.
+  routine: I volunteer at the local library on Mondays.
+  recent_event: I took over organising the library's book sale this month.
+  smoking_concern: My wife Ingrid has been on at me to stop smoking for years.
+  smoking_history: I've smoked for most of my adult life.
+
+99935: # F, 41 (Olivia)
+  occupation_role: I work as a translator.
+  household: I live with my mother.
+  relationship: My brother is a carpenter.
+  leisure: I enjoy knitting.
+  routine: I take part in an online writing group on Sunday evenings.
+  recent_event: My mother's birthday is this weekend.
+  symptom_noticed: My mother noticed I had to stop and catch my breath when we went shopping.
+  drinking_attempts: I've tried to stop drinking a few times but never lasted more than a couple of weeks.
+  drinking_concern: My brother has told me I should cut down.
+
+102835: # M, 55 (Jonas)
+  occupation_role: I work as a locksmith.
+  household: I live with my wife, Sabine.
+  relationship: My son is studying engineering in Aachen.
+  leisure: I like doing crossword puzzles.
+  routine: I play cards with friends every Friday evening.
+  recent_event: My wife and I celebrated our 30th wedding anniversary last week.
+  symptom_noticed: My wife Sabine has been taking my temperature every evening.
+  drinking_secret: I keep bottles hidden in my workshop so my wife doesn't see how much I drink.
+  drinking_concern: My wife has told me more than once that I should cut down.
+
+74168: # F, 48 (Christina), no occupation_role: works in agriculture (E_198)
+  household: I live with my husband and our daughter.
+  relationship: My mother calls me every evening.
+  leisure: I enjoy doing sudoku.
+  routine: I go to a quilting group every Monday.
+  recent_event: My daughter finishes school this year.
+  episode_witness: My husband was with me when it happened and told me afterwards what he saw.
+  episode_setting: It happened in the evening, while I was on the phone with my mother.
+
+93048: # F, 54 (Marie)
+  occupation_role: I work as a secretary at a law firm.
+  household: I live with my husband, Thomas.
+  relationship: My son lives in Munich with his family.
+  leisure: I like reading historical novels.
+  routine: I take an Italian evening class on Wednesdays.
+  recent_event: My son's second child was born last month.
+  eye_noticed_home: My husband Thomas was the first to notice my eyes looked red.
+  eye_noticed_work: My colleagues at work kept asking whether I'd been crying.
+
+133425: # F, 28 (Petra)
+  occupation_role: I work as a cashier in a hardware store.
+  household: I live alone.
+  relationship: My best friend works as a hairdresser.
+  leisure: I like watching true-crime documentaries.
+  routine: I go to the cinema with friends most Saturdays.
+  recent_event: I started working extra shifts at the store this month.
+  symptom_stairs: I had to stop halfway up the stairs to my flat last week.
+  symptom_noticed: My best friend said I sounded out of breath on the phone.
+  drinking_money: I've spent money I needed for rent on alcohol.
+  drinking_concern: My best friend keeps telling me I drink too much.
+
+85945: # M, 29 (Felix)
+  occupation_role: I work as a sound technician at a theatre.
+  household: I share a flat with my cousin.
+  relationship: My older sister is a lawyer.
+  leisure: I enjoy playing the guitar.
+  routine: I rehearse with a band every Thursday evening.
+  recent_event: My band plays its first concert next month.
+  symptom_noticed: My cousin saw the blood on a tissue and told me to get it checked.
+  symptom_setting: It started during a rehearsal and I had to step out.
+  drinking_work: I've missed shifts at the theatre because I was too hungover to go in.
+  drinking_concern: My cousin has told me a few times that I should cut down.
