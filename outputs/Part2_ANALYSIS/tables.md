@@ -38,6 +38,34 @@
 | A low | 32/40 | 5.33 | 2.12 | 0.69 | 4.56 | 2.82 | 3.55 | 1.56 | 0.81 | 22.96 |
 | O low | 33/40 | 6.29 | 1.19 | 0.38 | 3.25 | 3.46 | 3.41 | 1.81 | 0.06 | 24.77 |
 
+## All behavior categories
+
+Mean assessed turns per consultation; each category counts at most once per turn. Categories can overlap. The conversations CSV records the number of assessed behavior turns.
+
+### Qwen3.5-27B
+
+| Category | Moderate | N high | N low | A high | A low | O low |
+|---|---|---|---|---|---|---|
+| Emotional expression | 9.88 | 11.50 | 7.69 | 10.25 | 9.69 | 9.69 |
+| Questions to the doctor | 1.56 | 1.44 | 0.81 | 1.56 | 1.19 | 1.56 |
+| Interaction stance | 2.12 | 1.69 | 2.44 | 2.06 | 2.31 | 2.06 |
+| Own interpretation | 2.06 | 2.75 | 2.31 | 2.56 | 2.31 | 1.75 |
+| Unasked content | 1.94 | 2.00 | 1.94 | 1.50 | 1.25 | 1.06 |
+| Reporting style | 1.38 | 1.69 | 1.56 | 1.44 | 1.81 | 1.38 |
+| Care engagement | 1.50 | 1.69 | 1.56 | 1.69 | 1.44 | 1.69 |
+
+### Gemma-4-31B
+
+| Category | Moderate | N high | N low | A high | A low | O low |
+|---|---|---|---|---|---|---|
+| Emotional expression | 4.75 | 5.88 | 4.38 | 5.50 | 4.06 | 4.56 |
+| Questions to the doctor | 0.94 | 1.38 | 0.94 | 1.12 | 0.88 | 0.69 |
+| Interaction stance | 1.50 | 1.50 | 1.44 | 1.88 | 1.38 | 1.19 |
+| Own interpretation | 0.56 | 0.75 | 0.75 | 0.50 | 0.00 | 0.44 |
+| Unasked content | 0.75 | 0.69 | 0.69 | 0.69 | 0.19 | 0.50 |
+| Reporting style | 1.88 | 2.25 | 1.75 | 1.44 | 1.62 | 1.69 |
+| Care engagement | 0.44 | 0.25 | 0.44 | 0.25 | 0.62 | 0.56 |
+
 ## Paired trait effects
 
 Mean difference over (case, seed) pairs with a 95% bootstrap interval; n = number of pairs.

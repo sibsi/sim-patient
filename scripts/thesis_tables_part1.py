@@ -42,6 +42,7 @@ EFFECTS = [("words_per_turn", "words / turn", 3), ("background_disclosure_pct", 
            ("affect/worry_pct", "worry", 3), ("affect/calm_optimism_pct", "calm / optimism", 2),
            ("patient_question_pct", "questions", 2), ("interaction_stance_pct", "interaction stance", 2),
            ("own_interpretation_pct", "own interpretation", 2), ("unasked_content_pct", "unasked content", 2),
+           ("reporting_style_pct", "reporting style", 2),
            ("care_engagement_pct", "care engagement", 2)]
 # diverging blue (lower than moderate) to red (higher), gray midpoint
 LOWER, NEUTRAL, HIGHER = "#2a78d6", "#8a8984", "#e34948"
@@ -110,8 +111,10 @@ def summary(diffs, speakers):
     """Effects that move the same way in at least three of the four models by at least the threshold."""
     lines = ["# Part 1: consistent effects", "",
              f"A change is listed when at least 3 of the {len(speakers)} speaker models move the same way by at least "
-             "the threshold (3 words, 3 points of turns or disclosure, 2 for smaller categories, 1 addition) and "
-             "none moves the opposite way. Brackets: models agreeing, then the range of differences from moderate.", "",
+             "the threshold: 3 words per turn; 3 percentage points for background disclosure, affect and worry; "
+             "2 percentage points for the other behavior measures; or 1 unsupported addition per consultation. "
+             "No model may reach the threshold in the opposite direction. These are descriptive selection rules, "
+             "not significance tests. Brackets: models meeting the rule, then the range across all four models.", "",
              "| Profile | Consistent effects vs. moderate |", "|---|---|"]
     for profile in PROFILES[1:]:
         effects = []
@@ -126,26 +129,33 @@ def summary(diffs, speakers):
 
 
 def heatmap(diffs, speakers, path):
-    """One panel per model; colour is the difference in multiples of the measure's threshold, the text is the difference."""
+    """Show raw differences as numbers and threshold-scaled differences as colours."""
     colours = LinearSegmentedColormap.from_list("diverging", ["#184f95", "#6da7ec", "#f0efec", "#ef8f8e", "#b8302f"])
     keys = [key for key, _, _ in EFFECTS]
-    figure, axes = plt.subplots(1, len(speakers), figsize=(5.2 * len(speakers), 6.2), sharey=True)
-    for axis, speaker in zip(axes, speakers):
+    figure, axes = plt.subplots(2, 2, figsize=(9.4, 9.6), layout="constrained")
+    for axis, speaker in zip(axes.flat, speakers):
         grid = [[diffs[speaker][p][k] / threshold for k, _, threshold in EFFECTS] for p in PROFILES[1:]]
-        axis.imshow(grid, cmap=colours, vmin=-4, vmax=4, aspect="auto")
+        mesh = axis.imshow(grid, cmap=colours, vmin=-4, vmax=4, aspect="auto")
         for i, profile in enumerate(PROFILES[1:]):
             for j, key in enumerate(keys):
-                axis.text(j, i, f"{diffs[speaker][profile][key]:+.0f}", ha="center", va="center", fontsize=7.5, color="#0b0b0b")
-        axis.set_title(speaker, fontsize=11, color="#0b0b0b")
-        axis.set_xticks(range(len(keys)), [label for _, label, _ in EFFECTS], rotation=55, ha="right", fontsize=8.5)
+                digits = 1 if key == "unsupported_additions" else 0
+                value = round(diffs[speaker][profile][key], digits)
+                label = "0" if value == 0 else f"{value:+.{digits}f}"
+                ink = "white" if abs(grid[i][j]) >= 2.5 else "#0b0b0b"
+                axis.text(j, i, label, ha="center", va="center", fontsize=8, color=ink)
+        axis.set_title(speaker.replace("gemma", "Gemma"), fontsize=11, color="#0b0b0b", loc="left", fontweight="semibold")
+        axis.set_xticks(range(len(keys)), [label for _, label, _ in EFFECTS], rotation=55, ha="right", fontsize=9)
         axis.set_yticks(range(len(PROFILES) - 1), PROFILES[1:], fontsize=9)
         axis.tick_params(length=0, colors="#52514e")
         for spine in axis.spines.values():
             spine.set_visible(False)
-    figure.suptitle("Difference from the moderate baseline (red higher, blue lower; full colour at 4× the summary threshold)",
-                    fontsize=12, color="#0b0b0b")
-    figure.tight_layout()
-    figure.savefig(path, dpi=200, facecolor="#fcfcfb")
+    legend = figure.colorbar(mesh, ax=axes.ravel().tolist(), orientation="horizontal",
+                            shrink=0.55, fraction=0.035, pad=0.03, ticks=[-4, -2, 0, 2, 4], extend="both")
+    legend.set_label("Difference / descriptive threshold", fontsize=9)
+    legend.ax.tick_params(labelsize=8, length=0)
+    legend.outline.set_visible(False)
+    for suffix in ("png", "pdf"):
+        figure.savefig(path.with_suffix(f".{suffix}"), dpi=220, facecolor="#ffffff", bbox_inches="tight")
     plt.close(figure)
 
 

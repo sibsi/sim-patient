@@ -1,6 +1,6 @@
 # Part 1: consistent effects
 
-A change is listed when at least 3 of the 4 speaker models move the same way by at least the threshold (3 words, 3 points of turns or disclosure, 2 for smaller categories, 1 addition) and none moves the opposite way. Brackets: models agreeing, then the range of differences from moderate.
+A change is listed when at least 3 of the 4 speaker models move the same way by at least the threshold: 3 words per turn; 3 percentage points for background disclosure, affect and worry; 2 percentage points for the other behavior measures; or 1 unsupported addition per consultation. No model may reach the threshold in the opposite direction. These are descriptive selection rules, not significance tests. Brackets: models meeting the rule, then the range across all four models.
 
 | Profile | Consistent effects vs. moderate |
 |---|---|

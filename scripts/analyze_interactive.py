@@ -13,12 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from dialogue.case_facts import fact_group
 from evaluation.reporting import linguistic_metrics
+from evaluation.schemas import BEHAVIOR_SUBTYPES
 
 ACTIONS = ("disclose", "hint", "withhold", "deny")
 GROUPS = ("health", "detail", "negative", "life")
 MARKERS = ["affect/worry", "affect/distress", "affect/embarrassment", "affect/calm_optimism", "unasked_content",
            "interaction_stance/appreciation", "interaction_stance/reservation", "interaction_stance/challenge",
            "own_interpretation", "patient_question/reassurance", "care_engagement/proactive"]
+# exports every category and subtype while keeping the selected drift measures unchanged
+BEHAVIOR_MARKERS = list(dict.fromkeys(MARKERS + list(BEHAVIOR_SUBTYPES) + [
+    f"{category}/{subtype}" for category, subtypes in BEHAVIOR_SUBTYPES.items()
+    for subtype in subtypes if subtype is not None]))
 WINDOWS = ((1, 5), (6, 10), (11, 15))
 # compares high minus low; openness uses low minus moderate
 TRAITS = {"N": ("b5_N_high", "b5_N_low", ["affect/worry", "affect/distress", "anxiety"]),
@@ -121,6 +126,7 @@ def analyse(dialogue, evaluation):
             for v in plan["volunteer"]:
                 matrix[("volunteer", status.get(v["id"], "not said"))] += 1
         behaviours = {label(a) for a in j["annotations"] if a["category"] != "other_observations"}
+        behaviours.update(a["category"] for a in j["annotations"] if a["category"] in BEHAVIOR_SUBTYPES)
         per_turn.append({
             "run_id": m["run_id"], "patient_model": m["patient"]["model_name"],
             "profile": m["personality_condition"], "case": m["case"], "turn": t["turn"],
@@ -135,7 +141,7 @@ def analyse(dialogue, evaluation):
             "hinted": sum(s == "hinted" for s in status.values()),
             "denied": sum(s == "denied" for s in status.values()), "repaired": t["repaired"],
             # keeps unassessed behavior turns as missing values
-            **{marker: int(marker in behaviours) if j["annotations_complete"] else None for marker in MARKERS}})
+            **{marker: int(marker in behaviours) if j["annotations_complete"] else None for marker in BEHAVIOR_MARKERS}})
 
     findings = collections.Counter(f["kind"] for t in evaluation["turns"] for f in t["findings"])
     total_words = sum(len(t["reply"].split()) for t in turns)
@@ -153,7 +159,7 @@ def analyse(dialogue, evaluation):
         "contradictions": findings["contradiction"], "unsupported_additions": findings["unsupported_addition"],
         "findings_per_100_words": round(100 * sum(findings.values()) / total_words, 2) if total_words else None,
         "behaviour_turns_assessed": sum(r[MARKERS[0]] is not None for r in per_turn),
-        **{f"turns_{marker}": sum(r[marker] or 0 for r in per_turn) for marker in MARKERS},
+        **{f"turns_{marker}": sum(r[marker] or 0 for r in per_turn) for marker in BEHAVIOR_MARKERS},
         **{f"realism_{k}": v["score"] if v else None for k, v in realism.items()},
         **change_columns(evaluation.get("changes"), turns)})
     return row, per_turn, matrix

@@ -2,7 +2,7 @@
 
 Intervals are 95% percentile bootstraps over conversations (2000 resamples). Trait effects are paired:
 the high and low profile share case and seed, so each pair gives one difference.
-Writes figures/*.pdf and *.png and tables.md into the analysis folder.
+Writes figures/*.pdf and *.png, tables.md and behavior_categories.tex into the analysis folder.
 
 python scripts/thesis_figures_part2.py [--analysis outputs/Part2_ANALYSIS]
 """
@@ -412,6 +412,32 @@ def overview_tables(conversations):
     return lines
 
 
+def behavior_tables(conversations):
+    """All seven categories, counted once per turn, for Markdown and the thesis appendix."""
+    categories = [("affect", "Emotional expression"), ("patient_question", "Questions to the doctor"),
+                  ("interaction_stance", "Interaction stance"), ("own_interpretation", "Own interpretation"),
+                  ("unasked_content", "Unasked content"), ("reporting_style", "Reporting style"),
+                  ("care_engagement", "Care engagement")]
+    markdown = ["", "## All behavior categories", "",
+                "Mean assessed turns per consultation; each category counts at most once per turn. "
+                "Categories can overlap. The conversations CSV records the number of assessed behavior turns."]
+    latex = []
+    for model, model_label in MODELS:
+        headers = [label for _, label, _ in PROFILES]
+        markdown += ["", f"### {model_label}", "", "| Category | " + " | ".join(headers) + " |",
+                     "|---|" + "---|" * len(headers)]
+        latex += [r"\textbf{" + model_label + r"}\par\smallskip",
+                  r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}", r"\toprule",
+                  "Category & " + " & ".join(headers) + r" \\", r"\midrule"]
+        for key, label in categories:
+            cells = [mean_of([r for r in conversations if r["patient_model"] == model and r["profile"] == profile],
+                             f"turns_{key}") for profile, _, _ in PROFILES]
+            markdown.append("| " + label + " | " + " | ".join(cells) + " |")
+            latex.append(label + " & " + " & ".join(cells) + r" \\")
+        latex += [r"\bottomrule", r"\end{tabular*}", r"\par\medskip"]
+    return markdown, latex
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--analysis", type=Path, default=ROOT / "outputs/Part2_ANALYSIS")
@@ -431,8 +457,10 @@ def main():
                    "fig4_expression", figures)
     trajectory_figure(turns, figures)
     plan_figure(matrix, figures)
-    lines = overview_tables(conversations) + [""] + effect_table(conversations) + drift_table(turns)
+    behaviors, latex = behavior_tables(conversations)
+    lines = overview_tables(conversations) + behaviors + [""] + effect_table(conversations) + drift_table(turns)
     (args.analysis / "tables.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (args.analysis / "behavior_categories.tex").write_text("\n".join(latex) + "\n", encoding="utf-8")
     print(f"{len(conversations)} conversations -> {figures} and {args.analysis / 'tables.md'}")
 
 

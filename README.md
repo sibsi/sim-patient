@@ -49,7 +49,8 @@ many consultations run in parallel.
 The analysis of both studies is in `outputs/Part1_ANALYSIS/` and `outputs/Part2_ANALYSIS/`. Start
 with `tables.md`, followed by the CSVs and the `figures/` folder. Part 1's `dialogues.csv` has one row
 per consultation, and Part 2's `conversations.csv` and `turns.csv` hold consultation- and turn-level
-measures.
+measures. These include all seven behavior categories and their subtypes. Part 2's `tables.md`
+reports category means by model and profile, and `behavior_categories.tex` provides the same table for LaTeX.
 
 All transcripts, plans, and evaluations are archived in `outputs/Part1_RESULTS.zip` and
 `outputs/Part2_RESULTS.zip`. The archived evaluations already include the corrections of invalid or
