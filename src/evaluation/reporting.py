@@ -33,7 +33,7 @@ def evaluation_overview(result, behavior):
     for counts in disclosure.values():
         counts["percentage"] = (100 * counts["disclosed"] / counts["assessed"]
                                 if counts["assessed"] else None)
-    # A review turn may have rejected findings. Exclude it rather than imply it is error-free.
+    # excludes unassessed turns from finding counts
     assessed = [turns[t["turn"]] for t in result["report_context"]
                 if turns.get(t["turn"], {}).get("factual_status") == "completed"]
     findings = {kind: sum(f["kind"] == kind for t in assessed for f in t["findings"])
@@ -145,7 +145,7 @@ def summary_lines(result, overview, metrics):
     lines = ["## Summary", "", "| Measure | Result |", "|---|---|",
              f"| Disclosure: directly relevant | {rate(disclosure['directly_relevant'], True)} |",
              f"| Disclosure: related background | {rate(disclosure['related_background'], False)} |"]
-    # Same rule as the overview: findings from review turns stay in the details only.
+    # keeps findings from unassessed turns in the details only
     assessed = [t for t in result["turns"] if t.get("factual_status") == "completed"]
     for kind, title in (("contradiction", "Contradictions"), ("unsupported_addition", "Unsupported additions")):
         if not assessed:
@@ -282,7 +282,7 @@ def call_lines(calls):
 def write_reports(result, directory, metadata):
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
-    # Derived numbers are rendered here and recomputed by analyze_evaluations.py, so the JSON keeps only results.
+    # computes report-only metrics without adding them to evaluation JSON
     behavior = behavior_summary(result["turns"], len(result["report_context"]))
     overview = evaluation_overview(result, behavior)
     context = {t["turn"]: t for t in result["report_context"]}

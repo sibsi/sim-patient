@@ -12,7 +12,20 @@ build/
 
 data/ddxplus/raw/
 results/
-# Only the Part 1 results and analysis are versioned
+
+# keeps local notes and thesis writing out of the code release
+/docs/
+/SimPatient Thesis/
+
+# versions the results and analysis of both studies
 outputs/*
 !outputs/Part1_RESULTS.zip
 !outputs/Part1_ANALYSIS/
+!outputs/Part2_RESULTS.zip
+!outputs/Part2_ANALYSIS/
+
+# local thesis notes and archives
+/EXAMINER_REVIEW.md
+/MORNING_NOTES.md
+/THESIS_PLAN.md
+/SimPatient Thesis.zip

@@ -1,0 +1,115 @@
+patient_model,profile,condition,planned,observed,count
+Qwen/Qwen3.5-27B,b5_A_high,plan,deny,disclosed,1
+Qwen/Qwen3.5-27B,b5_A_high,plan,disclose,disclosed,382
+Qwen/Qwen3.5-27B,b5_A_high,plan,disclose,not said,42
+Qwen/Qwen3.5-27B,b5_A_high,plan,hint,disclosed,15
+Qwen/Qwen3.5-27B,b5_A_high,plan,hint,hinted,1
+Qwen/Qwen3.5-27B,b5_A_high,plan,hint,not said,1
+Qwen/Qwen3.5-27B,b5_A_high,plan,volunteer,disclosed,72
+Qwen/Qwen3.5-27B,b5_A_high,plan,volunteer,not said,6
+Qwen/Qwen3.5-27B,b5_A_high,plan,withhold,denied,2
+Qwen/Qwen3.5-27B,b5_A_high,plan,withhold,disclosed,10
+Qwen/Qwen3.5-27B,b5_A_high,plan,withhold,not said,55
+Qwen/Qwen3.5-27B,b5_A_low,plan,disclose,disclosed,370
+Qwen/Qwen3.5-27B,b5_A_low,plan,disclose,not said,22
+Qwen/Qwen3.5-27B,b5_A_low,plan,hint,disclosed,9
+Qwen/Qwen3.5-27B,b5_A_low,plan,hint,hinted,1
+Qwen/Qwen3.5-27B,b5_A_low,plan,hint,not said,2
+Qwen/Qwen3.5-27B,b5_A_low,plan,volunteer,disclosed,54
+Qwen/Qwen3.5-27B,b5_A_low,plan,volunteer,not said,7
+Qwen/Qwen3.5-27B,b5_A_low,plan,withhold,denied,5
+Qwen/Qwen3.5-27B,b5_A_low,plan,withhold,disclosed,7
+Qwen/Qwen3.5-27B,b5_A_low,plan,withhold,not said,77
+Qwen/Qwen3.5-27B,b5_N_high,plan,disclose,disclosed,383
+Qwen/Qwen3.5-27B,b5_N_high,plan,disclose,not said,31
+Qwen/Qwen3.5-27B,b5_N_high,plan,hint,disclosed,13
+Qwen/Qwen3.5-27B,b5_N_high,plan,hint,not said,3
+Qwen/Qwen3.5-27B,b5_N_high,plan,volunteer,disclosed,68
+Qwen/Qwen3.5-27B,b5_N_high,plan,volunteer,not said,1
+Qwen/Qwen3.5-27B,b5_N_high,plan,withhold,denied,2
+Qwen/Qwen3.5-27B,b5_N_high,plan,withhold,disclosed,4
+Qwen/Qwen3.5-27B,b5_N_high,plan,withhold,not said,47
+Qwen/Qwen3.5-27B,b5_N_low,plan,disclose,disclosed,361
+Qwen/Qwen3.5-27B,b5_N_low,plan,disclose,not said,33
+Qwen/Qwen3.5-27B,b5_N_low,plan,hint,disclosed,8
+Qwen/Qwen3.5-27B,b5_N_low,plan,volunteer,disclosed,59
+Qwen/Qwen3.5-27B,b5_N_low,plan,volunteer,not said,4
+Qwen/Qwen3.5-27B,b5_N_low,plan,withhold,disclosed,3
+Qwen/Qwen3.5-27B,b5_N_low,plan,withhold,not said,55
+Qwen/Qwen3.5-27B,b5_O_low,plan,deny,disclosed,1
+Qwen/Qwen3.5-27B,b5_O_low,plan,disclose,disclosed,350
+Qwen/Qwen3.5-27B,b5_O_low,plan,disclose,not said,25
+Qwen/Qwen3.5-27B,b5_O_low,plan,hint,disclosed,7
+Qwen/Qwen3.5-27B,b5_O_low,plan,hint,hinted,1
+Qwen/Qwen3.5-27B,b5_O_low,plan,hint,not said,2
+Qwen/Qwen3.5-27B,b5_O_low,plan,volunteer,disclosed,46
+Qwen/Qwen3.5-27B,b5_O_low,plan,volunteer,not said,6
+Qwen/Qwen3.5-27B,b5_O_low,plan,withhold,disclosed,8
+Qwen/Qwen3.5-27B,b5_O_low,plan,withhold,not said,50
+Qwen/Qwen3.5-27B,b5_moderate,plan,deny,disclosed,1
+Qwen/Qwen3.5-27B,b5_moderate,plan,disclose,disclosed,378
+Qwen/Qwen3.5-27B,b5_moderate,plan,disclose,not said,18
+Qwen/Qwen3.5-27B,b5_moderate,plan,hint,disclosed,9
+Qwen/Qwen3.5-27B,b5_moderate,plan,hint,not said,1
+Qwen/Qwen3.5-27B,b5_moderate,plan,volunteer,disclosed,63
+Qwen/Qwen3.5-27B,b5_moderate,plan,volunteer,not said,1
+Qwen/Qwen3.5-27B,b5_moderate,plan,withhold,denied,1
+Qwen/Qwen3.5-27B,b5_moderate,plan,withhold,disclosed,3
+Qwen/Qwen3.5-27B,b5_moderate,plan,withhold,not said,36
+google/gemma-4-31B-it,b5_A_high,plan,disclose,disclosed,320
+google/gemma-4-31B-it,b5_A_high,plan,disclose,not said,12
+google/gemma-4-31B-it,b5_A_high,plan,hint,disclosed,3
+google/gemma-4-31B-it,b5_A_high,plan,hint,hinted,1
+google/gemma-4-31B-it,b5_A_high,plan,volunteer,disclosed,29
+google/gemma-4-31B-it,b5_A_high,plan,withhold,denied,4
+google/gemma-4-31B-it,b5_A_high,plan,withhold,disclosed,1
+google/gemma-4-31B-it,b5_A_high,plan,withhold,not said,47
+google/gemma-4-31B-it,b5_A_low,plan,deny,denied,3
+google/gemma-4-31B-it,b5_A_low,plan,deny,not said,4
+google/gemma-4-31B-it,b5_A_low,plan,disclose,disclosed,296
+google/gemma-4-31B-it,b5_A_low,plan,disclose,not said,9
+google/gemma-4-31B-it,b5_A_low,plan,hint,disclosed,1
+google/gemma-4-31B-it,b5_A_low,plan,volunteer,disclosed,23
+google/gemma-4-31B-it,b5_A_low,plan,withhold,denied,8
+google/gemma-4-31B-it,b5_A_low,plan,withhold,disclosed,4
+google/gemma-4-31B-it,b5_A_low,plan,withhold,not said,61
+google/gemma-4-31B-it,b5_N_high,plan,deny,not said,3
+google/gemma-4-31B-it,b5_N_high,plan,disclose,disclosed,302
+google/gemma-4-31B-it,b5_N_high,plan,disclose,not said,14
+google/gemma-4-31B-it,b5_N_high,plan,hint,disclosed,3
+google/gemma-4-31B-it,b5_N_high,plan,hint,hinted,3
+google/gemma-4-31B-it,b5_N_high,plan,hint,not said,1
+google/gemma-4-31B-it,b5_N_high,plan,volunteer,disclosed,28
+google/gemma-4-31B-it,b5_N_high,plan,withhold,denied,6
+google/gemma-4-31B-it,b5_N_high,plan,withhold,disclosed,1
+google/gemma-4-31B-it,b5_N_high,plan,withhold,hinted,1
+google/gemma-4-31B-it,b5_N_high,plan,withhold,not said,53
+google/gemma-4-31B-it,b5_N_low,plan,deny,not said,1
+google/gemma-4-31B-it,b5_N_low,plan,disclose,disclosed,327
+google/gemma-4-31B-it,b5_N_low,plan,disclose,not said,16
+google/gemma-4-31B-it,b5_N_low,plan,hint,disclosed,3
+google/gemma-4-31B-it,b5_N_low,plan,hint,hinted,1
+google/gemma-4-31B-it,b5_N_low,plan,volunteer,disclosed,33
+google/gemma-4-31B-it,b5_N_low,plan,withhold,denied,3
+google/gemma-4-31B-it,b5_N_low,plan,withhold,disclosed,1
+google/gemma-4-31B-it,b5_N_low,plan,withhold,not said,37
+google/gemma-4-31B-it,b5_O_low,plan,deny,not said,1
+google/gemma-4-31B-it,b5_O_low,plan,disclose,disclosed,319
+google/gemma-4-31B-it,b5_O_low,plan,disclose,not said,11
+google/gemma-4-31B-it,b5_O_low,plan,hint,disclosed,2
+google/gemma-4-31B-it,b5_O_low,plan,hint,hinted,5
+google/gemma-4-31B-it,b5_O_low,plan,hint,not said,2
+google/gemma-4-31B-it,b5_O_low,plan,volunteer,disclosed,25
+google/gemma-4-31B-it,b5_O_low,plan,withhold,denied,6
+google/gemma-4-31B-it,b5_O_low,plan,withhold,disclosed,2
+google/gemma-4-31B-it,b5_O_low,plan,withhold,not said,44
+google/gemma-4-31B-it,b5_moderate,plan,deny,not said,2
+google/gemma-4-31B-it,b5_moderate,plan,disclose,disclosed,319
+google/gemma-4-31B-it,b5_moderate,plan,disclose,not said,13
+google/gemma-4-31B-it,b5_moderate,plan,hint,hinted,6
+google/gemma-4-31B-it,b5_moderate,plan,hint,not said,1
+google/gemma-4-31B-it,b5_moderate,plan,volunteer,disclosed,26
+google/gemma-4-31B-it,b5_moderate,plan,volunteer,not said,1
+google/gemma-4-31B-it,b5_moderate,plan,withhold,denied,6
+google/gemma-4-31B-it,b5_moderate,plan,withhold,disclosed,3
+google/gemma-4-31B-it,b5_moderate,plan,withhold,not said,45

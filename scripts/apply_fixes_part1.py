@@ -23,11 +23,11 @@ from evaluation.judge import evaluate, parse_judge_json, prepare_input
 from evaluation.reporting import write_reports
 from evaluation.schemas import BEHAVIOR_SUBTYPES, normalise, ordered_parts_ok, quote_ok, split_joined_excerpt
 
-# Run folders exceed the Windows path limit.
+# supports run paths longer than the Windows limit
 RESULTS = Path("\\\\?\\" + str(ROOT / "outputs/Part1_RESULTS")) if os.name == "nt" else ROOT / "outputs/Part1_RESULTS"
 
-# The judge quoted the fact sheet or the doctor, or paraphrased: reply text carrying its decision,
-# or None when the claim is not in that turn. Keyed by (run, turn, judge quote).
+# reviewed quote replacements keyed by run, turn and original quote
+# uses None to drop claims absent from the reply
 QUOTES = {
     ("Mistral-Small-3.2-24B jakob_19920__b5_N_high s1", 12, "I'm a tram driver"):
         "I've made a few small mistakes while driving. I'm worried about my safety and the safety of my passengers.",
@@ -88,7 +88,7 @@ FELIX = ("Qwen3.5-27B felix_85945__b5_A_high s2", "annotation:13", {"turns": [
                          "Explicitly treats honest disclosure as his responsibility.")]),
 ]})
 
-# Hand-reviewed label edits: (action, run, turn, category, subtype, quote in the label).
+# reviewed label edits: action, run, turn, category, subtype, quote
 EDITS = [("remove", run, n, "interaction_stance", sub, q) for run, n, sub, q in [  # stance aimed at third parties
     ("Mistral-Small-3.2-24B susanne_131469__b5_A_high s1", 12, "appreciation", "I'm grateful to have him there"),
     ("Mistral-Small-3.2-24B susanne_131469__b5_A_high s1", 13, "appreciation", "I'm grateful for that"),
@@ -113,7 +113,7 @@ EDITS = [("remove", run, n, "interaction_stance", sub, q) for run, n, sub, q in 
     ("Qwen3.5-27B jonas_102835__b5_N_low s2", 12, "appreciation", "which I appreciate")]] + [
     ("drop_quote", "Qwen3.5-9B jonas_102835__b5_O_high s1", 16, "interaction_stance", "appreciation", "I really appreciate Sabine's help"),
     ("drop_quote", "Qwen3.5-9B jonas_102835__b5_N_low s2", 16, "interaction_stance", "appreciation", "I'm really grateful for Sabine's help"),
-    # Drinking minimized while waving off the wife: avoidance of care, not stance toward the doctor.
+    # dismissing the wife's concern is care avoidance, not stance toward the doctor
     ("avoidant", "Qwen3.5-27B jonas_102835__b5_E_high s1", 11, "interaction_stance", "challenge", "I think I've got it under control"),
     ("avoidant", "Qwen3.5-27B jonas_102835__b5_A_low s2", 11, "interaction_stance", "challenge", "she's just being dramatic"),
     ("avoidant", "Qwen3.5-27B jonas_102835__b5_C_low s2", 11, "interaction_stance", "challenge", "she's just being worried"),
@@ -125,8 +125,8 @@ EDITS = [("remove", run, n, "interaction_stance", sub, q) for run, n, sub, q in 
 ]
 AVOIDANT = "Minimizes the drinking and waves off the wife's concern; avoids addressing it as a care issue."
 
-# unasked_content whose every excerpt is on the asked topic: doctor-question pattern -> excerpt pattern.
-# Travel answers are excluded because they add anecdotes or reasons.
+# removes unasked_content when every excerpt matches the question topic
+# keeps travel answers that add anecdotes or reasons
 ASKED_TOPICS = [(r"breathing", r"\bbreath|\bair\b|winded|wheez|chest (feels )?tight|lungs"),
                 (r"shivering or chills", r"shiver|chill|cold|shak"),
                 (r"smoking or drinking", r"smok|drink|alcohol|wine|beer|vap|cigar"),
@@ -137,7 +137,7 @@ ASKED_TOPICS = [(r"breathing", r"\bbreath|\bair\b|winded|wheez|chest (feels )?ti
                 (r"swollen", r"gland|swollen|throat")]
 KEEP_UNASKED = {("Mistral-Small-3.2-24B susanne_131469__b5_E_high s2", 4)}  # painkillers; treatment was not asked
 
-# Proactive excerpts in turns 15-16 that restate the doctor's plan or safety-net advice.
+# matches restatements of the doctor's plan or safety-net advice in turns 15-16
 RESTATED = re.compile(r"come (straight |right )?back|be back in|do the tests|whenever you are|keep my distance|smaller meals"
                       r"|eating too late|stay (off|home)|take (some )?time off|keep (a close |an )?eye on|rest as much|take it easy"
                       r"|follow your advice|the changes you suggested|just like you said|I'll do it|keep our interactions minimal", re.I)
@@ -245,7 +245,7 @@ def repair_annotations(key, parsed, batch, data):
                 continue
             turns = {1: {"patient_reply": reply}}
             if sum(1 if quote_ok(turns, 1, q) else len(split_joined_excerpt(turns, 1, q) or [q]) for q in quotes) > 3:
-                # Splitting the ellipses would exceed three excerpts; quote the covering reply text instead.
+                # uses a covering span when splitting would exceed three excerpts
                 quotes = [q if quote_ok(turns, 1, q) else covering_span(q, reply) or q for q in quotes]
                 LOG["ellipsis excerpt replaced by covering span"] += 1
             entry["evidence"] = list(dict.fromkeys(quotes))[:3]

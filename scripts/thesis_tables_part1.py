@@ -28,7 +28,7 @@ from evaluation.personality import behavior_summary
 from evaluation.reporting import evaluation_overview, linguistic_metrics
 from evaluation.schemas import BEHAVIOR_SUBTYPES
 
-# Run folders exceed the Windows path limit.
+# supports run paths longer than the Windows limit
 RESULTS = Path("\\\\?\\" + str(ROOT / "outputs/Part1_RESULTS")) if os.name == "nt" else ROOT / "outputs/Part1_RESULTS"
 PROFILES = ["moderate"] + [f"{t} {level}" for t in "OCEAN" for level in ("high", "low")]
 RESPONSE = [("direct_disclosure_pct", "Direct disclosure %"), ("background_disclosure_pct", "Background disclosure %"),
@@ -36,14 +36,14 @@ RESPONSE = [("direct_disclosure_pct", "Direct disclosure %"), ("background_discl
             ("naturalness", "Naturalness (1-5)"), ("fit", "Fit (1-5)"),
             ("words_per_turn", "Words / turn"), ("mattr", "MATTR")]
 BEHAVIOR = [(f"{c}_pct", c.replace("_", " ")) for c in BEHAVIOR_SUBTYPES]
-# Measures for the summary and heatmap: (key, label, smallest difference from moderate that counts).
+# summary measures: key, label, minimum difference from moderate
 EFFECTS = [("words_per_turn", "words / turn", 3), ("background_disclosure_pct", "background disclosure", 3),
            ("unsupported_additions", "unsupported additions", 1), ("affect_pct", "affect", 3),
            ("affect/worry_pct", "worry", 3), ("affect/calm_optimism_pct", "calm / optimism", 2),
            ("patient_question_pct", "questions", 2), ("interaction_stance_pct", "interaction stance", 2),
            ("own_interpretation_pct", "own interpretation", 2), ("unasked_content_pct", "unasked content", 2),
            ("care_engagement_pct", "care engagement", 2)]
-# Diverging blue (lower than moderate) to red (higher), gray midpoint.
+# diverging blue (lower than moderate) to red (higher), gray midpoint
 LOWER, NEUTRAL, HIGHER = "#2a78d6", "#8a8984", "#e34948"
 
 
@@ -64,7 +64,7 @@ def dialogue_row(document):
            "unsupported_additions": overview["factual_findings"]["unsupported_addition"],
            "naturalness": overview["realism"]["spoken_naturalness"], "fit": overview["realism"]["conversational_fit"],
            "words_per_turn": metrics["mean_words_per_turn"], "mattr": metrics["mattr"]}
-    # Share of assessed turns showing the behavior; subtypes go to the CSV only.
+    # share of assessed turns with the behavior; subtypes appear only in the CSV
     for category, counts in behaviors.items():
         share = lambda c: 100 * c["count"] / c["assessed_turns"] if c["assessed_turns"] else None
         row[f"{category}_pct"] = share(counts)

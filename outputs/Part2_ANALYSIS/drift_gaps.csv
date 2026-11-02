@@ -1,0 +1,21 @@
+patient_model,trait,comparison,measure,gap_1-5,gap_6-10,gap_11-15
+Qwen/Qwen3.5-27B,N,b5_N_high - b5_N_low,affect/worry,0.312,0.25,0.312
+Qwen/Qwen3.5-27B,N,b5_N_high - b5_N_low,affect/distress,0.087,0.087,0.05
+Qwen/Qwen3.5-27B,N,b5_N_high - b5_N_low,anxiety,1.963,1.588,1.138
+Qwen/Qwen3.5-27B,A,b5_A_high - b5_A_low,interaction_stance/appreciation,0.025,0.0,0.125
+Qwen/Qwen3.5-27B,A,b5_A_high - b5_A_low,interaction_stance/challenge,-0.037,-0.025,-0.075
+Qwen/Qwen3.5-27B,A,b5_A_high - b5_A_low,interaction_stance/reservation,0.0,-0.025,-0.037
+Qwen/Qwen3.5-27B,A,b5_A_high - b5_A_low,trust,0.825,1.025,0.775
+Qwen/Qwen3.5-27B,O,b5_O_low - b5_moderate,unasked_content,-0.037,-0.05,-0.088
+Qwen/Qwen3.5-27B,O,b5_O_low - b5_moderate,own_interpretation,-0.05,0.012,-0.025
+Qwen/Qwen3.5-27B,O,b5_O_low - b5_moderate,words,-4.113,-2.388,-4.262
+google/gemma-4-31B-it,N,b5_N_high - b5_N_low,affect/worry,0.112,0.125,0.2
+google/gemma-4-31B-it,N,b5_N_high - b5_N_low,affect/distress,-0.025,0.062,0.025
+google/gemma-4-31B-it,N,b5_N_high - b5_N_low,anxiety,1.587,1.25,1.163
+google/gemma-4-31B-it,A,b5_A_high - b5_A_low,interaction_stance/appreciation,-0.013,0.025,0.225
+google/gemma-4-31B-it,A,b5_A_high - b5_A_low,interaction_stance/challenge,-0.013,-0.013,-0.113
+google/gemma-4-31B-it,A,b5_A_high - b5_A_low,interaction_stance/reservation,0.0,0.0,0.0
+google/gemma-4-31B-it,A,b5_A_high - b5_A_low,trust,0.35,1.338,1.463
+google/gemma-4-31B-it,O,b5_O_low - b5_moderate,unasked_content,-0.05,0.0,0.0
+google/gemma-4-31B-it,O,b5_O_low - b5_moderate,own_interpretation,0.0,-0.013,-0.013
+google/gemma-4-31B-it,O,b5_O_low - b5_moderate,words,-1.8,-0.975,-2.462

@@ -11,11 +11,10 @@
 
 set -euo pipefail
 
-# Submit from the repository root or scripts/:
-#   sbatch scripts/run_frozen_four_models.sbatch
-# Use the same untyped GPU request as run_hf.sbatch.
-# Eight model/seed tasks, at most four concurrent tasks, one GPU each.
-# This does not enforce H200 hardware; check the nvidia-smi output below.
+# submit from the repository root or scripts/
+# sbatch scripts/run_frozen_four_models.sbatch
+# requests any GPU type; check the hardware printed below
+# eight model/seed tasks, at most four at once, one GPU each
 for candidate in "$PWD" "$PWD/scripts" \
     "${SLURM_SUBMIT_DIR:-$PWD}" "${SLURM_SUBMIT_DIR:-$PWD}/scripts"; do
     if [[ -f "$candidate/runner.py" && -f "$candidate/evaluate.py" ]]; then
@@ -46,7 +45,7 @@ MODELS=(
 )
 SEEDS=(1 2)
 JUDGE_MODEL="Qwen/Qwen3.8-27B"
-# Keep the judge seed fixed across patient-generation seeds.
+# uses the same judge seed for both patient seeds
 JUDGE_SEED=42
 CASES=(anna_103370 paul_102620 susanne_131469 jakob_19920
        sabine_60370 marie_93048 felix_85945 jonas_102835)
@@ -59,7 +58,7 @@ fi
 MODEL="${MODELS[$((TASK_ID / 2))]}"
 SEED="${SEEDS[$((TASK_ID % 2))]}"
 
-# Isolate this invocation, including requeues, from every other task's batch.
+# creates a separate output folder for each task and requeue
 OUTPUT_ROOT="../outputs"
 mkdir -p "$OUTPUT_ROOT"
 OUTPUT_FOLDER=$(mktemp -d "$OUTPUT_ROOT/frozen_${SLURM_ARRAY_JOB_ID}_${TASK_ID}_seed${SEED}_XXXXXX")
@@ -68,9 +67,9 @@ echo "Model: $MODEL | patient seed: $SEED | judge seed: $JUDGE_SEED"
 echo "Output folder: $OUTPUT_FOLDER"
 nvidia-smi --query-gpu=name,memory.total --format=csv
 
-# Preserve runner defaults: frozen prompt, temperature 0.7, top-p 0.9,
-# 400 new tokens, thinking disabled. Each task generates 8 x 11 interviews.
-# A failed generation task stops here; its saved outputs remain inspectable.
+# runner defaults: frozen prompt, temperature 0.7, top-p 0.9,
+# 400 new tokens, thinking disabled; 8 x 11 interviews per task
+# stops before evaluation if generation fails
 python -u runner.py \
     --backend hf \
     --model "$MODEL" \
@@ -88,8 +87,8 @@ fi
 BATCH="${MANIFESTS[0]%/batch.json}"
 echo "Evaluating batch: $BATCH"
 
-# Omitting --enable-thinking uses HFBackend(enable_thinking=False).
-# Generation has exited, releasing its GPU memory before loading the judge.
+# judge thinking is disabled by default
+# generation exits before the judge loads onto the GPU
 python -u evaluate.py "$BATCH" \
     --backend hf \
     --model "$JUDGE_MODEL" \

@@ -92,7 +92,7 @@ def ordered_parts_ok(turns, number, quote, min_words=3):
     """An excerpt joined with ellipses matches when each part appears, in order, in that turn's reply."""
     if not (type(number) is int and number in turns and isinstance(quote, str)):
         return False
-    text = normalise(quote)  # NFKC turns the single ellipsis character into "..."
+    text = normalise(quote)  # normalization expands the ellipsis character to "..."
     parts = [part.strip() for part in text.split("...") if part.strip()]
     if "..." not in text or not parts or any(len(part.split()) < min_words for part in parts):
         return False

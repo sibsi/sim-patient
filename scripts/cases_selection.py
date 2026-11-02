@@ -60,8 +60,8 @@ def values(row):
 
 
 def topics(row):
-    # follow-up details (pain location, rash color, ...) share their parent's code_question.
-    # details whose parent is missing (e.g. rash details without a rash) don't count as a topic.
+    # follow-up details (pain location, rash color, ...) share their parent's code_question
+    # details whose parent is missing (e.g. rash details without a rash) don't count as a topic
     present = codes(row)
     return len({evidences[c]["code_question"] for c in present
                 if not evidences[c]["is_antecedent"] and evidences[c]["code_question"] in present | {c}})
@@ -103,8 +103,8 @@ print("\neligible per pathology (F / M):")
 for pathology, group in cases.groupby("PATHOLOGY"):
     print(f"  {pathology:28} {len(group):5}  ({(group.SEX == 'F').sum()} / {(group.SEX == 'M').sum()})")
 
-# draw: per pathology one F and one M; if only one sex exists, two of that sex.
-# rank 0 = drawn case, ranks 1-3 = backups for the manual review, in this order.
+# draw: per pathology one F and one M; if only one sex exists, two of that sex
+# rank 0 = drawn case, ranks 1-3 = backups for the manual review, in this order
 drawn = []
 for pathology in PATHOLOGIES:
     group = cases[cases.PATHOLOGY == pathology]

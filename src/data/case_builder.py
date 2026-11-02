@@ -21,7 +21,6 @@ statements, then applies statement overrides, life shards and the script's added
 
 SEPARATOR = "_@_"
 
-# ===HELPER METHODS===
 def join_values(items: list[str]) -> str:
     # ['a'] -> 'a'; ['a','b'] -> 'a and b'; ['a','b','c'] -> 'a, b and c'
     if not items:
@@ -36,7 +35,7 @@ def lookup_phrases(value_codes, table, key=None) -> list[str]:
     phrases = []
     for v in value_codes:
         entry = table.get(v)
-        # key is 'paraphrased' for body_locations, None for value_phrasings
+        # selects a field from nested location entries
         if key and isinstance(entry, dict):
             entry = entry.get(key)
         if entry:
@@ -81,8 +80,8 @@ def location_text(value_codes, body_locations) -> str | None:
     return join_values(locations)
 
 def build_statement(code, value_codes, data_type, phrasing, body_locations) -> tuple[str | None, bool]:
-    # builds the first-person statement for one evidence -> (statement, is_negative)
-    # usually all evidence should yield a statement, but if not, gets skipped (no shard)
+    # returns the patient statement and whether it is negative
+    # missing phrasings return None and are checked by the caller
     statement = phrasing.get("statement")
 
     # binary evidence -> one possible statement
@@ -98,7 +97,7 @@ def build_statement(code, value_codes, data_type, phrasing, body_locations) -> t
     value_phrasings = phrasing.get("value_phrasings", {})
     format = phrasing.get("format")
 
-    # some specific fix for scale value 0 negating the statement
+    # uses an explicit negative statement for zero-valued symptom scales
     if phrasing.get("zero_statement") and positive_codes[0] == "0":
         return phrasing.get("zero_statement"), True
 
@@ -162,8 +161,7 @@ def decode_evidence(evidences, evidence_dict, phrasings, body_locations, initial
         evidence_description = evidence_dict[code]
         data_type = evidence_description["data_type"]
 
-        # DDXPlus artifact: follow-up details whose parent question is missing
-        # (e.g. "the rash isn't swollen" without having a rash) -> no shard
+        # skips symptom details whose parent symptom is absent
         parent = evidence_description.get("code_question", code)
         if data_type != "B" and parent != code and parent not in grouped:
             continue
@@ -184,14 +182,13 @@ def decode_evidence(evidences, evidence_dict, phrasings, body_locations, initial
         statement, is_negative = build_statement(code, value_codes, data_type, phrasings[code], body_locations)
         meanings = [value_meaning_list.get(v, {}).get("en", v) for v in value_codes]
         unknown_value = bool(meanings) and all(v == "NA" for v in meanings)
-        # NA does not describe a known medical fact. Keep it in the raw
-        # source evidence, but do not create an unknown-valued patient shard.
+        # keeps unknown values in source evidence without creating facts
         if unknown_value:
             continue
         if statement is None:
             raise ValueError(f"Evidence {code} could not be converted: {value_codes}")
-        # N is an explicit negative answer; NA is not. Numeric zero is not
-        # generically negative (e.g. E_59=0 describes gradual pain onset).
+        # interprets N as negative and NA as unknown; numeric zero depends on the evidence
+        # for example, E_59=0 means gradual pain onset
         is_negative = is_negative or (bool(meanings) and all(v == "N" for v in meanings))
 
         answer = "Yes" if data_type == "B" else ", ".join(meanings)
@@ -218,7 +215,7 @@ def decode_evidence(evidences, evidence_dict, phrasings, body_locations, initial
 
     return decoded_shards
 
-# Fixed names for the 12 selected evaluation cases.
+# names for the 12 originally selected cases
 CASE_NAMES = {
     103370: "Anna",
     74168: "Christina",

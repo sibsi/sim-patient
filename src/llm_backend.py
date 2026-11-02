@@ -23,7 +23,7 @@ def split_thinking(text, *, starts_in_thinking=False):
         if not separator:
             raise ValueError("Thinking did not finish: missing </think>; increase max_new_tokens")
         return reasoning.strip(), answer.strip()
-    # Some HTTP servers omit the opening tag when it was part of the prompt.
+    # some HTTP servers omit the opening tag when it was part of the prompt
     if "</think>" in stripped and not stripped.startswith(("{", "[", "```")):
         reasoning, _, answer = stripped.partition("</think>")
         return reasoning.strip(), answer.strip()
@@ -98,7 +98,7 @@ class LLMBackend:
             if self.log_path:
                 self.log_path.parent.mkdir(parents=True, exist_ok=True)
                 with self.log_path.open("a", encoding="utf-8") as output:
-                    # Redact the API key in case the server echoes it back.
+                    # redact the API key in case the server echoes it back
                     text = json.dumps(entry, ensure_ascii=False)
                     if self.api_key and self.api_key != "ollama":
                         text = text.replace(self.api_key, "[REDACTED]")
@@ -183,7 +183,7 @@ class HFBackend:
         self.reasoning_effort = reasoning_effort
 
     def check_available(self):
-        # Keep imports optional: HTTP runs do not need the GPU environment.
+        # imports GPU dependencies only for the local Hugging Face backend
         try:
             import torch
             import transformers
@@ -203,7 +203,7 @@ class HFBackend:
         config = AutoConfig.from_pretrained(self.model_name, **loading)
         model_loader = AutoModelForCausalLM
         if config.model_type in {"mistral3", "qwen3_5", "gemma4"}:
-            # These checkpoints use a multimodal class even for text-only input.
+            # loads the multimodal class required by these text-only runs
             from transformers import AutoModelForImageTextToText
             model_loader = AutoModelForImageTextToText
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, **loading)
@@ -218,7 +218,7 @@ class HFBackend:
         import torch
 
         if schema is not None:
-            # Prompt for JSON; decoding is unconstrained and the evaluator validates it.
+            # requests JSON in the prompt; the evaluator validates the generated text
             messages = [dict(message) for message in messages]
             instruction = ("\n\nReturn only a JSON object matching this JSON Schema. "
                            "Do not include Markdown fences or commentary.\n"
@@ -248,7 +248,7 @@ class HFBackend:
             device = self.model.get_input_embeddings().weight.device
             inputs = {key: value.to(device) for key, value in inputs.items()}
             prompt_length = inputs["input_ids"].shape[-1]
-            # manual_seed touches every visible CUDA device; restore all their RNG states.
+            # restores RNG state on every CUDA device touched by manual_seed
             devices = list(range(torch.cuda.device_count())) if torch.cuda.is_available() else []
             with torch.random.fork_rng(devices=devices), torch.inference_mode():
                 torch.manual_seed(seed)
@@ -262,7 +262,7 @@ class HFBackend:
             entry["response"] = {"text": text, "completion_tokens": len(completion),
                                  "finish_reason": "length" if limited else "stop"}
             if self.enable_thinking:
-                # Keep the exact decoded output, even if the thought block is incomplete.
+                # preserves decoded output, including incomplete thought blocks
                 entry["response"]["raw_text"] = self.tokenizer.decode(completion, skip_special_tokens=False)
             if limited:
                 raise ValueError("Generation reached its token limit; increase max_new_tokens")

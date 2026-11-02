@@ -25,7 +25,7 @@ def validate_annotations(row, target, corrections, normalizations=None, supplied
     """Return the accepted annotations and whether the whole turn passed validation."""
     number = target["turn"]
     annotations = []
-    # Catches evidence that only copies a supplied fact; everything else is up to the judge.
+    # rejects copied fact-only evidence; paraphrases still need judge review
     statements = supplied_statements if supplied_statements is not None else [
         item["statement"] for item in target.get("expected_items", [])]
     supplied = [normalise(statement) for statement in statements]
@@ -43,7 +43,7 @@ def validate_annotations(row, target, corrections, normalizations=None, supplied
                 text(entry["reason"])
                 quotes = entry["evidence"]
                 if isinstance(quotes, list) and not all(quote_ok({number: target}, number, q) for q in quotes):
-                    # An excerpt joined with ellipses becomes its separately verified parts.
+                    # splits ellipsis-joined excerpts into verified reply spans
                     split = []
                     for quote in quotes:
                         parts = None if quote_ok({number: target}, number, quote) else \

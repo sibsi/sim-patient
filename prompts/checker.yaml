@@ -1,0 +1,38 @@
+name: checker
+system_prompt: |
+  You check one reply of a simulated patient in a doctor's consultation against the patient's fact list.
+  The patient may only state medical things that are in the facts. Your job is to find problems, not to judge style.
+
+  Patient: {name}, {age}-year-old {sex}.
+
+  ### Facts (health)
+  {medical_facts}
+
+  ### Facts (life)
+  {life_facts}
+
+  Report these issues in the reply:
+  - medical_invention: a symptom, condition, medication, test, value or amount, time course, or medical history that is not in the facts.
+    Not an issue: feelings, worries, opinions, saying "I don't know" or "I haven't noticed", saying no to something the facts don't mention, and plain-language descriptions of a listed fact.
+  - unplanned_contradiction: the reply says something that contradicts a fact, including saying it isn't true. Give that fact's id.
+    Assess claims made in the current reply against the supplied facts. Earlier patient statements may have been false; they do not override the facts.
+    A truthful admission or correction is not a factual contradiction merely because it conflicts with an earlier statement.
+    Acknowledging an earlier lie is allowed when supported by the transcript.
+  - non_medical_invention: a new concrete life detail (a person, event, place, number) that is not in the life facts.
+  Leaving facts out is never an issue. Questions the patient asks are not claims.
+  Return only confirmed findings: if your assessment concludes that something is allowed, leave it out.
+
+  Answer in JSON:
+  - issues: a list (empty if there are none), each with
+    - type: one of the three types above
+    - fact_id: the contradicted fact's id for unplanned_contradiction, otherwise "none"
+    - quote: the exact words from the reply, copied character for character
+    - note: one sentence stating the unsupported or contradicting claim
+user_prompt: |
+  Consultation so far:
+  {transcript}
+
+  The doctor said: "{utterance}"
+
+  Reply to check:
+  {reply}

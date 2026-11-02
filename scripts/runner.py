@@ -49,7 +49,7 @@ def file_reference(path):
     try:
         relative = path.relative_to(ROOT)
     except ValueError:
-        # External inputs can be on another drive; omit machine-specific folders.
+        # stores external inputs without machine-specific folders
         relative = Path(path.name)
     return {"path": relative.as_posix(), "content": path.read_text(encoding="utf-8")}
 
@@ -173,7 +173,7 @@ def load_cases(args):
             run_inputs = dict(inputs)
             if reference is not None:
                 run_inputs["persona_profile"] = reference
-            # Validate every case/profile combination before any model calls.
+            # checks prompts before starting model calls
             patient = PatientSpeaker(case, None, prompt=speaker_prompt, persona_text=persona_text)
             for exchange in exchanges:
                 patient.build_messages(exchange["question"], [], exchange["facts"])

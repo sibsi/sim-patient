@@ -1,5 +1,5 @@
 -r requirements.txt
-# Install a CUDA-compatible PyTorch build for your cluster before this file.
+# install a CUDA-compatible PyTorch build before these requirements
 torch>=2.2
 transformers>=4.56,<6
 accelerate>=1.0

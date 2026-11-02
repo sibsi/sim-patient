@@ -7,7 +7,7 @@
 #SBATCH --time=06:00:00
 
 set -euo pipefail
-# Work from scripts/ (starting from the repository root also works).
+# runs from scripts/; also accepts submission from the repository root
 if [[ -f scripts/runner.py ]]; then
     cd scripts
 fi
@@ -33,7 +33,7 @@ python -u runner.py \
 
 BATCH=$(ls -td ../outputs/*/ | head -n 1)
 
-# Evaluation uses four annotation batches and one global realism call per dialogue.
+# evaluates four annotation batches and one realism call per dialogue
 python -u evaluate.py "$BATCH" \
     --backend hf \
     --model "Qwen/Qwen3.8-27B" \

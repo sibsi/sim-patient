@@ -11,11 +11,11 @@
 
 set -euo pipefail
 
-# Usage (from the repository root or scripts/):
-#   sbatch scripts/run_eval_shards.sbatch <batch-dir>
-# Splits one batch's judging over 4 GPUs (one shard per array task) and
-# skips runs that already have a completed evaluation.json.
-# Judge settings are identical to run_frozen_four_models.sbatch.
+# usage (from the repository root or scripts/):
+# sbatch scripts/run_eval_shards.sbatch <batch-dir>
+# splits evaluation across four array tasks, one GPU each
+# skips finished judge passes, including those with unresolved annotations
+# uses the same judge settings as run_frozen_four_models.sbatch
 
 BATCH_ARG="${1:?Pass the batch directory (the folder containing batch.json)}"
 BATCH=$(realpath "$BATCH_ARG")

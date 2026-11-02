@@ -3,7 +3,7 @@ from typing import Any
 
 @dataclass
 class Shard:
-    shard_id: str  # Medical IDs use M0, M1, ... and added negatives use X0, X1, ...; life shards use L-prefixed IDs.
+    shard_id: str  # fact IDs: M for medical, X for added negatives, L for life background
     # taken directly from DDXPlus dataset
     evidence_code: str | None
     value_codes: list[str]

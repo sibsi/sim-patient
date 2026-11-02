@@ -31,7 +31,7 @@ def contradiction_timing(document):
     rows = []
     for turn in document["turns"]:
         if turn.get("factual_status") != "completed":
-            continue  # Same rule as the overview: review turns are not counted.
+            continue  # excludes unassessed turns from comparison counts
         for finding in turn["findings"]:
             if finding["kind"] != "contradiction":
                 continue

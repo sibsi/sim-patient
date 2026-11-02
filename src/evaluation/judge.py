@@ -24,7 +24,7 @@ def prepare_input(dialogue):
     turns = dialogue["turns"]
     if len(turns) != 16 or [t["turn"] for t in turns] != list(range(1, 17)):
         raise ValueError("This evaluator requires 16 sequential completed turns")
-    # Only these fields reach the judge, so it never sees the diagnosis or model metadata.
+    # selects judge input fields; excludes diagnosis and model metadata
     clean = []
     for turn in turns:
         clean.append({key: turn[key] for key in
@@ -66,7 +66,7 @@ def parse_judge_json(raw, normalizations):
     def replace(match):
         nonlocal removed
         token = match.group()
-        # Strings (including escaped quotes) are matched first and kept verbatim.
+        # preserves quoted strings while repairing JSON syntax
         if token == "," and text[:match.start()].rstrip()[-1:] not in ("", "[", "{", ":", ","):
             removed += 1
             return ""
@@ -158,7 +158,7 @@ def validate_result(result, targets, corrections=None, history=None, normalizati
             def disclosure(d):
                 require(len(candidates) == 1, "Duplicate item")
                 require(isinstance(d, dict) and set(d) == {"item_id", "evidence"}, "Invalid disclosure fields")
-                # Disclosure only asks whether the fact was said, so ellipsis-joined parts may match.
+                # allows separate reply excerpts as evidence of disclosure
                 if not quote_ok(indexed, number, d["evidence"]) and ordered_parts_ok(indexed, number, d["evidence"]):
                     notes.append(f"Turn {number}: accepted {identifier} evidence joined with ellipses")
                     return
@@ -198,7 +198,7 @@ def validate_result(result, targets, corrections=None, history=None, normalizati
             if (isinstance(f, dict) and f.get("kind") == "contradiction"
                     and f.get("contradicted_item_id") in assigned_turns
                     and f.get("contradicted_turn") not in assigned_turns[f["contradicted_item_id"]]):
-                # The item ID identifies the script fact; the turn is only a pointer Python can recover.
+                # recovers the fact reference from its item ID
                 fixed = assigned_turns[f["contradicted_item_id"]][0]
                 notes.append(f"Turn {number}: set {f['contradicted_item_id']} contradiction turn "
                              f"{f.get('contradicted_turn')} to {fixed}")
@@ -254,7 +254,7 @@ def evaluate(dialogue, backend, *, seed=0, temperature=0,
         require(all(any(c.get("key") == f"annotation:{start}" and c.get("status") == "completed"
                         for c in reuse.get("calls", [])) for start in (1, 5, 9, 13)),
                 "Reuse requires four completed annotation batches")
-        # Completed calls are reused; failed or invalid ones are run again.
+        # reuses completed calls and reruns failed or invalid ones
         result["turns"] = deepcopy(reuse["turns"])
         result["conversation"] = deepcopy(reuse["conversation"])
 
